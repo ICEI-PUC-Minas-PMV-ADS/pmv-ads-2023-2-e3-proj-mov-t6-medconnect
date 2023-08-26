@@ -1,23 +1,25 @@
-# TÍTULO DO PROJETO
+# MedCon
 
-`CURSO`
+<hr/>
 
-`DISCIPLINA`
+`Curso: Análise e Desenvolvimento de Sistemas`
 
-`SEMESTRE`
+`Disciplina: Desenvolvimento de uma Aplicação Móvel em um Ambiente de Negócio`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+`3º SEMESTRE/ EIXO 3`
+
+Este trabalho tem como objetivo o desenvolvimento de um aplicativo para dispositivos moveis, baseado no conceito de telemedicina, que possibilite que profissionais de saúde possam dispor de seus serviços de assistência à saúde, utilizando recursos tecnológicos.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+- Paulo Silas Barbosa Bandeira
+- Nome completo do aluno 2
+- Nome completo do aluno 3
+- Nome completo do aluno 4
 
 ## Orientador
 
-* Nome completo do professor 1
+- Udo Fritzke Junior
 
 ## Instruções de utilização
 
