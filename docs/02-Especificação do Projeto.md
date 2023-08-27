@@ -8,26 +8,29 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-| ![alt text](./img/Personas/p2.jpg) | Antônio Santos Melo                                                        |
-| ---------------------------------- | -------------------------------------------------------------------------- |
-| Idade:                             | 58                                                                         |
-| Ocupação:                          | Medico                                                                     |
-| Motivações                         | Gosta do seu trabalho, pois percebe potencial para ajudar outras pessoas;  |
-| Frustrações                        | Deficiências no ambiente de trabalho o impedem de melhorar seu atendimento |
+| ![alt text](./img/Personas/p2.jpg) | Antônio Santos Melo                                                                         |
+| ---------------------------------- | ------------------------------------------------------------------------------------------- |
+| Idade:                             | 58                                                                                          |
+| Ocupação:                          | Médico, Empresário                                                                          |
+| História                           | Antônio é formado em medicina, e tem um consultório com 4 funcionários                      |
+| Motivações                         | Gosta do seu trabalho, pois percebe potencial para ajudar outras pessoas;                   |
+| Frustrações                        | Percebe que os pacientes do seu consultorio passam muito tempo esperando na sala de espera; |
 
-| ![alt text](./img/Personas/p3.jpg) | André Araujo Rocha                                                         |
-| ---------------------------------- | -------------------------------------------------------------------------- |
-| Idade:                             | 32                                                                         |
-| Ocupação:                          | Medico                                                                     |
-| Motivações                         | Gosta do seu trabalho, pois percebe potencial para ajudar outras pessoas;  |
-| Frustrações                        | Deficiências no ambiente de trabalho o impedem de melhorar seu atendimento |
+| ![alt text](./img/Personas/p3.jpg) | André Araujo Rocha                                                                                    |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Idade:                             | 35                                                                                                    |
+| Ocupação:                          | Médico                                                                                                |
+| História                           | André é formado em medicina e trabalha em uma clinica de procedimentos estéticos.                     |
+| Motivações                         | Gosta do seu trabalho, pois percebe potencial para ajudar outras pessoas;                             |
+| Frustrações                        | Atende alguns pacientes por videoconferência em aplicativos, porém não consegue organizar documentos, |
 
-| ![alt text](./img/Personas/p1.jpg) | João Almeida Pereira                                                       |
-| ---------------------------------- | -------------------------------------------------------------------------- |
-| Idade:                             | 32                                                                         |
-| Ocupação:                          | Medico                                                                     |
-| Motivações                         | Gosta do seu trabalho, pois percebe potencial para ajudar outras pessoas;  |
-| Frustrações                        | Deficiências no ambiente de trabalho o impedem de melhorar seu atendimento |
+| ![alt text](./img/Personas/p1.jpg) | João Almeida Pereira                                                                                                                                                                                                      |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Idade:                             | 62                                                                                                                                                                                                                        |
+| Ocupação:                          | Aposentado                                                                                                                                                                                                                |
+| História                           | João                                                                                                                                                                                                                      |
+| Motivações                         |                                                                                                                                                                                                                           |
+| Frustrações                        | Devido a um problema de saúde, João tem que se deslocar constantemente até uma clínica que fica distante de sua residência. Ele sabe que é necessário, mas fica estressado devido ao trânsito e ao longo tempo de espera. |
 
 ## Histórias de Usuários
 
