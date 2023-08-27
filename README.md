@@ -1,7 +1,5 @@
 # MedCon
 
-<hr/>
-
 `Curso: Análise e Desenvolvimento de Sistemas`
 
 `Disciplina: Desenvolvimento de uma Aplicação Móvel em um Ambiente de Negócio`
