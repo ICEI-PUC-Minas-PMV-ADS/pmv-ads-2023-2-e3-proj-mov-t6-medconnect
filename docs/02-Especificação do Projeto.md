@@ -28,8 +28,7 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Idade:                             | 62                                                                                                                                                                                                                        |
 | Ocupação:                          | Aposentado                                                                                                                                                                                                                |
-| História                           | João                                                                                                                                                                                                                      |
-| Motivações                         |                                                                                                                                                                                                                           |
+| História                           | João gosta de passar o tempo com sua familia e amigos. Sempre gostou de praticar esportes, mas devido a um problema no coração, não pode mais realizar algumas atividades.                                                |
 | Frustrações                        | Devido a um problema de saúde, João tem que se deslocar constantemente até uma clínica que fica distante de sua residência. Ele sabe que é necessário, mas fica estressado devido ao trânsito e ao longo tempo de espera. |
 
 ## Histórias de Usuários
