@@ -80,10 +80,16 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-| ID     | Descrição do Requisito                  | Prioridade |
-| ------ | --------------------------------------- | ---------- |
-| RF-001 | Permitir que o usuário cadastre tarefas | ALTA       |
-| RF-002 | Emitir um relatório de tarefas no mês   | MÉDIA      |
+| ID     | Descrição do Requisito                                                                                                                                 | Prioridade |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- |
+| RF-001 | O sistema de permitir o cadastro de clientes.                                                                                                          | ALTA       |
+| RF-002 | O sistema de permitir ao cliente cadastrado, acesso a tela de perfil do cliente.                                                                       | ALTA       |
+| RF-003 | O sistema de permitir ao cliente, solicitar um agendamento.                                                                                            | ALTA       |
+| RF-004 | O sistema deve emitir um recibo, com os dados provenientes do pedido de consulta.                                                                      | ALTA       |
+| RF-005 | O sistema deve permitir o compartilhamento de documentos necessarios ao atendimento                                                                    | ALTA       |
+| RF-006 | O cliente cadastrado, poderá, através do sistema de videoconfêrencia, realizar uma consulta com um especialista em dia e horario previamente agendado. | ALTA       |
+| RF-007 | O sistema deve permitir o envio de imagens                                                                                                             | MÉDIO      |
+| RF-008 | O sistema disponibilizará ao paciente, histórico médico eletrônico de consultas                                                                        | MÉDIO      |
 
 ### Requisitos não Funcionais
 
