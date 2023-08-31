@@ -35,20 +35,13 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
-| EU COMO... `PERSONA` | QUERO/PRECISO ... `FUNCIONALIDADE` | PARA ... `MOTIVO/VALOR`                |
-| -------------------- | ---------------------------------- | -------------------------------------- |
-| Usuário do sistema   | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-| Administrador        | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
->
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+| EU COMO... `PERSONA` | QUERO/PRECISO ... `FUNCIONALIDADE`                                                                                       | PARA ... `MOTIVO/VALOR`                                                                                                                                                                                             |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| João Almeida Pereira | Quando possível, consultar um especialista no conforto da minha residência.                                              | Moro longe do consultório, e gasto muito tempo no trânsito.                                                                                                                                                         |
+| João Almeida Pereira | Enviar uma mensagem de texto ou áudio para o consultório.                                                                | Evitar gastar muito tempo esperando no telefone.                                                                                                                                                                    |
+| João Almeida Pereira | Enviar resultados de exames para o especialista pelo aplicativo.                                                         | Moro longe do consultório, e gasto muito tempo no trânsito.                                                                                                                                                         |
+| Antônio Santos Melo  | Quando possível, atender seus clientes por videoconferência.                                                             | Agilizar o atendimento aos clientes em seu consultório. Evitar que seus clientes esperem por muito tempo em salas de espera. Melhorar o relacionamento entre cliente/médico. Prestar melhor atendimento ao cliente. |
+| André Araujo Rocha   | Ter os documentos dos clientes organizados, garantindo acesso a exames e documentos de clientes de forma simples e ágil. | Ter o acesso a informação de seus clientes de forma agil, para prestar melhor atendimento.                                                                                                                          |
 
 ## Modelagem do Processo de Negócio
 
@@ -87,10 +80,16 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-| ID     | Descrição do Requisito                  | Prioridade |
-| ------ | --------------------------------------- | ---------- |
-| RF-001 | Permitir que o usuário cadastre tarefas | ALTA       |
-| RF-002 | Emitir um relatório de tarefas no mês   | MÉDIA      |
+| ID     | Descrição do Requisito                                                                                                                                 | Prioridade |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- |
+| RF-001 | O sistema de permitir o cadastro de clientes.                                                                                                          | ALTA       |
+| RF-002 | O sistema de permitir ao cliente cadastrado, acesso a tela de perfil do cliente.                                                                       | ALTA       |
+| RF-003 | O sistema de permitir ao cliente, solicitar um agendamento.                                                                                            | ALTA       |
+| RF-004 | O sistema deve emitir um recibo, com os dados provenientes do pedido de consulta.                                                                      | ALTA       |
+| RF-005 | O sistema deve permitir o compartilhamento de documentos necessarios ao atendimento                                                                    | ALTA       |
+| RF-006 | O cliente cadastrado, poderá, através do sistema de videoconfêrencia, realizar uma consulta com um especialista em dia e horario previamente agendado. | ALTA       |
+| RF-007 | O sistema deve permitir o envio de imagens                                                                                                             | MÉDIO      |
+| RF-008 | O sistema disponibilizará ao paciente, histórico médico eletrônico de consultas                                                                        | MÉDIO      |
 
 ### Requisitos não Funcionais
 
