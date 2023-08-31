@@ -35,10 +35,13 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
-| EU COMO... `PERSONA` | QUERO/PRECISO ... `FUNCIONALIDADE` | PARA ... `MOTIVO/VALOR`                |
-| -------------------- | ---------------------------------- | -------------------------------------- |
-| Usuário do sistema   | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-| Administrador        | Alterar permissões                 | Permitir que possam administrar contas |
+| EU COMO... `PERSONA` | QUERO/PRECISO ... `FUNCIONALIDADE`                                                                                       | PARA ... `MOTIVO/VALOR`                                                                                                                                                                                             |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| João Almeida Pereira | Quando possível, consultar um especialista no conforto da minha residência.                                              | Moro longe do consultório, e gasto muito tempo no trânsito.                                                                                                                                                         |
+| João Almeida Pereira | Enviar uma mensagem de texto ou áudio para o consultório.                                                                | Evitar gastar muito tempo esperando no telefone.                                                                                                                                                                    |
+| João Almeida Pereira | Enviar resultados de exames para o especialista pelo aplicativo.                                                         | Moro longe do consultório, e gasto muito tempo no trânsito.                                                                                                                                                         |
+| Antônio Santos Melo  | Quando possível, atender seus clientes por videoconferência.                                                             | Agilizar o atendimento aos clientes em seu consultório. Evitar que seus clientes esperem por muito tempo em salas de espera. Melhorar o relacionamento entre cliente/médico. Prestar melhor atendimento ao cliente. |
+| André Araujo Rocha   | Ter os documentos dos clientes organizados, garantindo acesso a exames e documentos de clientes de forma simples e ágil. | Ter o acesso a informação de seus clientes de forma agil, para prestar melhor atendimento.                                                                                                                          |
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
