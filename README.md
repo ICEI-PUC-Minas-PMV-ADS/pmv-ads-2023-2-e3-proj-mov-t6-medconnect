@@ -10,10 +10,9 @@ Este trabalho tem como objetivo o desenvolvimento de um aplicativo para disposit
 
 ## Integrantes
 
+- Lucas Delmasquio Silva   
+- Nicolas Patrick Teixeira Da Silva
 - Paulo Silas Barbosa Bandeira
-- Nome completo do aluno 2
-- Nome completo do aluno 3
-- Nome completo do aluno 4
 
 ## Orientador
 
