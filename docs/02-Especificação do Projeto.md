@@ -131,17 +131,24 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
 </p>
 # Matriz de Rastreabilidade
 
-A matriz de rastreabilidade é uma ferramenta usada para facilitar a visualização dos relacionamento entre requisitos e outros artefatos ou objetos, permitindo a rastreabilidade entre os requisitos e os objetivos de negócio.
+<p align="center">
 
-A matriz deve contemplar todos os elementos relevantes que fazem parte do sistema, conforme a figura meramente ilustrativa apresentada a seguir.
+|         | RF-001 | RF-002 | RF-003 | RF-004 | RF-005 | RF-006 | RF-007 | RF-008 | RF-009 | RF-0010 | RF-0011 | RF-0012 |
+| ------- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------- | ------- | ------- |
+| cliente | x      | x      | x      |        |        |        |        |        |        | x       | x       | x       |
+| RF-001  |        |        |        |        |        |        |        |        |        |         |         |         |
+| RF-002  |        |        |        |        |        |        |        |        |        |         |         |         |
+| RF-003  |        |        |        |        |        |        |        |        |        |         |         |         |
+| RF-004  |        |        | x      |        |        |        |        |        |        |         |         |         |
+| RF-005  |        |        | x      |        |        | x      |        |        |        |         |         |         |
+| RF-006  |        |        | x      | x      |        |        |        |        |        |         |         |         |
+| RF-007  |        |        |        |        |        |        |        |        |        |         |         |         |
+| RF-008  |        |        | x      | x      |        | x      |        |        |        |         |         |         |
+| RF-009  |        |        | x      |        |        | x      |        |        |        |         |         |         |
+| RF-010  |        |        | x      |        |        |        |        |        |        |         |         |         |
+| RF-011  |        |        |        |        |        |        |        |        |        |         |         |         |
 
-![Exemplo de matriz de rastreabilidade](img/02-matriz-rastreabilidade.png)
-
-> **Links Úteis**:
->
-> - [Artigo Engenharia de Software 13 - Rastreabilidade](https://www.devmedia.com.br/artigo-engenharia-de-software-13-rastreabilidade/12822/)
-> - [Verificação da rastreabilidade de requisitos usando a integração do IBM Rational RequisitePro e do IBM ClearQuest Test Manager](https://developer.ibm.com/br/tutorials/requirementstraceabilityverificationusingrrpandcctm/)
-> - [IBM Engineering Lifecycle Optimization – Publishing](https://www.ibm.com/br-pt/products/engineering-lifecycle-optimization/publishing/)
+</p>
 
 # Gerenciamento de Projeto
 
