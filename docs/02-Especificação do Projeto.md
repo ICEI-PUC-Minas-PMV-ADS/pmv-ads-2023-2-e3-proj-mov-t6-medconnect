@@ -85,49 +85,36 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RF-001 | O sistema de permitir o cadastro de clientes.                                                                                                          | ALTA       |
 | RF-002 | O sistema de permitir ao cliente cadastrado, acesso a tela de perfil do cliente.                                                                       | ALTA       |
 | RF-003 | O sistema de permitir ao cliente, solicitar um agendamento.                                                                                            | ALTA       |
-| RF-004 | O sistema deve emitir um recibo, com os dados provenientes do pedido de consulta.                                                                      | ALTA       |
-| RF-005 | O sistema deve permitir o compartilhamento de documentos necessarios ao atendimento                                                                    | ALTA       |
+| RF-004 | O sistema deve emitir um recibo, com os dados provenientes do pedido de consulta.                                                                      | MÉDIA      |
+| RF-005 | O sistema deve permitir o envio de documentos necessarios ao atendimento.                                                                              | ALTA       |
 | RF-006 | O cliente cadastrado, poderá, através do sistema de videoconfêrencia, realizar uma consulta com um especialista em dia e horario previamente agendado. | ALTA       |
-| RF-007 | O sistema deve permitir o envio de imagens                                                                                                             | MÉDIO      |
+| RF-007 | O cliente poderá enviar enviar mensagem de texto ou imagens ao profissional, atravéz do chat.                                                          | BAIXA      |
 | RF-008 | O sistema disponibilizará ao paciente, histórico médico eletrônico de consultas                                                                        | MÉDIO      |
+| RF-009 | O cliente poderá pesquisar por um profissional, atravéz do campo de pesquisa.                                                                          | ALTA       |
+| RF-010 | No perfil de um profissional selecionado, estará disponivel os dias disponiveis para antendimento por videoconferência                                 | ALTA       |
+| RF-011 | O usuário do aplicativo poderá alterar sua senha.                                                                                                      | BAIXA      |
+| RF-012 | O usuário do aplicativo poderá alterar foto de perfil.                                                                                                 | BAIXA      |
 
 ### Requisitos não Funcionais
 
-| ID      | Descrição do Requisito                                            | Prioridade |
-| ------- | ----------------------------------------------------------------- | ---------- |
-| RNF-001 | O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA      |
-| RNF-002 | Deve processar requisições do usuário em no máximo 3s             | BAIXA      |
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
-  (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
-  correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-  Lembre-se que cada requisito deve corresponder à uma e somente uma
-  característica alvo da sua solução. Além disso, certifique-se de que
-  todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+| ID      | Descrição do Requisito                                                                                     | Prioridade |
+| ------- | ---------------------------------------------------------------------------------------------------------- | ---------- |
+| RNF-001 | O aplicativo deverá ser desenvolvido utilizando React Native                                               | ALTA       |
+| RNF-002 | Deverá ser ultilizada a linguagem Csharp no desenvolvimento do servidor backend                            | ALTA       |
+| RNF-003 | Deverá ser ultilizado o banco de dados SQLServer                                                           | ALTA       |
+| RNF-004 | O aplicativo deverá estar disponível para aparelhos com sistema Android                                    | ALTA       |
+| RNF-005 | O aplicativo deverá estar disponível para aparelhos com sistema IOS                                        | BAIXA      |
+| RNF-006 | O aplicativo deverá estar conectado a internet para que seja possivel ultilizar todas suas funcionalidades | MEDIA      |
+| RNF-007 | O sistema deverá estar disponível 24 horas por dia, todos os dias da semana                                | MÉDIA      |
+| RNF-008 | O aplicativo estará disponivel nas plataformas Google Play e App Store                                     | ALTA       |
 
 ## Restrições
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-| ID  | Restrição                                             |
-| --- | ----------------------------------------------------- |
-| 01  | O projeto deverá ser entregue até o final do semestre |
-| 02  | Não pode ser desenvolvido um módulo de backend        |
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
->
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+| ID  | Restrição                                    |
+| --- | -------------------------------------------- |
+| 01  | O projeto deverá ser entregue até 04/12/2023 |
 
 ## Diagrama de Casos de Uso
 
