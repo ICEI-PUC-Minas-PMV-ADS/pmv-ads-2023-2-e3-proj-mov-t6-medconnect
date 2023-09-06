@@ -11,9 +11,11 @@ Este trabalho tem como objetivo o desenvolvimento de um aplicativo para disposit
 
 ## Integrantes
 
+- Frederico Goncalves da Silva Junior
 - Lucas Delmasquio Silva
 - Nicolas Patrick Teixeira Da Silva
 - Paulo Silas Barbosa Bandeira
+- Samuel Ferreira de Oliveia
 
 ## Orientador
 
