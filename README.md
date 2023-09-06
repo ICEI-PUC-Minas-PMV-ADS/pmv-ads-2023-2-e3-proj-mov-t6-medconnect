@@ -1,3 +1,4 @@
+<img src="./docs/img/Logo.jpg" width="350" />
 # MedCon
 
 `Curso: Análise e Desenvolvimento de Sistemas`
@@ -10,7 +11,7 @@ Este trabalho tem como objetivo o desenvolvimento de um aplicativo para disposit
 
 ## Integrantes
 
-- Lucas Delmasquio Silva   
+- Lucas Delmasquio Silva
 - Nicolas Patrick Teixeira Da Silva
 - Paulo Silas Barbosa Bandeira
 
