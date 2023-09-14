@@ -18,13 +18,13 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 |Critério de Êxito | - O usuário consegue fazer o login. |
 |Critério de Falha | - O usuário não consegue fazer o login, e a aplicação retorna uma mensagem de erro: "Email e/ou senha incorreta". |
 |  	|  	|
-| **Caso de Teste** | **Busca de consultas** |
+| **Caso de Teste** | **Busca de consultas e especialistas** |
 | Requisito Associado |  - Permitir a busca por consultas através dos especialistas cadastrados e/ou dos sintomas . |
 | Objetivo do Teste | - Verificar se o usuário consegue realizar a busca filtrando pelos sintomas ou pelo tipo de especialista . |
 |Critério de Êxito | - A aplicação vai retornar os especialistas disponíveis de acordo com a necessidade do  usuário. |
 |Critério de Falha | - A aplicação retorna uma mensagem de erro: " Não foi possível encontrar medicos para essa modalidade tente novamente ". |
 | 	|  	|
-| **Caso de Teste** | **Registrar de sintomas** |
+| **Caso de Teste** | **Registro de sintomas** |
 | Requisito Associado 	Permitir que o usuário gerencie os sintomas que vem sentindo. |
 | Objetivo do Teste | - Verificar se o usuário consegue realizar o cadastro dos sintomas. |
 | Passos | - Clicar em "Registros"; <br> - Preencher as informações de especialistas; <br> - Clicar em "Salvar". |
