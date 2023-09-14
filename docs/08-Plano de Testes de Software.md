@@ -1,19 +1,34 @@
 # Plano de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>
+Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 
-Apresente os cenários de testes utilizados na realização dos testes da sua aplicação. Escolha cenários de testes que demonstrem os requisitos sendo satisfeitos.
-
-Enumere quais cenários de testes foram selecionados para teste. Neste tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
  
-## Ferramentas de Testes (Opcional)
+| **Caso de Teste** | **Criar conta** 	|
+| :---: | :--- |
+| Requisito Associado |  - Permitir ao usuário gerenciar seu cadastro na plataforma; <br> - Realizar a validação de credenciais do usuário. |
+| Objetivo do Teste | Verificar se o usuário consegue se cadastrar na aplicação. |
+| Passos |  - Acessar a aplicação; <br> - Clicar em "Cadastrar";  <br> - Preencher os campos obrigatórios (CPF, nome, e-mail, data de nascimento e senha); <br> - Clicar em "Salvar". |
+|Critério de Êxito | - O cadastro foi realizado com sucesso. |
+|Critério de Falha | - O usuário não consegue concluir o cadastro, e aparece na tela mostrando algum campo com preenchimento obrigatório. |
+|  	|  	|
+| **Caso de Teste** | **Efetuar login** |
+| Requisito Associado | - Permitir ao usuário realizar o login na plataforma. |
+| Objetivo do Teste | - Verificar se o usuário consegue fazer o login. |
+| Passos | - Acessar a aplicação; <br> - Preencher os dados de login cadastrado ; <br> - Clicar em "Entrar". |
+|Critério de Êxito | - O usuário consegue fazer o login. |
+|Critério de Falha | - O usuário não consegue fazer o login, e a aplicação retorna uma mensagem de erro: "Email e/ou senha incorreta". |
+|  	|  	|
+| **Caso de Teste** | **Busca de consultas** |
+| Requisito Associado |  - Permitir a busca por consultas através dos especialistas cadastrados e/ou dos sintomas . |
+| Objetivo do Teste | - Verificar se o usuário consegue realizar a busca filtrando pelos sintomas ou pelo tipo de especialista . |
+|Critério de Êxito | - A aplicação vai retornar os especialistas disponíveis de acordo com a necessidade do  usuário. |
+|Critério de Falha | - A aplicação retorna uma mensagem de erro: " Não foi possível encontrar medicos para essa modalidade tente novamente ". |
+	|  	|
+| **Caso de Teste** | **Registrar de sintomas ** |
+| Requisito Associado 	Permitir que o usuário gerencie os sintomas que vem sentindo. |
+| Objetivo do Teste | - Verificar se o usuário consegue realizar o cadastro dos sintomas. |
+| Passos | - Clicar em "Registros"; <br> - Preencher as informações de especialistas; <br> - Clicar em "Salvar". |
+|Critério de Êxito | - Os especialistas  apontados na tela. |
+|Critério de Falha | - A aplicação não realizar a busca dos medicos e deverá retornar uma mensagem de erro: "Não foi possível encontrar especialista registrado". |
+|  	|  	|
 
-Comente sobre as ferramentas de testes utilizadas.
- 
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
-> - [Criação e Geração de Planos de Teste de Software](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
