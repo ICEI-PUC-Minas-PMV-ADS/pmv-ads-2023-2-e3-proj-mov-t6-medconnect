@@ -27,8 +27,8 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 | **Caso de Teste** | **Registro de sintomas** |
 | Requisito Associado | 	Permitir que o usuário gerencie os sintomas que vem sentindo. |
 | Objetivo do Teste | - Verificar se o usuário consegue realizar o cadastro dos sintomas. |
-| Passos | - Clicar em "Registros"; <br> - Preencher as informações de especialistas; <br> - Clicar em "Salvar". |
-|Critério de Êxito | - Os especialistas  apontados na tela. |
-|Critério de Falha | - A aplicação não realizar a busca dos medicos e deverá retornar uma mensagem de erro: "Não foi possível encontrar especialista registrado". |
+| Passos | - Clicar em "Sintomas"; <br> - Preencher as informações de sintomas; <br> - Clicar em "Salvar". |
+|Critério de Êxito | - Os sintomas cadastrados com sucesso, buscando especialistas. |
+|Critério de Falha | - A aplicação não realiza a busca dos medicos e deverá retornar uma mensagem de erro: "Não foi possível encontrar especialista registrado". |
 |  	|  	|
 
