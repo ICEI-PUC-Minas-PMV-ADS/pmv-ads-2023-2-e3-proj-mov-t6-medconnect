@@ -25,7 +25,6 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 |Critério de Falha | - A aplicação retorna uma mensagem de erro: " Não foi possível encontrar medicos para essa modalidade tente novamente ". |
 | 	|  	|
 | **Caso de Teste** | **Registro de sintomas** |
-
 | Requisito Associado | 	Permitir que o usuário gerencie os sintomas que vem sentindo. |
 | Objetivo do Teste | - Verificar se o usuário consegue realizar o cadastro dos sintomas. |
 | Passos | - Clicar em "Registros"; <br> - Preencher as informações de especialistas; <br> - Clicar em "Salvar". |
