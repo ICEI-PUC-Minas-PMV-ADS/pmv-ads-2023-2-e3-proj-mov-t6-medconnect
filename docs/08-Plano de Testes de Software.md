@@ -14,7 +14,7 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 | **Caso de Teste** | **Efetuar login** |
 | Requisito Associado | - Permitir ao usuário realizar o login na plataforma. |
 | Objetivo do Teste | - Verificar se o usuário consegue fazer o login. |
-| Passos | - Acessar a aplicação; <br> - Preencher os dados de login cadastrado ; <br> - Clicar em "Entrar". |
+| Passos |  - Preencher os dados de login cadastrado ; <br> - Clicar em "Entrar". |
 |Critério de Êxito | - O usuário consegue fazer o login. |
 |Critério de Falha | - O usuário não consegue fazer o login, e a aplicação retorna uma mensagem de erro: "Email e/ou senha incorreta". |
 |  	|  	|
