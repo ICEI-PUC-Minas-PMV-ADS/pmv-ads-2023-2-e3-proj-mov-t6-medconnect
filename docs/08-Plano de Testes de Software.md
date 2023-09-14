@@ -22,7 +22,7 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 | Requisito Associado |  - Permitir a busca por consultas através dos especialistas cadastrados e/ou dos sintomas . |
 | Objetivo do Teste | - Verificar se o usuário consegue realizar a busca filtrando pelos sintomas ou pelo tipo de especialista . |
 |Critério de Êxito | - A aplicação vai retornar os especialistas disponíveis de acordo com a necessidade do  usuário. |
-|Critério de Falha | - A aplicação retorna uma mensagem de erro: " Não foi possível encontrar medicos para essa modalidade tente novamente ". |
+|Critério de Falha | - A aplicação retorna uma mensagem de erro: " Não foi possível encontrar médicos para essa modalidade tente novamente ". |
 | 	|  	|
 | **Caso de Teste** | **Registro de sintomas** |
 | Requisito Associado | 	Permitir que o usuário gerencie os sintomas que vem sentindo. |
