@@ -7,7 +7,7 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 | :---: | :--- |
 | Requisito Associado |  - Permitir ao usuário gerenciar seu cadastro na plataforma; <br> - Realizar a validação de credenciais do usuário. |
 | Objetivo do Teste | Verificar se o usuário consegue se cadastrar na aplicação. |
-| Passos |  - Acessar a aplicação; <br> - Clicar em "Cadastrar";  <br> - Preencher os campos obrigatórios (CPF, nome, e-mail, data de nascimento e senha); <br> - Clicar em "Salvar". |
+| Passos |  - Clicar em "Cadastrar";  <br> - Preencher os campos obrigatórios (CPF, nome, e-mail, data de nascimento e senha); <br> - Clicar em "Salvar". |
 |Critério de Êxito | - O cadastro foi realizado com sucesso. |
 |Critério de Falha | - O usuário não consegue concluir o cadastro, e aparece na tela mostrando algum campo com preenchimento obrigatório. |
 |  	|  	|
@@ -23,7 +23,7 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 | Objetivo do Teste | - Verificar se o usuário consegue realizar a busca filtrando pelos sintomas ou pelo tipo de especialista . |
 |Critério de Êxito | - A aplicação vai retornar os especialistas disponíveis de acordo com a necessidade do  usuário. |
 |Critério de Falha | - A aplicação retorna uma mensagem de erro: " Não foi possível encontrar medicos para essa modalidade tente novamente ". |
-	|  	|
+| 	|  	|
 | **Caso de Teste** | **Registrar de sintomas ** |
 | Requisito Associado 	Permitir que o usuário gerencie os sintomas que vem sentindo. |
 | Objetivo do Teste | - Verificar se o usuário consegue realizar o cadastro dos sintomas. |
