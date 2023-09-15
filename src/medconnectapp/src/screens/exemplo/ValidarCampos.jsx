@@ -1,4 +1,3 @@
-import {useState} from 'react'
 import {View, Text, Button, TextInput} from "react-native"
 import {useForm, Controller } from 'react-hook-form'
 import { Schema } from './Validate'
@@ -13,13 +12,13 @@ export const ValidarCampos = () => {
     resolver: yupResolver(Schema)
   })
 
-  const handleSignIn = (data) => {
+  const handleFunction = (data) => {
     console.log(data)
   }
 
   return (
     <View style={styles.container}>
-      <Text>Recuperar Senha</Text>
+      <Text>Campos:</Text>
      
         
       <Controller 
@@ -90,7 +89,7 @@ export const ValidarCampos = () => {
 
       <Button 
       title="ENVIAR"
-      onPress={handleSubmit(handleSignIn)}
+      onPress={handleSubmit(handleFunction)}
     />
     
     </View>

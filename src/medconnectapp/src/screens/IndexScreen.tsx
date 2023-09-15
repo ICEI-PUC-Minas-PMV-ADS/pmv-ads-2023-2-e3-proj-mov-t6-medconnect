@@ -12,7 +12,7 @@ export const IndexScreen = () => {
         <Button title="Cadastro" onPress={() => navigation.navigate("Register")}/>
         <Button title="Recuperar Senha" onPress={() => navigation.navigate("RecoverPassword")}/>
         <Button title="Dashboard" onPress={() => navigation.navigate("Dashboard")}/>
-        <Button title="ValidarCampos" onPress={() => navigation.navigate("ValidarCampos")}/>        
+        <Button title="Exemplo Validar Campos" onPress={() => navigation.navigate("ValidarCampos")}/>        
     </View>
   )
 }
