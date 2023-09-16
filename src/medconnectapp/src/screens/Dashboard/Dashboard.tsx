@@ -1,9 +1,17 @@
-import React from 'react'
-import {View, Text} from 'react-native';
-export const DashboardScreen = () => {
+import { DrawerScreenProps } from '@react-navigation/drawer';
+import {View }from 'react-native';
+import { HeaderContainer } from '../../components/header/HeaderContainer/HeaderContainer';
+
+
+interface Props extends DrawerScreenProps<any, any>{}
+
+export const DashboardScreen = ({navigation} :Props) => {
+
+
   return (
    <View>
-    <Text>Dashboard</Text>
+    <HeaderContainer navigation={navigation}/> 
+ 
   </View>
   )
 }
