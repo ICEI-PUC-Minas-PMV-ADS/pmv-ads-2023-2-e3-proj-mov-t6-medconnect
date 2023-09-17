@@ -51,11 +51,11 @@ export const Carousel = () => {
 
   const renderItem = ({ item, index}) => {
     return(
-      <View style={{marginHorizontal: 25}}>
+      <View style={{justifyContent:'center'}}>
         <Image 
           source={{uri: item.image}} 
           style={{height: 150, 
-          width: screenWidth - 50}} />
+          width: screenWidth}} />
       </View>
     )
   };
@@ -69,9 +69,9 @@ export const Carousel = () => {
             <View  
             style={{
               backgroundColor:'green',
-              height: 10, width: 10,
+              height: 6, width: 6,
               borderRadius: 5,
-              marginHorizontal: 6,
+              marginHorizontal: 4,
               }}>
 
             </View>
@@ -82,9 +82,9 @@ export const Carousel = () => {
           <View 
             style={{
                   backgroundColor:'red',
-                  height: 10, width: 10,
+                  height: 6, width: 6,
                   borderRadius: 5,
-                  marginHorizontal: 6,
+                  marginHorizontal: 4,
                   }}
             key = {index}
             >
@@ -105,7 +105,7 @@ export const Carousel = () => {
   }
 
   return (
-    <View>
+    <View >
  
       <FlatList 
           data={carouselData} 

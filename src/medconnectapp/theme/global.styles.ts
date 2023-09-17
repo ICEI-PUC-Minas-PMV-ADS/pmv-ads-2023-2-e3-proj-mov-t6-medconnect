@@ -1,3 +1,3 @@
 export const globalStyles = {
-  colorSearchBg: '#858585',
+  colorSearchBg: '#D9D9D9',
 };
