@@ -11,7 +11,7 @@ export const SideMenuButton = ({navigation}: Props) => {
         <Icon 
             name="menu-outline" 
             size={30} 
-            color="#999"
+            color="#FFF"
             onPress={ ()=> navigation.toggleDrawer()}
             />
     </View>

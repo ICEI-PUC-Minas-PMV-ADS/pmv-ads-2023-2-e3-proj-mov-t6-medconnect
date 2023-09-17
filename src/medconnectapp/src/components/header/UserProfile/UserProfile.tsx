@@ -5,7 +5,7 @@ import {styles} from "./styles"
 export const UserProfile = () => {
   return (
    <View style={styles.content}>
-    <Text>Olá João</Text>
+    <Text style={styles.userName}>Olá João</Text>
     <View style={styles.profileImgContainer}>
         <Image 
             source={require('../../../assets/images/persona01.jpg')}

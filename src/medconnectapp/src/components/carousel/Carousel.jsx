@@ -3,18 +3,15 @@ import {View, Text, FlatList, Image, Dimensions} from "react-native"
 const carouselData = [
   {
     id: 1,
-    image:
-      'https://cdn.abrahao.com.br/base/c06/02e/7be/promocao-restaurante-oriental-fb.png',
+    image: require('../../assets/images/banner.png'),
   },
   {
     id: 2,
-    image:
-      'https://www.clickriomafra.com.br/wp-content/uploads/2021/04/06/Promo%C3%A7%C3%B5es-especiais-no-aplicativo-do-Restaurante-Vitorino-2.jpg',
+    image: require('../../assets/images/banner.png'),
   },
   {
     id: 3,
-    image:
-      'https://cdn.abrahao.com.br/base/c06/02e/7be/promocao-restaurante-oriental-fb.png',
+    image: require('../../assets/images/banner.png'),
   },
 ];
 
@@ -44,7 +41,7 @@ export const Carousel = () => {
           animation:true
         })
       }
-    }, 3000);
+    }, 7000);
 
   return () => clearInterval(interval)
   })
@@ -53,7 +50,7 @@ export const Carousel = () => {
     return(
       <View style={{justifyContent:'center'}}>
         <Image 
-          source={{uri: item.image}} 
+          source={item.image} 
           style={{height: 150, 
           width: screenWidth}} />
       </View>
@@ -67,6 +64,7 @@ export const Carousel = () => {
         if(activeIndex === index){
           return(
             <View  
+            key = {index}
             style={{
               backgroundColor:'green',
               height: 6, width: 6,

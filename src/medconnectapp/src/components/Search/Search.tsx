@@ -7,14 +7,17 @@ export const Search = () => {
    <View  style={styles.content}>
 
     <TextInput 
-        placeholder="Pesquisar Especialidade ou Profissional..."
+        placeholder="Pesquisar..."
         style={styles.inputSearch}
       />
-      <Icon 
-        name="search-outline" 
-        size={16} 
-        color="#333"
-        style={styles.searchIcon} />
+      <View  style={styles.searchIcon}>
+        <Icon 
+          name="search-outline" 
+          size={16} 
+          color="#333"
+          />
+      </View>
+     
    </View>
   )
 }
