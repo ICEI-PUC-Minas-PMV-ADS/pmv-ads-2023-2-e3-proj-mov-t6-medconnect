@@ -1,5 +1,5 @@
 import { DrawerScreenProps } from "@react-navigation/drawer"
-import { View, Image } from "react-native"
+import { View, Image, ImageBackground } from "react-native"
 import { Search } from "../../Search"
 import { SideMenuButton } from "../SideMenuButton"
 import { UserProfile } from "../UserProfile"
@@ -10,7 +10,7 @@ interface Props extends DrawerScreenProps<any, any>{}
 export const HeaderContainer = ({navigation}:Props  ) => {
   return (
     <View style={styles.container}>
-      <Image 
+      <ImageBackground 
           style={styles.bgtexture}
           source={require('../../../assets/images/bgtexture.png')}/>
       

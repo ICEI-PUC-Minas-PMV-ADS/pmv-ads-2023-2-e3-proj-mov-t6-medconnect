@@ -16,7 +16,17 @@ export const DashboardScreen = ({navigation, route} :Props) => {
   return (
     <SafeAreaView>
       <View style={styles.container}>
-      
+      <ScrollView
+          scrollEventThrottle={16}
+          onScroll={Animated.event([{
+            nativeEvent:{
+              contentOffset: {y : scrollY}
+            }
+          }],
+          { useNativeDriver: false}
+          )}
+      >
+       
         <Animated.View style={
           [styles.header,
              {
@@ -35,17 +45,7 @@ export const DashboardScreen = ({navigation, route} :Props) => {
           <HeaderContainer route={route} navigation={navigation} />      
         </Animated.View>
     
-        <ScrollView
-          scrollEventThrottle={16}
-          onScroll={Animated.event([{
-            nativeEvent:{
-              contentOffset: {y : scrollY}
-            }
-          }],
-          { useNativeDriver: false}
-          )}
-      >
-       
+
        <View style={styles.menuIcons}>
           <MenuIcon 
             icon={require('../../assets/images/medical-team.png')}

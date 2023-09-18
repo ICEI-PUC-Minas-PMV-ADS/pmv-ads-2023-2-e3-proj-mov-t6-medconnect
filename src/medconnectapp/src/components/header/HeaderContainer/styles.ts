@@ -4,7 +4,7 @@ import {globalMargin, globalStyles} from '../../../../theme/';
 export const styles = StyleSheet.create({
   container: {
     backgroundColor: globalStyles.primaryColor,
-
+    height: 200,
     marginBottom: 10,
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 0,
