@@ -1,9 +1,9 @@
 import {StyleSheet, Dimensions} from 'react-native';
-import {globalMargin} from '../../../../theme/global.margin';
+import {globalMargin, globalStyles} from '../../../../theme/';
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#2E52D0',
+    backgroundColor: globalStyles.primaryColor,
 
     marginBottom: 10,
     borderBottomLeftRadius: 3,

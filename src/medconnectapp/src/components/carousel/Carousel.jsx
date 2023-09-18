@@ -66,7 +66,7 @@ export const Carousel = () => {
             <View  
             key = {index}
             style={{
-              backgroundColor:'green',
+              backgroundColor:'black',
               height: 6, width: 6,
               borderRadius: 5,
               marginHorizontal: 4,
@@ -79,7 +79,7 @@ export const Carousel = () => {
         return(
           <View 
             style={{
-                  backgroundColor:'red',
+                  backgroundColor:'gray',
                   height: 6, width: 6,
                   borderRadius: 5,
                   marginHorizontal: 4,
