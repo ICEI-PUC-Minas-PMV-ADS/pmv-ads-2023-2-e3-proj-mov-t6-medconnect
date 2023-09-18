@@ -71,7 +71,7 @@ export const DashboardScreen = ({navigation, route} :Props) => {
         </View>
 
         <View style={styles.content}>
-          
+          <Text style={[styles.subtitle, {marginBottom: 5}]}>Especialistas</Text>
           <Card image = {require("../../assets/images/persona02.png")}/>
           <Card image = {require("../../assets/images/persona04.png")}/>
           <Card image = {require("../../assets/images/persona03.png")}/>

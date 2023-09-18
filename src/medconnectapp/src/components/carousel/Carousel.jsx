@@ -7,7 +7,7 @@ const carouselData = [
   },
   {
     id: 2,
-    image: require('../../assets/images/banner.png'),
+    image: require('../../assets/images/banner1.png'),
   },
   {
     id: 3,

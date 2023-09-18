@@ -55,7 +55,9 @@ export const styles = StyleSheet.create({
 
     borderRadius: 2,
   },
-
+  subtitle: {
+    fontSize: 16,
+  },
   box: {
     height: 300,
     backgroundColor: '#DDD',

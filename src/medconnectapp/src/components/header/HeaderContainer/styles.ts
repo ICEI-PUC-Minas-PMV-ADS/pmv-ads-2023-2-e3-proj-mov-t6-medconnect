@@ -6,8 +6,8 @@ export const styles = StyleSheet.create({
     backgroundColor: globalStyles.primaryColor,
 
     marginBottom: 10,
-    borderBottomLeftRadius: 3,
-    borderBottomRightRadius: 3,
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
   },
   content: {
     marginVertical: globalMargin.marginVertical,
