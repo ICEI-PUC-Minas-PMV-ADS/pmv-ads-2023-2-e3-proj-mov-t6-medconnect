@@ -1,8 +1,15 @@
 # Arquitetura da Solução
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>
+<p>
+   O aplicativo será construído utilizando o framework React-Native, e consumirá dados de uma API, que será construída utilizando a arquitetura do framework .NET e linguagem CSharp.
+    </p>    
+    <p>
+      A API será hospedada na plataforma de computação em nuvem Microsoft Azure, e utilizará o banco de dados SQLServer para leitura e armazenamento de dados.
+</p>
 
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
+<p>
+   Um token de autorização, Json Web Token(JWT), será armazenado em localstorage da aplicação.
+</p>
 
 ![Arquitetura da Solução](img/02-mob-arch.png)
 
