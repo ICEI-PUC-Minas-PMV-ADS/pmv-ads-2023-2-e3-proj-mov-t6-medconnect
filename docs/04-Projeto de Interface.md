@@ -22,20 +22,20 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 
 ## Prototipos
 
-<table>
-    <tr>
+<table >
+    <tr >
        <th>Tela Inicial</th>
        <th>Tela de Login</th>
        <th>Tela de Cadastro</th>
     </tr>
     <tr>
-    <td>
+    <td width="300">
          <img width="200"  src="./img/Prototipo/HomeScreen.png">
     </td>
-    <td>
+    <td width="300">
          <img width="200"  src="./img/Prototipo/Login.png">
     </td>
-    <td>
+    <td width="300">
         <img width="200"  src="./img/Prototipo/Cadastro.png">
     </td>
     </tr>
@@ -48,13 +48,13 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
        <th>Tela com Resultado de Pesquisas</th>
     </tr>
     <tr>
-    <td>
+    <td width="300">
          <img width="200"  src="./img/Prototipo/Cadastro-Sucesso.png">
     </td>
-    <td>
+    <td width="300">
          <img width="200"  src="./img/Prototipo/Dashboard.png">
     </td>
-    <td>
+    <td width="300">
        <img width="200"  src="./img/Prototipo/Pesquisa.png">
     </td>
     </tr>
@@ -67,13 +67,13 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
        <th>Modal/Tela Agendamento Realizado com Sucesso</th>
     </tr>
     <tr>
-    <td>
+    <td width="300">
          <img width="200"  src="./img/Prototipo/PerfilProfissional.png">
     </td>
-    <td>
+    <td width="300">
          <img width="200"  src="./img/Prototipo/Agendar.png">
     </td>
-    <td>
+    <td width="300">
         <img width="200"  src="./img/Prototipo/Agendamento-Sucesso.png">
     </td>
     </tr>
@@ -86,13 +86,13 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
        <th>Tela de Consulta</th>
     </tr>
     <tr>
-    <td>
+    <td width="300">
         <img width="200"  src="./img/Prototipo/HistoricosDeConsultas.png">
     </td>
-    <td>
+    <td width="300">
          <img width="200"  src="./img/Prototipo/Calendario.png">
     </td>
-    <td>
+    <td width="300">
         <img width="200"  src="./img/Prototipo/Consulta.png">
     </td>
     </tr>
@@ -105,13 +105,13 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
        <th>Tela Recuperar Senha</th>
     </tr>
     <tr>
-    <td>
+    <td width="300">
        <img width="200"  src="./img/Prototipo/DocumentosEnviados.png">
     </td>
-    <td>
+    <td width="300">
         <img width="200"  src="./img/Prototipo/Documento.png">
     </td>
-    <td>
+    <td width="300">
        <img width="200"  src="./img/Prototipo/RecuperarSenha.png">
     </td>
     </tr>
