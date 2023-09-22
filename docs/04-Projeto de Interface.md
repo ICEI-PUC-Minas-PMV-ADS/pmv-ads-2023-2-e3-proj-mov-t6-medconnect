@@ -22,86 +22,97 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 
 ## Prototipos
 
-### Tela inicial
+<table>
+    <tr>
+       <th>Tela Inicial</th>
+       <th>Tela de Login</th>
+       <th>Tela de Cadastro</th>
+    </tr>
+    <tr>
+    <td>
+         <img width="200"  src="./img/Prototipo/HomeScreen.png">
+    </td>
+    <td>
+         <img width="200"  src="./img/Prototipo/Login.png">
+    </td>
+    <td>
+        <img width="200"  src="./img/Prototipo/Cadastro.png">
+    </td>
+    </tr>
+</table>
 
- <p align="center" > 
-<img width="200"  src="./img/Prototipo/HomeScreen.png">
-</p>
+<table>
+    <tr>
+       <th>Modal/Tela Cadastro realizado com sucesso</th>
+       <th>Tela Dashboard</th>
+       <th>Tela com Resultado de Pesquisas</th>
+    </tr>
+    <tr>
+    <td>
+         <img width="200"  src="./img/Prototipo/Cadastro-Sucesso.png">
+    </td>
+    <td>
+         <img width="200"  src="./img/Prototipo/Dashboard.png">
+    </td>
+    <td>
+       <img width="200"  src="./img/Prototipo/Pesquisa.png">
+    </td>
+    </tr>
+</table>
 
-### Tela de Login
+<table>
+    <tr>
+       <th>Perfil do Profissional</th>
+       <th>Tele de Agendamento</th>
+       <th>Modal/Tela Agendamento Realizado com Sucesso</th>
+    </tr>
+    <tr>
+    <td>
+         <img width="200"  src="./img/Prototipo/PerfilProfissional.png">
+    </td>
+    <td>
+         <img width="200"  src="./img/Prototipo/Agendar.png">
+    </td>
+    <td>
+        <img width="200"  src="./img/Prototipo/Agendamento-Sucesso.png">
+    </td>
+    </tr>
+</table>
 
- <p align="center" > 
-<img width="200"  src="./img/Prototipo/Login.png">
-</p>
+<table>
+    <tr>
+       <th>Historico de Consultas</th>
+       <th>Calendário</th>
+       <th>Tela de Consulta</th>
+    </tr>
+    <tr>
+    <td>
+        <img width="200"  src="./img/Prototipo/HistoricosDeConsultas.png">
+    </td>
+    <td>
+         <img width="200"  src="./img/Prototipo/Calendario.png">
+    </td>
+    <td>
+        <img width="200"  src="./img/Prototipo/Consulta.png">
+    </td>
+    </tr>
+</table>
 
-### Tela de Cadastro
-
- <p align="center" > 
-<img width="200"  src="./img/Prototipo/Cadastro.png">
-</p>
-
-### Modal/Tela Cadastro realizado com sucesso
-
- <p align="center" > 
-<img width="200"  src="./img/Prototipo/Cadastro-Sucesso.png">
-</p>
-
-### Tela Dashboard
-
- <p align="center" > 
-<img width="200"  src="./img/Prototipo/Dashboard.png">
-</p>
-
-### Tela com Resultado de pesquisas feitas pelo cliente.
-
- <p align="center" > 
-<img width="200"  src="./img/Prototipo/Pesquisa.png">
-</p>
-
-### Tela Perfil Profissional
-
- <p align="center" > 
-<img width="200"  src="./img/Prototipo/PerfilProfissional.png">
-</p>
-
-### Tela Historico de Consultas
-
- <p align="center" > 
-<img width="200"  src="./img/Prototipo/HistoricosDeConsultas.png">
-</p>
-
-### Tela Confirmação de Agendamento
-
- <p align="center" > 
-<img width="200"  src="./img/Prototipo/Agendar.png">
-</p>
-
-### Tela Confirmação de Agendamento
-
- <p align="center" > 
-<img width="200"  src="./img/Prototipo/Agendamento-Sucesso.png">
-</p>
-
-### Tela Consulta
-
- <p align="center" > 
-<img width="200"  src="./img/Prototipo/Consulta.png">
-</p>
-
-### Tela envio de documentos
-
- <p align="center" > 
-<img width="200"  src="./img/Prototipo/DocumentosEnviados.png">
-</p>
-
-### Tela para leitura de documentos
-
- <p align="center" > 
-<img width="200"  src="./img/Prototipo/Documento.png">
-</p>
-
-### Tela Recuperar Senha
-
- <p align="center" > 
-<img width="200"  src="./img/Prototipo/RecuperarSenha.png">
-</p>
+<table>
+    <tr>
+       <th>Tela envio de documentos</th>
+       <th>Tela para leitura de documentos</th>
+       <th>Tela Recuperar Senha</th>
+    </tr>
+    <tr>
+    <td>
+       <img width="200"  src="./img/Prototipo/DocumentosEnviados.png">
+    </td>
+    <td>
+        <img width="200"  src="./img/Prototipo/Documento.png">
+    </td>
+    <td>
+       <img width="200"  src="./img/Prototipo/RecuperarSenha.png">
+    </td>
+    </tr>
+</table>
