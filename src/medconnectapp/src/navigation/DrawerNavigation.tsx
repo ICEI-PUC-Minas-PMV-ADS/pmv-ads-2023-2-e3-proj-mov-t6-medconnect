@@ -1,15 +1,20 @@
-import React from 'react'
+import {useEffect} from 'react'
 import {createDrawerNavigator} from "@react-navigation/drawer"
 import { DashboardScreen } from '../screens'
-import { StackNavigation } from './StackNavigation'
+import { useWindowDimensions } from 'react-native'
+import { StackScreenProps } from '@react-navigation/stack'
 
 export const SideMenu = () => {
 
     const Drawer = createDrawerNavigator()
+    const { width } = useWindowDimensions();
 
+//drawerType: (width >= 720 ? 'permanent' : 'front')
   return (
-    <Drawer.Navigator>
-        <Drawer.Screen name="Dashboard" component={DashboardScreen} />     
+    <Drawer.Navigator 
+      screenOptions={{headerShown:false }}  >
+        <Drawer.Screen name="Dashboard" component={DashboardScreen} />  
+        
     </Drawer.Navigator>
   )
 }
