@@ -1,10 +1,12 @@
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 import {globalStyles} from '../../../theme/global.styles';
+
+const width = Dimensions.get('window').width;
 
 export const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    width: 330,
+    width: width,
     height: 140,
     gap: 10,
     marginBottom: 2,
@@ -18,7 +20,7 @@ export const styles = StyleSheet.create({
     height: 120,
   },
   cardSpecInfo: {
-    width: 230,
+    width: width - 120,
     height: 130,
   },
   cardSpecBtnView: {
@@ -27,8 +29,6 @@ export const styles = StyleSheet.create({
     backgroundColor: globalStyles.primaryColor,
     alignItems: 'center',
     justifyContent: 'center',
-    alignSelf: 'flex-end',
-    marginRight: 25,
     marginTop: 5,
     borderRadius: 3,
   },

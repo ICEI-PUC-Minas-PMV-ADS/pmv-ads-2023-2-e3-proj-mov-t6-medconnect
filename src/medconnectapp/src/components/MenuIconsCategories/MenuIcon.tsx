@@ -14,6 +14,7 @@ export const MenuIcon = ({icon, category, background="D2D2D2"}: IconData) => {
     <Image 
         source={icon}
         style={[styles.icon]}
+        resizeMode="contain"
     />
     <Text  style={styles.textStyle}>{category}</Text>
    </TouchableOpacity>

@@ -19,6 +19,7 @@ export const Carousel = () => {
 
   const [activeIndex, setActiveIndex] = useState(0)
   const screenWidth = Dimensions.get("window").width
+  const screenHeight = Dimensions.get("window").height / 4
   
   const flatListRef = useRef()
 
@@ -51,7 +52,7 @@ export const Carousel = () => {
       <View style={{justifyContent:'center'}}>
         <Image 
           source={item.image} 
-          style={{height: 150, 
+          style={{height: screenHeight, 
           width: screenWidth}} />
       </View>
     )
