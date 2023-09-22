@@ -34,11 +34,10 @@
         <img width="200" style="margin-right: 20px"  src="./img/Template/TemplatePadrao2.png">
     </td>
      <td width="300" >
-       <img width="200"  src="./img/Prototipo/DashboardMenu.png">
+       <img width="200"  src="./img/Prototipo/dashboardMenu.png">
     </td>
     <td width="300" >
-       <img width="200"  src="./img/Prototipo/Dashboard1.png">
-    </td>
-    
+       <img width="200"  src="./img/Prototipo/dashboard1.png">
+    </td>    
     </tr>
 </table>

@@ -2,7 +2,12 @@
 
 <span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>
 
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
+<p>
+    O aplicativo será construido utilizando o framework React-Native, e consumirá dados de uma API, que será construida utilizando a arquitetura do framework .NET e linguagem CSharp.
+    </p>
+    <p>
+    A API será hospedada na plataforma de computação em nuvem Microsoft Azure, e utilizará o bando de dados SQLServer para leitura e armazenamento de dados
+</p>
 
 ![Arquitetura da Solução](img/02-mob-arch.png)
 
