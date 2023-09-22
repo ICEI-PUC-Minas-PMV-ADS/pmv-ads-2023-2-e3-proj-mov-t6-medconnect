@@ -2,7 +2,7 @@
 
 <p>
    O aplicativo será construído utilizando o framework React-Native, e consumirá dados de uma API, que será construída utilizando a arquitetura do framework .NET e linguagem CSharp.
-    </p>
+    </p>    
     <p>
       A API será hospedada na plataforma de computação em nuvem Microsoft Azure, e utilizará o banco de dados SQLServer para leitura e armazenamento de dados.
 </p>
