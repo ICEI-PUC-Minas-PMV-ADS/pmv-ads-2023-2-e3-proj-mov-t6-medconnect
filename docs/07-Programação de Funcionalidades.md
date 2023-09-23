@@ -17,7 +17,7 @@ _Figura 01 - tela Dashboard_
 
 </td>
 <td width="300" >
-<img width="300" height="100%"  src="./img/Programacao/dashboardFonte.png">
+<img width="300" height="100%"  src="./img/programacao/dashboardFonte.png">
 
 _Figura 01 - Codigo fonte_
 
@@ -33,7 +33,7 @@ _Figura 01 - Codigo fonte_
     </tr>
     <tr>
     <td width="300" >
-        <img width="200"  src="./img/prototipo/barrapesquisa.png">
+        <img width="200"  src="./img/Prototipo/barrapesquisa.png">
 
 _Figura 03 - Barra de Pesquisa_
 
