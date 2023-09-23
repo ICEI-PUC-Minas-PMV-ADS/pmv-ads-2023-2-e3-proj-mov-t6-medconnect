@@ -2,7 +2,7 @@
 
 ## Dashboard
 
-###Tela Principal
+### Tela Principal
 
 <table>
     <tr>
@@ -33,13 +33,13 @@ _Figura 01 - Codigo fonte_
     </tr>
     <tr>
     <td width="300" >
-        <img width="200"  src="./img/Prototipo/barrapesquisa.png">
+        <img width="200"  src="./img/prototipo/barrapesquisa.png">
 
 _Figura 03 - Barra de Pesquisa_
 
 </td>
 <td width="300" >
-<img width="300" height="100%"  src="./img/Programacao/Pesquisa.png">
+<img width="300" height="100%"  src="./img/programacao/Pesquisa.png">
 
 _Figura 04 - Codigo fonte_
 
