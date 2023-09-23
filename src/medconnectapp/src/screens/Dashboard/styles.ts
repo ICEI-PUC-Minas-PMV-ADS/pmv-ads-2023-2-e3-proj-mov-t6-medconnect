@@ -29,20 +29,15 @@ export const styles = StyleSheet.create({
 
     borderRadius: 2,
   },
-
-  menuIcons: {
+  containerMenuIcons: {
     backgroundColor: '#FFF',
     width: '95%',
-
-    flexDirection: 'row',
     marginHorizontal: globalMargin.marginHorizontal,
     paddingHorizontal: globalMargin.marginHorizontal,
-    paddingTop: 25,
+    paddingTop: 10,
     paddingBottom: 10,
-    alignSelf: 'center',
     zIndex: 90,
-    justifyContent: 'space-between',
-    alignItems: 'center',
+
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -55,13 +50,16 @@ export const styles = StyleSheet.create({
 
     borderRadius: 2,
   },
+  menuIcons: {
+    flexDirection: 'row',
+    alignSelf: 'center',
+    justifyContent: 'space-between',
+    gap: 10,
+  },
   subtitle: {
     fontSize: 16,
   },
-  box: {
-    height: 300,
-    backgroundColor: '#DDD',
-    margin: 7,
-    borderRadius: 5,
+  menuTitle: {
+    marginBottom: 15,
   },
 });

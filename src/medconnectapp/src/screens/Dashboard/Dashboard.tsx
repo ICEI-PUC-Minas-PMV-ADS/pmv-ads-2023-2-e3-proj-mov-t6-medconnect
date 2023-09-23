@@ -46,24 +46,27 @@ export const DashboardScreen = ({navigation, route} :Props) => {
         </Animated.View>
     
 
-       <View style={styles.menuIcons}>
-          <MenuIcon 
-            icon={require('../../assets/images/medical-team.png')}
-            category={"Profissionais"}
-            background={"#e3ebeb"}  
-          />          
+       <View style={styles.containerMenuIcons}>
+        <Text style={styles.menuTitle}>Menu</Text>
+        <View style={styles.menuIcons}>
+            <MenuIcon 
+              icon={require('../../assets/images/medical-team.png')}
+              category={"Profissionais"}
+              background={"#e3ebeb"}  
+            />          
 
-          <MenuIcon 
-            icon={require('../../assets/images/medical-checkup.png')}
-            category={"Agendamentos"}
-            background={"#e3ebeb"}  
-          />   
+            <MenuIcon 
+              icon={require('../../assets/images/medical-checkup.png')}
+              category={"Agendamentos"}
+              background={"#e3ebeb"}  
+            />   
 
-          <MenuIcon 
-            icon={require('../../assets/images/lungs.png')}
-            category={"Exames"}
-            background={"#e3ebeb"}  
-          />   
+            <MenuIcon 
+              icon={require('../../assets/images/lungs.png')}
+              category={"Exames"}
+              background={"#e3ebeb"}  
+            />   
+          </View>
         </View>
 
         <View style={styles.content}>

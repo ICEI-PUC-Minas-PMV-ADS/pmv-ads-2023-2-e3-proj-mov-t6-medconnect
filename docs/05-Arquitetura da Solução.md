@@ -41,7 +41,7 @@ O Esquema Relacional corresponde à representação dos dados em tabelas juntame
  
 <img width="1200" src="./img/Diagramas/DiagramaER.png">
 
-##### _Figura 2- Modelo Conseitual_
+##### _Figura 2- Esquema Relacional_
 
 ## Modelo Físico
 
