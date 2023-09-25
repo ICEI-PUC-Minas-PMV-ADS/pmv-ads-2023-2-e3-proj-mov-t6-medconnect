@@ -2,7 +2,8 @@ import {createStackNavigator} from "@react-navigation/stack"
 import React from 'react'
 import { IndexScreen } from "../screens/IndexScreen"
 
-import { DashboardScreen, HomeScreen, LoginScreen, RecoverPasswordScreen, RegisterScreen } from "../screens"
+import {RegisterScreen} from "../screens/Register";
+import { DashboardScreen, HomeScreen, LoginScreen, RecoverPasswordScreen } from "../screens"
 import { SideMenu } from "./DrawerNavigation"
 import { ValidarCampos } from "../screens/exemplo"
 import { BottomNavigation } from "./BottomNavigation"
