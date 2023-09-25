@@ -13,6 +13,8 @@
 
 ![Arquitetura da Solução](img/02-mob-arch.png)
 
+##### _Figura 1- Arquitetura da solução_
+
 ## Diagrama de Classes
 
 O diagrama de classes ilustra graficamente como será a estrutura do software, e como cada uma das classes da sua estrutura estarão interligadas. Essas classes servem de modelo para materializar os objetos que executarão na memória.
@@ -21,7 +23,9 @@ O diagrama de classes ilustra graficamente como será a estrutura do software, e
  
 <img width="1000" src="./img/Diagramas/DiagramaClasses.png">
 
-##### _Figura 1- Diagrama de casos de uso_
+##### _Figura 2- Diagrama de casos de uso_
+
+</p>
 
 ## Modelo ER (Projeto Conceitual)
 
@@ -31,7 +35,9 @@ O Modelo ER representa através de um diagrama como as entidades (coisas, objeto
  
 <img width="1000" src="./img/Diagramas/Conseitual.png">
 
-##### _Figura 2- Modelo Conseitual_
+</p>
+
+##### _Figura 3- Modelo Conseitual_
 
 ## Esquema Relacional
 
@@ -41,7 +47,37 @@ O Esquema Relacional corresponde à representação dos dados em tabelas juntame
  
 <img width="1200" src="./img/Diagramas/DiagramaER.png">
 
-##### _Figura 2- Esquema Relacional_
+</p>
+
+##### _Figura 4- Esquema Relacional_
+
+### Processos de Negócio no Padrão BPMN
+
+##### Cadastro/Login
+
+ <p align="center">
+ 
+<img width="1200" src="./img/Diagramas/bpmn1.png">
+
+</p>
+
+##### Agendamento
+
+ <p align="center">
+ 
+<img width="1200" src="./img/Diagramas/bpmn2.png">
+
+</p>
+
+##### Consulta
+
+ <p align="center">
+ 
+<img width="1200" src="./img/Diagramas/bpmn3.png">
+
+</p>
+
+##### _Figura 5- Esquema Relacional_
 
 ## Modelo Físico
 
