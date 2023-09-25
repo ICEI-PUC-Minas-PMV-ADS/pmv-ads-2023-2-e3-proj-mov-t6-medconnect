@@ -16,6 +16,25 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 
 <table >
     <tr >
+       <th>Wireframe Tela Inicial</th>
+       <th>Wireframe Outras Telas</th>
+       <th>Wireframe Menu</th>
+    </tr>
+    <tr>
+    <td width="300" >
+       <img width="200" style="margin-right: 20px"  src="./img/Template/TemplatePadrao.png">
+    </td>
+      <td width="300" >
+        <img width="200" style="margin-right: 20px"  src="./img/Template/TemplatePadrao2.png">
+    </td>
+       <td width="300" >
+       <img width="200" height="450" style="margin-right: 20px" src="./img/Template/TemplatePadrao2Menu.png">
+    </td>
+    </tr>
+</table>
+
+<table >
+    <tr >
        <th>Tela Inicial</th>
        <th>Tela de Login</th>
        <th>Tela de Cadastro</th>
