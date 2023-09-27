@@ -1,56 +1,25 @@
-import React, {useState} from 'react';
-import {View, TextInput, Text, StyleSheet, SafeAreaView, Button, ScrollView, Alert} from "react-native"
-import Icon from 'react-native-vector-icons/Ionicons';
-import {TextInputMask} from 'react-native-masked-text';
-import { useNavigation } from '@react-navigation/native';
+import React, { useState } from 'react';
+import { View, Text, TextInput, Button, StyleSheet, SafeAreaView, ScrollView, Alert } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { TextInputMask } from 'react-native-masked-text';
 
-import {useForm, Controller } from 'react-hook-form'
-import { yupResolver } from '@hookform/resolvers/yup'
-import * as yup from "yup"
+import { insertCadastro } from '../services/ServiceCadastroDb'; 
 
-
-const Schema = yup.object({
-  username: yup.string().required('Informe seu nome.'),
-// email: yup.string().email('Email invalido').required('Informe seu email'),
- /* password: yup
-    .string()
-    .min(6, 'A senha deve ter pelo menos 6 digitos')
-    .required('Informe uma senha.'), */
-});
-
-
-export const RegisterScreen = () => {
-
-
-  const {control, handleSubmit, formState: {errors} }= useForm({
-    resolver: yupResolver(Schema)
-  })
-
-  
+const CadastroScreen = () => {
   const [nome, setNome] = useState('');
   const [sobrenome, setSobrenome] = useState('');
   const [cpf, setCpf] = useState('');
-
+  
   const [email, setEmail] = useState('');
 
-  const navigation = useNavigation()
-  
   const handleCadastrar = async () => {
-
-    Alert.alert('Cadastro realizado com sucesso!');
-    navigation.navigate("Dashboard");
-    
-   /* if (nome && sobrenome && cpf && email) {
+    if (nome && sobrenome && cpf && email) {
       try {
-        const rowsAffected = await insertCadastro({
-          nome,
-          sobrenome,
-          cpf,
-          email,
-        });
+        const rowsAffected = await insertCadastro({ nome, sobrenome, cpf, email });
         if (rowsAffected > 0) {
+          
           Alert.alert('Cadastro realizado com sucesso!');
-
+        
           setNome('');
           setSobrenome('');
           setCpf('');
@@ -65,8 +34,8 @@ export const RegisterScreen = () => {
     } else {
       Alert.alert('Preencha todos os campos antes de cadastrar.');
     }
-    */
   };
+  
 
   return (
     <SafeAreaView style={styles.container}>
@@ -78,29 +47,17 @@ export const RegisterScreen = () => {
 
         <View style={styles.formContainer}>
           <View style={styles.inputContainer}>
-            <Icon name="person" size={20} color="blue" style={styles.icon} />
-         
-            <Controller 
-              control={control}
-              name="username"
-              render={({field: {onChange, onBlur, value}}) => (  
-         
-              <TextInput
-                  style={[styles.input,                
-                        { borderWidth: errors.username && 1,
-                        borderColor: errors.username && '#ff3777'  
-                }]}
-                  placeholder="Nome"
-                  value={value}
-                  onChangeText={onChange}
-                  placeholderTextColor="blue"
-                  />
-                  )}
-              />
-
+            <Ionicons name="person" size={20} color="blue" style={styles.icon} />
+            <TextInput
+              style={styles.input}
+              placeholder="Nome"
+              value={nome}
+              onChangeText={setNome}
+              placeholderTextColor="blue"
+            />
           </View>
           <View style={styles.inputContainer}>
-            <Icon name="person" size={20} color="blue" style={styles.icon} />
+            <Ionicons name="person" size={20} color="blue" style={styles.icon} />
             <TextInput
               style={styles.input}
               placeholder="Sobrenome"
@@ -110,35 +67,30 @@ export const RegisterScreen = () => {
             />
           </View>
           <View style={styles.inputContainer}>
-            <Icon
-              name="lock-closed"
-              size={20}
-              color="blue"
-              style={styles.icon}
-            />
+            <Ionicons name="lock-closed" size={20} color="blue" style={styles.icon} />
             <TextInputMask
               style={styles.input}
               placeholder="CPF (apenas números)"
               type={'cpf'}
               value={cpf}
-              onChangeText={text => setCpf(text)}
+              onChangeText={(text) => setCpf(text)}
               keyboardType="numeric"
               placeholderTextColor="blue"
             />
           </View>
           <View style={styles.inputContainer}>
-            <Icon name="mail" size={20} color="blue" style={styles.icon} />
+            <Ionicons name="mail" size={20} color="blue" style={styles.icon} />
             <TextInput
               style={styles.input}
               placeholder="E-mail"
               value={email}
-              onChangeText={text => setEmail(text)}
+              onChangeText={(text) => setEmail(text)}
               keyboardType="email-address"
               placeholderTextColor="blue"
             />
           </View>
 
-          <Button title="Cadastrar" onPress={handleSubmit(handleCadastrar)} color="blue" />
+          <Button title="Cadastrar" onPress={handleCadastrar} color="blue" />
         </View>
 
         <Text style={styles.loginText}>Já tem cadastro? Faça Login</Text>
@@ -203,3 +155,5 @@ const styles = StyleSheet.create({
     color: 'white',
   },
 });
+
+export default CadastroScreen;
