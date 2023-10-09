@@ -1,31 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, SafeAreaView, ScrollView, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { TextInputMask } from 'react-native-masked-text';
+import axios from 'axios';
 
-import { insertCadastro } from '../services/ServiceCadastroDb'; 
+const apiUrl = 'https://localhost:7009/api/Usuarios';
 
 const CadastroScreen = () => {
   const [nome, setNome] = useState('');
   const [sobrenome, setSobrenome] = useState('');
   const [cpf, setCpf] = useState('');
-  
   const [email, setEmail] = useState('');
 
   const handleCadastrar = async () => {
     if (nome && sobrenome && cpf && email) {
+      const data = {
+        nome,
+        sobrenome,
+        cpf,
+        email,
+      };
+
       try {
-        const rowsAffected = await insertCadastro({ nome, sobrenome, cpf, email });
-        if (rowsAffected > 0) {
-          
+        const response = await axios.post(apiUrl, data);
+
+        if (response.status === 200) {
           Alert.alert('Cadastro realizado com sucesso!');
-        
           setNome('');
           setSobrenome('');
           setCpf('');
           setEmail('');
         } else {
-          Alert.alert('Não foi possível cadastrar.');
+          Alert.alert('Não foi possível cadastrar. Motivo:', response.data.message || 'Erro desconhecido');
         }
       } catch (error) {
         console.error('Erro ao cadastrar:', error);
@@ -35,7 +41,51 @@ const CadastroScreen = () => {
       Alert.alert('Preencha todos os campos antes de cadastrar.');
     }
   };
-  
+
+  const handleGetUsuarios = async () => {
+    try {
+      const response = await axios.get(apiUrl);
+      console.log('Usuários:', response.data);
+    } catch (error) {
+      console.error('Erro ao obter usuários:', error);
+    }
+  };
+
+  const handlePutUsuario = async (id) => {
+   
+    const data = {
+      nome: 'Novo Nome',
+      sobrenome: 'Novo Sobrenome',
+      cpf: '12345678901',
+      email: 'novemail@example.com'
+    };
+
+    try {
+      const response = await axios.put(`${apiUrl}/${id}`, data);
+
+      if (response.status === 200) {
+        console.log('Usuário atualizado com sucesso!');
+      } else {
+        console.error('Não foi possível atualizar o usuário. Motivo:', response.data.message || 'Erro desconhecido');
+      }
+    } catch (error) {
+      console.error('Erro ao atualizar usuário:', error);
+    }
+  };
+
+  const handleDeleteUsuario = async (id) => {
+    try {
+      await axios.delete(`${apiUrl}/${id}`);
+      console.log('Usuário excluído com sucesso.');
+    } catch (error) {
+      console.error('Erro ao excluir usuário:', error);
+    }
+  };
+
+  useEffect(() => {
+   
+    handleGetUsuarios();
+  }, []);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -92,8 +142,6 @@ const CadastroScreen = () => {
 
           <Button title="Cadastrar" onPress={handleCadastrar} color="blue" />
         </View>
-
-        <Text style={styles.loginText}>Já tem cadastro? Faça Login</Text>
       </ScrollView>
     </SafeAreaView>
   );
@@ -148,11 +196,6 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginRight: 10,
-  },
-  loginText: {
-    marginTop: 20,
-    textAlign: 'center',
-    color: 'white',
   },
 });
 
