@@ -1,8 +1,9 @@
 import {useEffect} from 'react'
 import {createDrawerNavigator} from "@react-navigation/drawer"
-import { DashboardScreen, RegisterScreen } from '../screens'
+import { DashboardScreen, RegisterScreen, SearchScreen } from '../screens'
 import { useWindowDimensions } from 'react-native'
 import { StackScreenProps } from '@react-navigation/stack'
+import CadastroScreen from '../screens/Register/components/CadastroScreen'
 
 export const SideMenu = () => {
 
@@ -13,8 +14,8 @@ export const SideMenu = () => {
   return (
     <Drawer.Navigator 
       screenOptions={{headerShown:false }}  >
-        <Drawer.Screen name="Dashboard" component={DashboardScreen} />          
-        <Drawer.Screen name="Cadastro" component={RegisterScreen} />          
+        <Drawer.Screen name="Dashboard" component={DashboardScreen} />                 
+        <Drawer.Screen name="Cadastro" component={CadastroScreen} />          
     </Drawer.Navigator>
   )
 }

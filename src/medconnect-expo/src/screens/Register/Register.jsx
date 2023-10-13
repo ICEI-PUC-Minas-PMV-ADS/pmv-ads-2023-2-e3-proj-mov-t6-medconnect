@@ -77,7 +77,10 @@ export const RegisterScreen = () => {
         </View>
 
         <View style={styles.formContainer}>
-          <View style={styles.inputContainer}>
+          <View style={[styles.inputContainer,               
+                        { borderWidth: errors.username && 1,
+                        borderColor: errors.username && '#ff3777'  
+                }] }>
             <Icon name="person" size={20} color="blue" style={styles.icon} />
          
             <Controller 
@@ -86,10 +89,7 @@ export const RegisterScreen = () => {
               render={({field: {onChange, onBlur, value}}) => (  
          
               <TextInput
-                  style={[styles.input,                
-                        { borderWidth: errors.username && 1,
-                        borderColor: errors.username && '#ff3777'  
-                }]}
+                 
                   placeholder="Nome"
                   value={value}
                   onChangeText={onChange}
@@ -101,12 +101,19 @@ export const RegisterScreen = () => {
           </View>
           <View style={styles.inputContainer}>
             <Icon name="person" size={20} color="blue" style={styles.icon} />
-            <TextInput
-              style={styles.input}
-              placeholder="Sobrenome"
-              value={sobrenome}
-              onChangeText={setSobrenome}
-              placeholderTextColor="blue"
+
+            <Controller 
+              control={control}
+              name="lastname"
+              render={({field: {onChange, onBlur, value}}) => (  
+              <TextInput
+                style={styles.input}
+                placeholder="Sobrenome"
+                value={value}
+                onChangeText={onChange}
+                placeholderTextColor="blue"
+              />
+              )}
             />
           </View>
           <View style={styles.inputContainer}>
