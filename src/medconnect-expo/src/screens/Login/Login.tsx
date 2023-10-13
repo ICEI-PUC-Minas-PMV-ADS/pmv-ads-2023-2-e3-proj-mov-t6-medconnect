@@ -1,14 +1,28 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, TouchableOpacity, StyleSheet, Image, Dimensions } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
+import {useForm, Controller } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
+
+import {Schema} from "./ValidateSchema";
 
 export const LoginScreen = () => {
+
+  const navigation = useNavigation()
+
+  const {control, handleSubmit, formState: {errors} }= useForm({
+    resolver: yupResolver(Schema)
+  })
+
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
+  const handleLogin = (data: any) => {
+    const {username, password} = data
     if (username === 'usuario' && password === 'senha') {
-      alert('Login bem-sucedido');
+       navigation.navigate("Dashboard");
     } else {
       alert('Login falhou. Verifique seu usuário e senha.');
     }
@@ -31,31 +45,60 @@ export const LoginScreen = () => {
           style={styles.logo}
         />
         <Text style={styles.title}>Tela de Login</Text>
-        <View style={styles.inputContainer}>
-          <TextInput
-            style={styles.input}
-            placeholder="Usuário"
-            placeholderTextColor="gray"
-            onChangeText={(text) => setUsername(text)}
-            value={username}
+        <View style={[styles.inputContainer,
+          { borderWidth: errors.username && 1,
+            borderColor: errors.username && '#ff3777'}
+          ]}>
+          
+        <Controller 
+              control={control}
+              name="username"
+              render={({field: {onChange, onBlur, value}}) => (  
+
+                <TextInput
+                  style={[styles.input ]}
+                  placeholder="Usuário"
+                  placeholderTextColor="gray"
+                  onChangeText={onChange}
+                  value={value}
+                />
+
+          )}
           />
           <AntDesign name="user" size={24} color="gray" style={styles.icon} />
         </View>
-        <View style={styles.inputContainer}>
-          <TextInput
-            style={styles.input}
-            placeholder="Senha"
-            placeholderTextColor="gray"
-            secureTextEntry={true}
-            onChangeText={(text) => setPassword(text)}
-            value={password}
-          />
+        
+        { errors.username && <Text> { errors.username.message} </Text>}
+
+        <View style={[styles.inputContainer,
+          { borderWidth: errors.password && 1,
+            borderColor: errors.password && '#ff3777'}
+          ]}>
+        <Controller 
+              control={control}
+              name="password"
+              render={({field: {onChange, onBlur, value}}) => (  
+
+              <TextInput
+                style={styles.input}
+                placeholder="Senha"
+                placeholderTextColor="gray"
+                secureTextEntry={true}
+                onChangeText={onChange}
+                value={value}
+              />
+              
+              )}             
+           />
+          
           <AntDesign name="lock" size={24} color="gray" style={styles.icon} />
         </View>
+        { errors.password && <Text> { errors.password.message} </Text>}
+
         <TouchableOpacity onPress={handleForgotPassword}>
           <Text style={styles.forgotPassword}>Esqueceu a senha?</Text>
         </TouchableOpacity>
-        <Button title="Login" onPress={handleLogin} color="#4C4DDC" />
+        <Button title="Login" onPress={handleSubmit(handleLogin)} color="#4C4DDC" />
         <Text style={styles.createAccount}>
           Não tem cadastro? <Text style={styles.link}>Clique aqui</Text>
         </Text>
