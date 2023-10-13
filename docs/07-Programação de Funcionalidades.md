@@ -70,19 +70,17 @@ _Figura 03 - tela Cadastro_
 <table>
     <tr>
        <th>Tela Dashboard</th>
-       <th><a href="https://github.com/pauloosilas/pmv-ads-2023-2-e3-proj-mov-t6-medconnect/blob/main/src/medconnectapp/src/screens/Dashboard/Dashboard.tsx">Link do Código Fonte</a></span></th>       
+       <th><a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t6-medconnect/blob/main/src/medconnect-expo/src/screens/Dashboard/Dashboard.tsx">Link do Código Fonte</a></th>       
     </tr>
     <tr>
     <td width="300" >
-        <img width="200"  src="./img/Prototipo/dashboard1.png">
+       <img width="300" height="100%"  src="./img/programacao/dashboardFonte.png">
 
 _Figura 04 - tela Dashboard_
 
 </td>
 <td width="300" >
-<img width="300" height="100%"  src="./img/programacao/dashboardFonte.png">
-
-_Figura 05 - Codigo fonte_
+<a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t6-medconnect/blob/main/src/medconnect-expo/src/screens/Dashboard/Dashboard.tsx">Link do Código Fonte</a></th>
 
 </td>
 </tr>
