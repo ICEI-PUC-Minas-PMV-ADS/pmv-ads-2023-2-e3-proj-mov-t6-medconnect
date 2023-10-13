@@ -47,7 +47,7 @@ export const LoginScreen = () => {
         <Text style={styles.title}>Tela de Login</Text>
         <View style={[styles.inputContainer,
           { borderWidth: errors.username && 1,
-            borderColor: errors.username && '#ff3777'}
+            borderColor: errors.username && 'red'}
           ]}>
           
         <Controller 
@@ -72,7 +72,7 @@ export const LoginScreen = () => {
 
         <View style={[styles.inputContainer,
           { borderWidth: errors.password && 1,
-            borderColor: errors.password && '#ff3777'}
+            borderColor: errors.password && 'red'}
           ]}>
         <Controller 
               control={control}
