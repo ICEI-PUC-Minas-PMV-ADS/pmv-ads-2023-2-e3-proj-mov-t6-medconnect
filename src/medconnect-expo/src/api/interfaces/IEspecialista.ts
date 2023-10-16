@@ -4,5 +4,5 @@ export interface IEspecialista {
   sobrenome: string;
   atendimentos: any;
   descricaoCurta: string;
-  fotoPerfil: string;
+  fotoPerfil: any;
 }

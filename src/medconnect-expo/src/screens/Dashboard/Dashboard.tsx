@@ -29,7 +29,7 @@ export const DashboardScreen = ({navigation, route} :Props) => {
 
   }, [])
 
-  
+  console.log(especialistas)
   const [scrollY, setScrollY] = useState(new Animated.Value(0))
   return (
     <SafeAreaView>
@@ -112,14 +112,14 @@ export const DashboardScreen = ({navigation, route} :Props) => {
                keyExtractor={card => card.especialistaId}              
               /> */}
 
-        {especialistas.map((card) =>  (
+        {especialistas.map((especialista) =>  (
            
                <Card 
-                key={card.especialistaId}
+                key={especialista.especialistaId}
                 image = {require("../../assets/images/persona02.png")}
-                nome = {card.nome} 
-                sobrenome={card.sobrenome}
-                descricaoCurta = {card.descricaoCurta}
+                nome = {especialista.nome} 
+                sobrenome={especialista.sobrenome}
+                descricaoCurta = {especialista.descricaoCurta}
                 categoria="Cirurgia Plastica"   
               />  
               

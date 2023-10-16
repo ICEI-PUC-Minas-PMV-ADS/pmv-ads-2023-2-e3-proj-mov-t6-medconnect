@@ -1,11 +1,9 @@
 import {useEffect, useState} from 'react';
 import { DrawerScreenProps } from '@react-navigation/drawer';
-import {Animated, SafeAreaView, ScrollView, Text, View }from 'react-native';
-import { Carousel } from '../../components/carousel/Carousel';
+import {Animated, SafeAreaView, ScrollView, Text, View, TouchableOpacity }from 'react-native';
 import { HeaderContainer } from '../../components/header/HeaderContainer';
 import { styles } from './styles';
 import { Card } from '../../components/Card';
-import { MenuIcon } from '../../components/MenuIconsCategories';
 import { useAuth } from '../../hooks/useAuth';
 import { FlatList } from 'react-native-gesture-handler';
 import { IEspecialista } from '../../api/interfaces';
@@ -15,6 +13,7 @@ import { Search } from '../../components/Search';
 interface Props extends DrawerScreenProps<any, any>{}
 
 export const SearchScreen = ({navigation, route} :Props) => {
+ 
   const { getAllEspecialistas } = useAuth();
   const [especialistas, setEspecialistas] = useState<IEspecialista[]>([]);
   const [espResult, setEspResult] = useState<IEspecialista[]>([]);
@@ -71,17 +70,23 @@ export const SearchScreen = ({navigation, route} :Props) => {
        <View style={styles.containerMenuIcons}>
         <Text style={styles.menuTitle}>Resultados para a Pesquisa</Text>
       
-        {espResult.map((card) =>  (
-           
-           <Card 
-            key={card.especialistaId}
-            image = {require("../../assets/images/persona02.png")}
-            nome = {card.nome} 
-            sobrenome={card.sobrenome}
-            descricaoCurta = {card.descricaoCurta}
-            categoria="Cirurgia Plastica"   
-          />  
+        {espResult.map((espec) =>  (
+         
+         <TouchableOpacity onPress={() => navigation.navigate("Specialist", 
+              {especialista:espec})
+            }>
+
+            <Card 
+              key={espec.especialistaId}
+              image = {require("../../assets/images/persona02.png")}
+              nome = {espec.nome} 
+              sobrenome={espec.sobrenome}
+              descricaoCurta = {espec.descricaoCurta}
+              categoria="Cirurgia Plastica"   
+            />  
           
+          
+         </TouchableOpacity>
           ))     
     }
 
