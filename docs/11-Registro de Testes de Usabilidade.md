@@ -4,5 +4,9 @@ Após realizar os testes de usabilidade, obtém-se um relatório a partir das an
 
 As referências abaixo irão auxiliá-lo na geração do artefato “Registro de Testes de Usabilidade”.
 
-> **Links Úteis**:
-> - [Ferramentas de Testes de Usabilidade](https://www.usability.gov/how-to-and-tools/resources/templates.html)
+## Avaliação Funcional.
+
+| Atividade a ser realizada                                                        | Feedback do usuário                                   | Considerações (quais os problemas, deficiências, limitações, etc) | Sugestão de melhorias |
+| -------------------------------------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------- | --------------------- |
+| Cadastro de usuário - Campos obrigatórios: Nome, Sobrenome, CPF, E-mail, e Senha | Consegui criar minha conta no Aplicativo              | Nenhum observado                                                  | Nenhum observado      |
+| Realizar login - Campos obrigatórios: Usuário e senha                            | Realizei o login na aplicação sem eventuais problemas | Nenhum observado                                                  | Nenhum observado      |
