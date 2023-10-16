@@ -14,7 +14,7 @@ import { Search } from '../../components/Search';
 
 interface Props extends DrawerScreenProps<any, any>{}
 
-export const DashboardScreen = ({navigation, route} :Props) => {
+export const SpecialistScreen = ({navigation, route} :Props) => {
   const { getAllEspecialistas } = useAuth();
   const [especialistas, setEspecialistas] = useState<IEspecialista[]>([]);
   
@@ -29,7 +29,8 @@ export const DashboardScreen = ({navigation, route} :Props) => {
 
   }, [])
 
-  
+
+ 
   const [scrollY, setScrollY] = useState(new Animated.Value(0))
   return (
     <SafeAreaView>
@@ -60,8 +61,8 @@ export const DashboardScreen = ({navigation, route} :Props) => {
               })
             }
         ]}>
-          <HeaderContainer route={route} navigation={navigation}> 
-            <Search />
+          <HeaderContainer route={route} navigation={navigation}>
+            <Search data={especialistas} setDataResult={especialistas} />
           </HeaderContainer>      
         </Animated.View>
     
