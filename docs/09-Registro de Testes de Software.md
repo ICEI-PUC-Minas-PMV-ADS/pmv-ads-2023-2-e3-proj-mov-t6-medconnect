@@ -10,8 +10,20 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 
 ##### _Figura 01 - Caso de Teste 01 - login inválido_
 
+##### Registro do Teste 01.
+
+<img width="800"  src="./img/programacao/LoginFalhou.png">
+
+##### _Figura 02 - Registro do Teste 01 - login inválido_
+
 ### Teste 02: Tentativa de login, sem informar dados.
 
  <img width="800"  src="./img/Testes/LoginCamposVazios.png">
 
-##### _Figura 02 - Caso de Teste 02 - campos vazios_
+##### _Figura 02 - Caso de Teste 02 campos vazios_
+
+### Registro do Teste 02.
+
+ <img width="800"  src="./img/programacao/CamposVazios.png">
+
+##### _Figura 02 - Registro do Teste 02, campos vazios_
