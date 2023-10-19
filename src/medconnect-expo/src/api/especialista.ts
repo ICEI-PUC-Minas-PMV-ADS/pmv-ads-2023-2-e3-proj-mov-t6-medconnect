@@ -1,7 +1,8 @@
+import { IP_SERVER } from "../../config/env.ts";
 export class Especialista {
   async getAll() {
     try {
-      const url = "http://192.168.1.6:5000/api/especialistas";
+      const url = `http://${IP_SERVER}:5000/api/especialistas`;
       const params = {
         method: "GET",
         headers: {},
@@ -12,6 +13,7 @@ export class Especialista {
       if (response.status !== 200) throw Error;
 
       return result;
+      console.log(result);
     } catch (error) {
       console.log("Error", error);
       throw error;

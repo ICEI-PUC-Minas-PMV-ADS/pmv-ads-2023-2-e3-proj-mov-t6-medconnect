@@ -9,6 +9,7 @@ import { MenuIcon } from '../../components/MenuIconsCategories';
 import { useAuth } from '../../hooks/useAuth';
 import { FlatList } from 'react-native-gesture-handler';
 import { IEspecialista } from '../../api/interfaces';
+import { Search } from '../../components/Search';
 
 
 interface Props extends DrawerScreenProps<any, any>{}
@@ -25,10 +26,10 @@ export const DashboardScreen = ({navigation, route} :Props) => {
   
   useEffect(() => {
     getEspecialistas()
+
   }, [])
 
-
- 
+  console.log(especialistas)
   const [scrollY, setScrollY] = useState(new Animated.Value(0))
   return (
     <SafeAreaView>
@@ -59,7 +60,9 @@ export const DashboardScreen = ({navigation, route} :Props) => {
               })
             }
         ]}>
-          <HeaderContainer route={route} navigation={navigation} />      
+          <HeaderContainer route={route} navigation={navigation}> 
+            <Search />
+          </HeaderContainer>      
         </Animated.View>
     
 
@@ -109,13 +112,14 @@ export const DashboardScreen = ({navigation, route} :Props) => {
                keyExtractor={card => card.especialistaId}              
               /> */}
 
-        {especialistas.map((card) =>  (
+        {especialistas.map((especialista) =>  (
            
                <Card 
+                key={especialista.especialistaId}
                 image = {require("../../assets/images/persona02.png")}
-                nome = {card.nome} 
-                sobrenome={card.sobrenome}
-                descricaoCurta = {card.descricaoCurta}
+                nome = {especialista.nome} 
+                sobrenome={especialista.sobrenome}
+                descricaoCurta = {especialista.descricaoCurta}
                 categoria="Cirurgia Plastica"   
               />  
               

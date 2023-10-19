@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\medconnect.API.props" />
+</Project>
