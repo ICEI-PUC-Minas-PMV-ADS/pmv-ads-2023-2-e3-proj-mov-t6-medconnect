@@ -11,6 +11,7 @@ export function AuthProvider(props){
     const { children } = props;
     const [user, setUser] = useState(null)
   
+    
     const getAllEspecialistas = async() => {
         
         try {
