@@ -3,7 +3,7 @@ import React from 'react'
 import { IndexScreen } from "../screens/IndexScreen"
 
 import {RegisterScreen} from "../screens/Register";
-import { DashboardScreen, HomeScreen, LoginScreen, RecoverPasswordScreen, ScheduleScreen, SearchScreen, SpecialistScreen } from "../screens"
+import { AppointmentScreen, DashboardScreen, HomeScreen, LoginScreen, RecoverPasswordScreen, SearchScreen, SpecialistScreen } from "../screens"
  
 import { ValidarCampos } from "../screens/exemplo"
 import { BottomNavigation } from "./BottomNavigation"
@@ -23,7 +23,7 @@ export const StackNavigation = () => {
         <Stack.Screen name="Search" component={SearchScreen} />
         <Stack.Screen name="ValidarCampos" component={ValidarCampos} />
         <Stack.Screen name="Specialist" component={SpecialistScreen} />
-        <Stack.Screen name="Schedule" component={ScheduleScreen} />
+        <Stack.Screen name="Appointment" component={AppointmentScreen} />
     </Stack.Navigator>
   )
 }

@@ -72,12 +72,12 @@ export const SearchScreen = ({navigation, route} :Props) => {
       
         {espResult.map((espec) =>  (
          
-         <TouchableOpacity onPress={() => navigation.navigate("Specialist", 
+         <TouchableOpacity   key={espec.especialistaId} onPress={() => navigation.navigate("Specialist", 
               {especialista:espec})
             }>
 
             <Card 
-              key={espec.especialistaId}
+             
               image = {require("../../assets/images/persona02.png")}
               nome = {espec.nome} 
               sobrenome={espec.sobrenome}

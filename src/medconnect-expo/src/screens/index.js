@@ -5,4 +5,4 @@ export * from "./RecoverPassword";
 export * from "./Dashboard";
 export * from "./Search";
 export * from "./Specialist";
-export * from "./ScheduleAppointment";
+export * from "./Appointment";

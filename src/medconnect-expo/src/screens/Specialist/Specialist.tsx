@@ -17,7 +17,7 @@ export const SpecialistScreen = ({navigation, route} :Props) => {
   const { especialista } = route.params;
 
   const goAgendamento = () => {
-    navigation.navigate("Schedule", {especialista:especialista})
+    navigation.navigate("Appointment", {especialista:especialista})
   }
  
   const [scrollY, setScrollY] = useState(new Animated.Value(0))

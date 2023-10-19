@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { globalStyles } from '../../../theme';
 export function HomeScreen() {
 
   const navigation = useNavigation();
@@ -62,7 +63,7 @@ export function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#2E52D0",
+    backgroundColor: globalStyles.primaryColor,
     flexDirection: 'column',
   },
   header: {

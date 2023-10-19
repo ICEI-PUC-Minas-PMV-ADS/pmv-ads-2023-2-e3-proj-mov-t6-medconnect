@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { globalStyles } from "../../../theme";
 import { globalMargin } from "../../../theme/global.margin";
 
 export const styles = StyleSheet.create({
@@ -52,16 +53,32 @@ export const styles = StyleSheet.create({
 
     borderRadius: 2,
   },
-  menuIcons: {
-    flexDirection: "row",
-    alignSelf: "center",
-    justifyContent: "space-between",
-    gap: 10,
-  },
+
   subtitle: {
     fontSize: 16,
   },
   menuTitle: {
     marginBottom: 15,
+  },
+
+  pedidoConsulta: {},
+
+  btnHours: {
+    flexDirection: "row",
+    width: 400,
+    height: 100,
+  },
+  btnHour: {
+    width: 80,
+    height: 30,
+    backgroundColor: globalStyles.primaryColor,
+    borderRadius: 3,
+    marginVertical: 2,
+    marginRight: 2,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  textHour: {
+    color: "#fff",
   },
 });

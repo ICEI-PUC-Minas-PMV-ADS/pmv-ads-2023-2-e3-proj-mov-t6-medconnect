@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "X6rT1MIM0DC2ap88YGLzMLfg5b2pmkKJgJgtcW17KMU=",
+  "Source": "medconnect.API",
+  "BasePath": "_content/medconnect.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
