@@ -1,8 +1,8 @@
 import { createContext, useState } from "react";
-import { Especialista, Consulta } from "../api";
+import { Especialista } from "../api";
 
 const especialistaController = new Especialista();
-const consultaController = new Consulta();
+ 
 
 export const AuthContext = createContext();
 
@@ -15,10 +15,7 @@ export function AuthProvider(props){
     const getAllEspecialistas = async() => {
         
         try {
-
-          const response = await especialistaController.getAll();  
-          const response2 = await consultaController.AddConsulta();
-          console.log(response2)       
+          const response = await especialistaController.getAll();              
           return response;       
 
         } catch (error) {

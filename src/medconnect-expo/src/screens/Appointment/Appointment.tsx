@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import { DrawerScreenProps } from '@react-navigation/drawer';
-import {Animated, SafeAreaView, ScrollView, Text, View, Image, Button, FlatList }from 'react-native';
+import {Animated, SafeAreaView, ScrollView, Text, View, Image, Button, FlatList, Alert }from 'react-native';
 import { Carousel } from '../../components/carousel/Carousel';
 import { HeaderContainer } from '../../components/header/HeaderContainer';
 import { styles } from './styles';
@@ -10,28 +10,32 @@ import { Search } from '../../components/Search';
 import { ButtonPrimary } from '../../components/Buttons';
 import { Calendario } from '../../components/Calendar/Calendar';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Consulta } from '../../api';
 
 interface Props extends DrawerScreenProps<any, any>{}
 
 export const AppointmentScreen = ({navigation, route} :Props) => {
   route.params.especialista.fotoPerfil = require("../../assets/images/persona02.png");
   const { especialista } = route.params;
+
+  const consultaController = new Consulta();
   
   const [dataAgendamento, setDataAgendamento] = useState("");
+  const [horaAgendamento, setHoraAgendamento] = useState("");
 
-  console.log(especialista.atendimentos)
   const [scrollY, setScrollY] = useState(new Animated.Value(0))
   
-  const dateAtend = (data:string) => {
-    let dateAt = new Date(data);
-    return (dateAt.getDate() + " / " + (dateAt.getMonth() + 1) + " / " +  dateAt.getFullYear())
-  }
-
+ 
   const timeAtend = (data:string) => {
     let dateAt = new Date(data);
-    return (dateAt.getHours() + "h" + (dateAt.getMinutes() + 1))
+    return (dateAt.getHours() + ":" + (dateAt.getMinutes()))
   }
 
+  const sendConsulta = async () =>{
+    (dataAgendamento.trim().length > 0 && horaAgendamento.trim().length > 0) 
+      ? await consultaController.newConsulta(dataAgendamento+"T"+horaAgendamento)
+      : Alert.alert("Por favor, escolha um dia e horário...");
+  }
 
   return (
     <SafeAreaView>
@@ -73,9 +77,7 @@ export const AppointmentScreen = ({navigation, route} :Props) => {
            <Image source={especialista.fotoPerfil} /> 
            <Text style={styles.menuTitle}>Dr: {especialista.nome} {especialista.sobrenome} </Text>
           
-         
-          
-          <ScrollView>
+       <ScrollView>
 
           <View style={styles.pedidoConsulta}>
               <Text>Data da consulta:</Text>
@@ -92,7 +94,7 @@ export const AppointmentScreen = ({navigation, route} :Props) => {
             {
               especialista.atendimentos.map((ag:any) => 
               (
-                  <TouchableOpacity style={styles.btnHour} >
+                  <TouchableOpacity onPress={() => setHoraAgendamento(timeAtend(ag.dataAtendimento))} style={styles.btnHour} >
                     <Text style={styles.textHour}>{timeAtend(ag.dataAtendimento)}</Text>                 
                   </TouchableOpacity>
               ))
@@ -102,10 +104,11 @@ export const AppointmentScreen = ({navigation, route} :Props) => {
             <Text>Data da consulta:</Text>
             <Text>{dataAgendamento}</Text>
             <Text>Horario da consulta:</Text>
-            <Text>{dataAgendamento}</Text>
+            <Text>{horaAgendamento}</Text>
             <Text>Data do Agendamento:{Date.now()}</Text>
+           
             <ButtonPrimary 
-               onPress={{}}
+               onPress={() => sendConsulta()}
                textButton='Confirmar Agendamento'/>
 
             {/*

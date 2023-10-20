@@ -5,7 +5,6 @@ import { HeaderContainer } from '../../components/header/HeaderContainer';
 import { styles } from './styles';
 import { Card } from '../../components/Card';
 import { useAuth } from '../../hooks/useAuth';
-import { FlatList } from 'react-native-gesture-handler';
 import { IEspecialista } from '../../api/interfaces';
 import { Search } from '../../components/Search';
 
@@ -76,9 +75,8 @@ export const SearchScreen = ({navigation, route} :Props) => {
               {especialista:espec})
             }>
 
-            <Card 
-             
-              image = {require("../../assets/images/persona02.png")}
+            <Card              
+              image = {espec.fotoPerfil}
               nome = {espec.nome} 
               sobrenome={espec.sobrenome}
               descricaoCurta = {espec.descricaoCurta}
