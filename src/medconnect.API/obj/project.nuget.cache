@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BexE+LB2wysht5yyZlQah0TWAcfhlE/wHygDY7z2Im5Ayy1Jgd+haaDhPRMVUPcxGSaalNvFMxu2yzhG3ibEag==",
+  "dgSpecHash": "uX9z1jOy8iR4iI9CdCgw9RhBjSpKURXOomE1k5rH/Noq3fY+qD+tanRWqbWdiy2EggFrB7gokHkHpdJiVQ8yEA==",
   "success": true,
-  "projectFilePath": "E:\\Users\\Paulo\\Documents\\ProjetosProgramacao\\dotnet\\medconnect.API\\medconnect.API.csproj",
+  "projectFilePath": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\medconnect.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\paulo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\paulo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.23\\microsoft.aspnetcore.cryptography.internal.6.0.23.nupkg.sha512",

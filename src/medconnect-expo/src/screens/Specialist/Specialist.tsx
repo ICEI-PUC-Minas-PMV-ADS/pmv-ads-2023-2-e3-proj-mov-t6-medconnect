@@ -9,17 +9,20 @@ import { IEspecialista } from '../../api/interfaces';
 import { Search } from '../../components/Search';
 import { ButtonPrimary } from '../../components/Buttons';
 
+import { publicFiles } from "../../../config/env.ts";
+import { SpecialistInfo } from '../../components/SpecialistInfo';
 
 interface Props extends DrawerScreenProps<any, any>{}
 
 export const SpecialistScreen = ({navigation, route} :Props) => {
-  route.params.especialista.fotoPerfil = require("../../assets/images/persona02.png");
+ 
   const { especialista } = route.params;
 
   const goAgendamento = () => {
     navigation.navigate("Appointment", {especialista:especialista})
   }
- 
+
+ console.log(`${publicFiles}${especialista.fotoPerfil}`)
   const [scrollY, setScrollY] = useState(new Animated.Value(0))
   return (
     <SafeAreaView>
@@ -58,9 +61,14 @@ export const SpecialistScreen = ({navigation, route} :Props) => {
 
        <View style={styles.body}>
 
-           <Image source={especialista.fotoPerfil} /> 
-           <Text style={styles.menuTitle}>Dr: {especialista.nome} {especialista.sobrenome} </Text>
-           <Text>{especialista.descricaoCurta}</Text> 
+        <SpecialistInfo 
+            nome={especialista.nome}
+            sobrenome={especialista.sobrenome}
+            image={especialista.fotoPerfil}
+            descricaoCurta={especialista.descricaoCurta}
+            categoria="Cirurgia Plastica"  
+        />
+         
        
             <ButtonPrimary 
                onPress={goAgendamento}

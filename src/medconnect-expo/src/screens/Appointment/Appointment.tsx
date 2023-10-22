@@ -1,21 +1,22 @@
 import {useEffect, useState} from 'react';
 import { DrawerScreenProps } from '@react-navigation/drawer';
 import {Animated, SafeAreaView, ScrollView, Text, View, Image, Button, FlatList, Alert }from 'react-native';
-import { Carousel } from '../../components/carousel/Carousel';
+
 import { HeaderContainer } from '../../components/header/HeaderContainer';
 import { styles } from './styles';
 
-import { IEspecialista } from '../../api/interfaces';
-import { Search } from '../../components/Search';
 import { ButtonPrimary } from '../../components/Buttons';
 import { Calendario } from '../../components/Calendar/Calendar';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Consulta } from '../../api';
+import { Card } from '../../components/Card';
+import { publicFiles } from '../../../config/env';
+
 
 interface Props extends DrawerScreenProps<any, any>{}
 
 export const AppointmentScreen = ({navigation, route} :Props) => {
-  route.params.especialista.fotoPerfil = require("../../assets/images/persona02.png");
+  
   const { especialista } = route.params;
 
   const consultaController = new Consulta();
@@ -37,6 +38,7 @@ export const AppointmentScreen = ({navigation, route} :Props) => {
       : Alert.alert("Por favor, escolha um dia e horário...");
   }
 
+  
   return (
     <SafeAreaView>
       <View style={styles.container}>
@@ -74,9 +76,8 @@ export const AppointmentScreen = ({navigation, route} :Props) => {
 
        <View style={styles.body}>
 
-           <Image source={especialista.fotoPerfil} /> 
-           <Text style={styles.menuTitle}>Dr: {especialista.nome} {especialista.sobrenome} </Text>
-          
+        <Image style={{width: 100, height: 150}} source={{uri : `${publicFiles}/${especialista.fotoPerfil}`}} />    
+        <Text>{especialista.nome} {especialista.sobrenome}</Text>  
        <ScrollView>
 
           <View style={styles.pedidoConsulta}>
@@ -94,7 +95,7 @@ export const AppointmentScreen = ({navigation, route} :Props) => {
             {
               especialista.atendimentos.map((ag:any) => 
               (
-                  <TouchableOpacity onPress={() => setHoraAgendamento(timeAtend(ag.dataAtendimento))} style={styles.btnHour} >
+                  <TouchableOpacity key={ag.dataAtendimento} onPress={() => setHoraAgendamento(timeAtend(ag.dataAtendimento))} style={styles.btnHour} >
                     <Text style={styles.textHour}>{timeAtend(ag.dataAtendimento)}</Text>                 
                   </TouchableOpacity>
               ))

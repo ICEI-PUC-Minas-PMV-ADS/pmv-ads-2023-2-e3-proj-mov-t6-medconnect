@@ -1,15 +1,34 @@
-import { TextInput, View } from "react-native"
+import { useEffect, useState } from "react"
+import { TextInput, View, TouchableOpacity } from "react-native"
+import { useNavigation } from "@react-navigation/native"
 import { createFilter } from "react-search-input"
 import Icon from "react-native-vector-icons/Ionicons"
 import { styles } from "./styles"
+import { IEspecialista } from "../../api/interfaces"
 
-export const Search = ({data, setDataResult}: any) => {
+type searchData = {
+  data: IEspecialista[],
+  especialistasRes: IEspecialista[],
+  setDataResult: any,
+}
+
+export const Search = ({data, setDataResult, especialistasRes}: searchData) => {
  
-  const KEYS = ["nome", "sobrenome", "descricaoCurta"]
+  const navigation = useNavigation();
+  const KEYS = ["nome", "sobrenome", "descricaoCurta"];
+
+  useEffect(() => {
+    console.log("==================================>>", especialistasRes)
+    {especialistasRes.length < data.length ? setDataResult(especialistasRes) : setDataResult(data)}
+  },[especialistasRes])
 
   const onSearch = (text:string) => {
-   const resultSearch = data.filter(createFilter(text, KEYS));
-   setDataResult(resultSearch);
+    const resultSearch = data.filter(createFilter(text, KEYS));
+    setDataResult(resultSearch);
+   }
+
+  const sendSearch = () => {
+    navigation.navigate("Search", {especialistasRes:especialistasRes})
   }
 
   return (
@@ -20,14 +39,18 @@ export const Search = ({data, setDataResult}: any) => {
         style={styles.inputSearch}
         onChangeText={(text) => onSearch(text)}
       />
-      <View  style={styles.searchIcon}>
+      <TouchableOpacity onPress={() => sendSearch()} style={styles.searchIcon}>
         <Icon 
           name="search-outline" 
           size={16} 
           color="#333"
           />
-      </View>
+      </TouchableOpacity>
      
    </View>
   )
 }
+
+
+
+

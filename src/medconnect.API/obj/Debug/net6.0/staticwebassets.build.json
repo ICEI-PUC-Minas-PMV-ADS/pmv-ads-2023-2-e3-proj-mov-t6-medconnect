@@ -1,11 +1,105 @@
 {
   "Version": 1,
-  "Hash": "X6rT1MIM0DC2ap88YGLzMLfg5b2pmkKJgJgtcW17KMU=",
+  "Hash": "4J32mheu/c9aFj+xpdeNr/F2WvWxx0nmsy0SBwrOk28=",
   "Source": "medconnect.API",
   "BasePath": "_content/medconnect.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "medconnect.API\\wwwroot",
+      "Source": "medconnect.API",
+      "ContentRoot": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\",
+      "BasePath": "_content/medconnect.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\personImages\\persona01.png",
+      "SourceId": "medconnect.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\",
+      "BasePath": "_content/medconnect.API",
+      "RelativePath": "personImages/persona01.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\personImages\\persona01.png"
+    },
+    {
+      "Identity": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\personImages\\persona02.png",
+      "SourceId": "medconnect.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\",
+      "BasePath": "_content/medconnect.API",
+      "RelativePath": "personImages/persona02.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\personImages\\persona02.png"
+    },
+    {
+      "Identity": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\personImages\\persona03.png",
+      "SourceId": "medconnect.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\",
+      "BasePath": "_content/medconnect.API",
+      "RelativePath": "personImages/persona03.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\personImages\\persona03.png"
+    },
+    {
+      "Identity": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\personImages\\persona04.png",
+      "SourceId": "medconnect.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\",
+      "BasePath": "_content/medconnect.API",
+      "RelativePath": "personImages/persona04.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\personImages\\persona04.png"
+    },
+    {
+      "Identity": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\personImages\\persona05.png",
+      "SourceId": "medconnect.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\",
+      "BasePath": "_content/medconnect.API",
+      "RelativePath": "personImages/persona05.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\personImages\\persona05.png"
+    }
+  ]
 }

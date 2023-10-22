@@ -1,6 +1,5 @@
 import { useAuth } from "../hooks/useAuth";
-import { HomeScreen } from "../screens";
-import { SideMenu } from "./DrawerNavigation";
+import { AuthNavigation } from "./AuthNavigation";
 import { StackNavigation } from "./StackNavigation";
 
 async function teste(){

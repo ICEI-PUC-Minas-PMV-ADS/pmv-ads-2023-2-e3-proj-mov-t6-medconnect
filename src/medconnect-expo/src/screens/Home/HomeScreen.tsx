@@ -2,12 +2,17 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { globalStyles } from '../../../theme';
+
 export function HomeScreen() {
 
   const navigation = useNavigation();
 
   return (
+    <>
+     <Background />
+   
     <View style={styles.container}>
+     
       {/* Cabeçalho */}
       <View style={styles.header}>
         
@@ -57,14 +62,30 @@ export function HomeScreen() {
         </View>
       </View>
     </View>
+    </>
   );
 }
 
+const Background = () => {
+  return(
+    <View style={{width: "130%", height:"90%", top:'-20%',left:-10, position:'absolute', zIndex: 1}}>
+       <ImageBackground
+          source={require("../../assets/images/bgtexture.png")}
+          style={{position:'absolute', width: "110%", height: "100%", zIndex:2}}
+          resizeMode="contain"
+        />
+    </View>
+  );
+}
+
+
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    width:"100%",
+    height: "100%",
     backgroundColor: globalStyles.primaryColor,
     flexDirection: 'column',
+    position:'absolute'
   },
   header: {
     height: '12%',
@@ -74,6 +95,7 @@ const styles = StyleSheet.create({
     marginRight: '10%',
     alignItems: 'center',
     justifyContent: 'space-between',
+    zIndex: 999
   },
   logo: {
     width: 61,
@@ -89,13 +111,13 @@ const styles = StyleSheet.create({
     padding: '2%',
   },
   medica: {
-    zIndex: 1,
+    zIndex: 3,
     width: "100%",
     height: "70%",
     marginLeft: "12%",
   },
   footerContent: {
-    zIndex: 2,
+    zIndex: 100,
     position: 'absolute',
     bottom: 0,
     left: '2%',
@@ -126,6 +148,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     margin: 5,
     alignItems: 'center',
+    zIndex:5,
   },
   buttonLogin: {
     backgroundColor: '#EEEEFC',

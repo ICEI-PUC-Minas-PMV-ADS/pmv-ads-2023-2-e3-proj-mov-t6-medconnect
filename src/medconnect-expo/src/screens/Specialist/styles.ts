@@ -1,5 +1,7 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 import { globalMargin } from "../../../theme/global.margin";
+
+var heightBody = Dimensions.get("window").height * 0.82;
 
 export const styles = StyleSheet.create({
   container: {
@@ -33,6 +35,7 @@ export const styles = StyleSheet.create({
     alignSelf: "center",
     backgroundColor: "#FFF",
     width: "94%",
+    height: heightBody,
     marginHorizontal: globalMargin.marginHorizontal,
     paddingHorizontal: globalMargin.marginHorizontal,
     paddingTop: 10,

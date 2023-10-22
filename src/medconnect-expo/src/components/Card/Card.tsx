@@ -18,7 +18,7 @@ export const Card = ({
       descricaoCurta = "Doutor especialista em cirurgia plasticas, doutor especialista em cirurgia plasticas... ",
       categoria="Cirurgia Plastica"  
     } : CardData) => {
- console.log(`${publicFiles}`)
+
   return (
     <View style={styles.container}>
         <View style={styles.cardSpecImgContainer}>

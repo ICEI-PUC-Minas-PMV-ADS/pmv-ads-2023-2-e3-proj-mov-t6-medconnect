@@ -9,7 +9,7 @@ export const AuthContext = createContext();
 export function AuthProvider(props){
    
     const { children } = props;
-    const [user, setUser] = useState(null)
+    const [user, setUser] = useState()
   
     
     const getAllEspecialistas = async() => {

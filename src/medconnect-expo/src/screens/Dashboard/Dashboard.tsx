@@ -17,10 +17,14 @@ interface Props extends DrawerScreenProps<any, any>{}
 export const DashboardScreen = ({navigation, route} :Props) => {
   const { getAllEspecialistas } = useAuth();
   const [especialistas, setEspecialistas] = useState<IEspecialista[]>([]);
+  const [especialistasRes, setEspecialistasRes] = useState<IEspecialista[]>([]);
   
+
+
   const getEspecialistas = async () =>{
     const esp = await getAllEspecialistas()
     setEspecialistas(esp);    
+    setEspecialistasRes(esp)
   }
 
   
@@ -29,7 +33,7 @@ export const DashboardScreen = ({navigation, route} :Props) => {
 
   }, [])
 
-  console.log(especialistas)
+ 
   const [scrollY, setScrollY] = useState(new Animated.Value(0))
   return (
     <SafeAreaView>
@@ -61,7 +65,7 @@ export const DashboardScreen = ({navigation, route} :Props) => {
             }
         ]}>
           <HeaderContainer route={route} navigation={navigation}> 
-            <Search />
+            <Search data={especialistas}  setDataResult={setEspecialistasRes} especialistasRes={especialistasRes}/>
           </HeaderContainer>      
         </Animated.View>
     
@@ -116,7 +120,7 @@ export const DashboardScreen = ({navigation, route} :Props) => {
            
                <Card 
                 key={especialista.especialistaId}
-                image = {require("../../assets/images/persona02.png")}
+                image = {especialista.fotoPerfil}
                 nome = {especialista.nome} 
                 sobrenome={especialista.sobrenome}
                 descricaoCurta = {especialista.descricaoCurta}

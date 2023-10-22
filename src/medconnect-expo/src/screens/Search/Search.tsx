@@ -17,6 +17,8 @@ export const SearchScreen = ({navigation, route} :Props) => {
   const [especialistas, setEspecialistas] = useState<IEspecialista[]>([]);
   const [espResult, setEspResult] = useState<IEspecialista[]>([]);
   
+  const {especialistasRes} = route.params;
+
   const getEspecialistas = async () =>{
     const esp = await getAllEspecialistas()
     setEspecialistas(esp);    
@@ -60,7 +62,7 @@ export const SearchScreen = ({navigation, route} :Props) => {
             }
         ]}>
           <HeaderContainer route={route} navigation={navigation}>
-             <Search data={especialistas} setDataResult={setEspResult} />
+            <Search data={especialistas} setDataResult={setEspResult} especialistasRes={especialistasRes}/>
           </HeaderContainer>  
          
         </Animated.View>

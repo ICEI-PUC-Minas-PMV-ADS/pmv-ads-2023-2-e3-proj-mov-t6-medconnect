@@ -14,13 +14,9 @@ const Stack = createStackNavigator()
 export const StackNavigation = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="IndexScreen" component={IndexScreen} />
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Register" component={CadastroScreen} />
+        <Stack.Screen name="IndexScreen" component={IndexScreen} />       
         <Stack.Screen name="Dashboard" options={{headerShown: false}} component={BottomNavigation} />
-        <Stack.Screen name="RecoverPassword" component={RecoverPasswordScreen} />
-        <Stack.Screen name="Search" component={SearchScreen} />
+        <Stack.Screen name="RecoverPassword" component={RecoverPasswordScreen} />     
         <Stack.Screen name="ValidarCampos" component={ValidarCampos} />
         <Stack.Screen name="Specialist" component={SpecialistScreen} />
         <Stack.Screen name="Appointment" component={AppointmentScreen} />

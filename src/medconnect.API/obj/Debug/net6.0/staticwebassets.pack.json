@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\personImages\\persona01.png",
+      "PackagePath": "staticwebassets\\personImages\\persona01.png"
+    },
+    {
+      "Id": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\personImages\\persona02.png",
+      "PackagePath": "staticwebassets\\personImages\\persona02.png"
+    },
+    {
+      "Id": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\personImages\\persona03.png",
+      "PackagePath": "staticwebassets\\personImages\\persona03.png"
+    },
+    {
+      "Id": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\personImages\\persona04.png",
+      "PackagePath": "staticwebassets\\personImages\\persona04.png"
+    },
+    {
+      "Id": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\personImages\\persona05.png",
+      "PackagePath": "staticwebassets\\personImages\\persona05.png"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.medconnect.API.props",
+      "PackagePath": "build\\medconnect.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.medconnect.API.props",
+      "PackagePath": "buildMultiTargeting\\medconnect.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.medconnect.API.props",
+      "PackagePath": "buildTransitive\\medconnect.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.medconnect.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
