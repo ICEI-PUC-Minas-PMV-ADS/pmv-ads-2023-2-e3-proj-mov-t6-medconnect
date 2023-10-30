@@ -78,11 +78,12 @@ export const SearchScreen = ({navigation, route} :Props) => {
             }>
 
             <Card              
-              image = {espec.fotoPerfil}
+              fotoPerfil = {espec.fotoPerfil}
               nome = {espec.nome} 
               sobrenome={espec.sobrenome}
               descricaoCurta = {espec.descricaoCurta}
-              categoria="Cirurgia Plastica"   
+              categoria="Cirurgia Plastica" 
+              atendimentos={espec.atendimentos}  
             />  
           
           

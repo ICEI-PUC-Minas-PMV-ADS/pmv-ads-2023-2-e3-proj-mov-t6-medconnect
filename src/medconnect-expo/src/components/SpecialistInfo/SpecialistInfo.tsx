@@ -4,30 +4,25 @@ import { styles } from "./Styles"
  
 
 type CardData = {
-    image: string,
+    fotoPerfil: string,
     nome: string,
     sobrenome:string,
     descricaoCurta:string,
     categoria:string,
+    atendimentos:object,
 }
 
-export const SpecialistInfo = ({
-      image, 
-      nome = "", 
-      sobrenome="", 
-      descricaoCurta = "Doutor especialista em cirurgia plasticas, doutor especialista em cirurgia plasticas... ",
-      categoria="Cirurgia Plastica"  
-    } : CardData) => {
- console.log(`${publicFiles}`)
+export const SpecialistInfo = (Prop : CardData) => {
+ console.log("FOTO",Prop)
   return (
     <View style={styles.container}>
         <View style={styles.cardSpecImgContainer}>
-             <Image style={styles.cardSpecImgProfile} source={{uri:`${publicFiles}/${image}`}} />
+             <Image style={styles.cardSpecImgProfile} source={{uri:`${publicFiles}/${Prop.image}`}} />
         </View>
         <View style={styles.cardSpecInfo}>
-            <Text>{nome} {sobrenome} </Text>
-            <Text>{ descricaoCurta }</Text>
-            <Text>{categoria}</Text>
+            <Text>{Prop.nome} {Prop.sobrenome} </Text>
+            <Text>{ Prop.descricaoCurta }</Text>
+            <Text>{Prop.categoria}</Text>
         </View>
     </View>
   )

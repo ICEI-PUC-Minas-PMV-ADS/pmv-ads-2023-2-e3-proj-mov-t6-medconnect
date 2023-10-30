@@ -51,7 +51,7 @@ namespace medconnect.API.Controllers
                 new Especialista { Nome = "André", Sobrenome = "Silva", DescricaoCurta = "Médico especialista em cirurgia bariatrica.", FotoPerfil = "personImages/persona01.png" },
                 new Especialista { Nome = "João", Sobrenome = "Gonsalves", DescricaoCurta = "Médico Especialista em Cirurgia Vascular. Cuida dos problemas em vasos sanguíneos das pernas, braços, tronco e pescoço. Problemas das artérias como aneurisma de aorta, estenose das carótidas, doença arterial obstrutiva; e nas veias: teleangectasias, varizes e trombos.  O cirurgião plástico atua na reparação de órgãos e tecidos para", FotoPerfil = "personImages/persona02.png" },
                 new Especialista { Nome = "Aline", Sobrenome = "Santos", DescricaoCurta = "Especialista em Dermatologia...", FotoPerfil = "personImages/persona03.png" },
-                new Especialista { Nome = "Pedro", Sobrenome = "Albuquerque", DescricaoCurta = "Especialista em Clínica Médica...", FotoPerfil = "personImages/persona04.png" },
+                new Especialista { Nome = "Maria Helena", Sobrenome = "Albuquerque", DescricaoCurta = "Especialista em Clínica Médica...", FotoPerfil = "personImages/persona04.png" },
                 new Especialista { Nome = "José", Sobrenome = "Toledo Junior", DescricaoCurta = "Especialista em Endocrinologia e Metabologia...", FotoPerfil = "personImages/persona05.png" },
         };
              _appDbContext.Especialistas.AddRangeAsync(es);
@@ -65,24 +65,24 @@ namespace medconnect.API.Controllers
         {
             List<Atendimento> at = new List<Atendimento>()
             {
-                new Atendimento{ EspecialistaId = Guid.Parse("08dbd190-916e-4b55-8dad-240c895d9aa1"), 
+                new Atendimento{ EspecialistaId = Guid.Parse("08dbd362-7491-483b-8eca-10aeb459812c"), 
                     AtendimentoId = Guid.NewGuid(), DataAtendimento = DateTime.Now 
                 },
 
                
-                 new Atendimento{ EspecialistaId = Guid.Parse("08dbd190-917a-4186-8386-1d7e3c4a3d67"),
+                 new Atendimento{ EspecialistaId = Guid.Parse("08dbd362-749d-4a81-89ee-220763a2e315"),
                     AtendimentoId = Guid.NewGuid(), DataAtendimento = DateTime.Now
                 },
 
-                 new Atendimento{ EspecialistaId = Guid.Parse("08dbd190-917a-4206-804b-499cce17549d"),
+                 new Atendimento{ EspecialistaId = Guid.Parse("08dbd362-749d-4aee-845d-8aa0f396ef4c"),
                     AtendimentoId = Guid.NewGuid(), DataAtendimento = DateTime.Now
                 },
 
-                new Atendimento{ EspecialistaId = Guid.Parse("08dbd190-917a-4213-81f5-0ccdfe492c00"),
+                new Atendimento{ EspecialistaId = Guid.Parse("08dbd362-749d-4af5-8c12-992e14b5e768"),
                     AtendimentoId = Guid.NewGuid(), DataAtendimento = DateTime.Now
                 },
 
-                 new Atendimento{ EspecialistaId = Guid.Parse("08dbd190-917a-4231-847d-2fb80d19bf28"),
+                 new Atendimento{ EspecialistaId = Guid.Parse("08dbd362-749d-4b11-843f-994ad272c433"),
                     AtendimentoId = Guid.NewGuid(), DataAtendimento = DateTime.Now
                 },
 

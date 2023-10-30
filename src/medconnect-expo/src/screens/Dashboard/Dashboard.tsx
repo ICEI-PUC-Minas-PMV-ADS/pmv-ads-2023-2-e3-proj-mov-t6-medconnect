@@ -120,11 +120,12 @@ export const DashboardScreen = ({navigation, route} :Props) => {
            
                <Card 
                 key={especialista.especialistaId}
-                image = {especialista.fotoPerfil}
+                fotoPerfil = {especialista.fotoPerfil}
                 nome = {especialista.nome} 
                 sobrenome={especialista.sobrenome}
                 descricaoCurta = {especialista.descricaoCurta}
-                categoria="Cirurgia Plastica"   
+                categoria="Cirurgia Plastica"  
+                atendimentos= {especialista.atendimentos} 
               />  
               
               ))     
