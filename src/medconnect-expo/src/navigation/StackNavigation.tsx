@@ -19,7 +19,7 @@ export const StackNavigation = () => {
         <Stack.Screen name="RecoverPassword" component={RecoverPasswordScreen} />     
         <Stack.Screen name="ValidarCampos" component={ValidarCampos} />
         <Stack.Screen name="Specialist" component={SpecialistScreen} />
-        <Stack.Screen name="Appointment" component={AppointmentScreen} />
+        <Stack.Screen name="Appointment" component={AppointmentScreen} options={{presentation: "modal"}}/>
     </Stack.Navigator>
   )
 }

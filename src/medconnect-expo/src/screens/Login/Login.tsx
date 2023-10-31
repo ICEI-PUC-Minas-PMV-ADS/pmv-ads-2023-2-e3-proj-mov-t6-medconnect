@@ -21,7 +21,7 @@ export const LoginScreen = () => {
 
   const handleLogin = (data: any) => {
     const {username, password} = data
-    if (username === 'usuario' && password === 'senha') {
+    if (username === 'usuario' && password === 'senha1') {
        navigation.navigate("Dashboard");
     } else {
       alert('Login falhou. Verifique seu usuário e senha.');

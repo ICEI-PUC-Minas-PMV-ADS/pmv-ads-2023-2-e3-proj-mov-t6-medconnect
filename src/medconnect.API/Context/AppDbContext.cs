@@ -1,4 +1,5 @@
 ﻿using medconnect.API.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,6 +12,9 @@ namespace medconnect.API.Context
         public DbSet<Especialista> Especialistas { get; set; }
         public DbSet<Atendimento> Atendimentos { get; set;}
         public DbSet<Consulta> Consultas { get; set; }
+
+
+        public DbSet<UserIdentity> UserIdentities { get; set; }
        
     }
 }

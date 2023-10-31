@@ -23,6 +23,7 @@ export const AppointmentScreen = ({navigation, route} :Props) => {
   
   const [dataAgendamento, setDataAgendamento] = useState("");
   const [horaAgendamento, setHoraAgendamento] = useState("");
+  const [datas, setDatas] = useState([])
 
   const [scrollY, setScrollY] = useState(new Animated.Value(0))
   
@@ -38,7 +39,14 @@ export const AppointmentScreen = ({navigation, route} :Props) => {
       : Alert.alert("Por favor, escolha um dia e horário...");
   }
 
-  
+  const splitDate = ( date: string ) => {
+    return date.split("T")[0];
+  }
+
+   
+  console.log("datas", datas);
+  console.log("especilista", especialista.atendimentos);
+
   return (
     <SafeAreaView>
       <View style={styles.container}>
@@ -84,7 +92,7 @@ export const AppointmentScreen = ({navigation, route} :Props) => {
               <Text>Data da consulta:</Text>
               <View>
                 <Text style={styles.textHour}>ESCOLHER DIA</Text>
-                <Calendario setDataAgendamento={setDataAgendamento}/> 
+                <Calendario  setDataAgendamento={setDataAgendamento}/> 
               </View>
           </View>
           <View style={styles.pedidoConsulta}>
@@ -106,7 +114,8 @@ export const AppointmentScreen = ({navigation, route} :Props) => {
             <Text>{dataAgendamento}</Text>
             <Text>Horario da consulta:</Text>
             <Text>{horaAgendamento}</Text>
-            <Text>Data do Agendamento:{Date.now()}</Text>
+            <Text>Data do Agendamento:{}</Text>
+            <Text>Protocolo:{Date.now()}</Text>
            
             <ButtonPrimary 
                onPress={() => sendConsulta()}

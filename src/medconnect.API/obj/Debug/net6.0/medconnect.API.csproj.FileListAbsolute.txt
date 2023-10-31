@@ -118,3 +118,11 @@ E:\Users\Paulo\Documents\Projeto\medconnect\src\medconnect.API\obj\Debug\net6.0\
 E:\Users\Paulo\Documents\Projeto\medconnect\src\medconnect.API\obj\Debug\net6.0\medconnect.API.pdb
 E:\Users\Paulo\Documents\Projeto\medconnect\src\medconnect.API\obj\Debug\net6.0\medconnect.API.genruntimeconfig.cache
 E:\Users\Paulo\Documents\Projeto\medconnect\src\medconnect.API\obj\Debug\net6.0\ref\medconnect.API.dll
+E:\Users\Paulo\Documents\Projeto\medconnect\src\medconnect.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Users\Paulo\Documents\Projeto\medconnect\src\medconnect.API\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+E:\Users\Paulo\Documents\Projeto\medconnect\src\medconnect.API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Users\Paulo\Documents\Projeto\medconnect\src\medconnect.API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+E:\Users\Paulo\Documents\Projeto\medconnect\src\medconnect.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+E:\Users\Paulo\Documents\Projeto\medconnect\src\medconnect.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Users\Paulo\Documents\Projeto\medconnect\src\medconnect.API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+E:\Users\Paulo\Documents\Projeto\medconnect\src\medconnect.API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

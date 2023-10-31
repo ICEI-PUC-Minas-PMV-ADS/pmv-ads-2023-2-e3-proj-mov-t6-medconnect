@@ -220,7 +220,6 @@ namespace medconnect.API.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("CPF")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("ConcurrencyStamp")
@@ -234,8 +233,8 @@ namespace medconnect.API.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("tinyint(1)");
 
-                    b.Property<Guid?>("EspecialistaId")
-                        .HasColumnType("char(36)");
+                    b.Property<string>("FotoPerfil")
+                        .HasColumnType("longtext");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("tinyint(1)");
@@ -263,7 +262,7 @@ namespace medconnect.API.Migrations
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("longtext");
 
-                    b.Property<int>("TipoUsuario")
+                    b.Property<int?>("TipoUsuario")
                         .HasColumnType("int");
 
                     b.Property<bool>("TwoFactorEnabled")
@@ -274,8 +273,6 @@ namespace medconnect.API.Migrations
                         .HasColumnType("varchar(256)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("EspecialistaId");
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
@@ -345,15 +342,6 @@ namespace medconnect.API.Migrations
                         .HasForeignKey("EspecialistaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Especialista");
-                });
-
-            modelBuilder.Entity("medconnect.API.Models.UserIdentity", b =>
-                {
-                    b.HasOne("medconnect.API.Models.Especialista", "Especialista")
-                        .WithMany()
-                        .HasForeignKey("EspecialistaId");
 
                     b.Navigation("Especialista");
                 });

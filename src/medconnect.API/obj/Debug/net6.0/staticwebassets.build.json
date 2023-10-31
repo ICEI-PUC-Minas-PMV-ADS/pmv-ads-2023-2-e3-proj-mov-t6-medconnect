@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4J32mheu/c9aFj+xpdeNr/F2WvWxx0nmsy0SBwrOk28=",
+  "Hash": "5Xh+IOueSySO5FI/D+L5llbSVMfXHu3TpQMTkGfuA1U=",
   "Source": "medconnect.API",
   "BasePath": "_content/medconnect.API",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\personImages\\persona05.png"
+    },
+    {
+      "Identity": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\personImages\\persona07.png",
+      "SourceId": "medconnect.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\",
+      "BasePath": "_content/medconnect.API",
+      "RelativePath": "personImages/persona07.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\personImages\\persona07.png"
     }
   ]
 }

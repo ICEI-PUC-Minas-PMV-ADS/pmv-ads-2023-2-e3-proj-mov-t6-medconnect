@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\personImages\\persona05.png"
     },
     {
+      "Id": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\personImages\\persona07.png",
+      "PackagePath": "staticwebassets\\personImages\\persona07.png"
+    },
+    {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.medconnect.API.props",
       "PackagePath": "build\\medconnect.API.props"
     },
