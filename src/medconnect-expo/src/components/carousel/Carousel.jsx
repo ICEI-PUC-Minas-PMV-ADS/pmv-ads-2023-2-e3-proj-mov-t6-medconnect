@@ -31,7 +31,7 @@ export const Carousel = () => {
 
   useEffect(() => {
    let interval = setInterval(() => {
-      if(activeIndex === carouselData.length - 1){
+      if(activeIndex === carouselData.length - 1 || activeIndex > carouselData.length - 1){
         flatListRef.current.scrollToIndex({
           index: 0,
           animation:true
@@ -42,12 +42,13 @@ export const Carousel = () => {
           animation:true
         })
       }
-    }, 7000);
+    }, 4000);
 
   return () => clearInterval(interval)
   })
 
   const renderItem = ({ item, index}) => {
+    
     return(
       <View style={{justifyContent:'center'}}>
         <Image 
@@ -100,7 +101,7 @@ export const Carousel = () => {
     const scrollPosition = event.nativeEvent.contentOffset.x;
     const index = scrollPosition / screenWidth
     
-    setActiveIndex(index)
+    setActiveIndex(index <= 2 ? parseInt(index)+1 : parseInt(index)-2)
   }
 
   return (

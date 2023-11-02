@@ -1,10 +1,11 @@
 import { IP_SERVER } from "../../config/env.ts";
 export class Consulta {
-  async AddConsulta() {
+  async newConsulta(data: string) {
+    console.log(data);
     try {
       const url = `http://${IP_SERVER}:5000/api/consultas`;
       const formData = {
-        DataConsulta: "2023-10-21T20:00:00",
+        DataConsulta: data,
       };
       //const formData = new FormData();
       //formData.append();

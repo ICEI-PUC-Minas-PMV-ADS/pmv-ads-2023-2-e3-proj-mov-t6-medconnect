@@ -5,7 +5,6 @@ import { HeaderContainer } from '../../components/header/HeaderContainer';
 import { styles } from './styles';
 import { Card } from '../../components/Card';
 import { useAuth } from '../../hooks/useAuth';
-import { FlatList } from 'react-native-gesture-handler';
 import { IEspecialista } from '../../api/interfaces';
 import { Search } from '../../components/Search';
 
@@ -18,6 +17,8 @@ export const SearchScreen = ({navigation, route} :Props) => {
   const [especialistas, setEspecialistas] = useState<IEspecialista[]>([]);
   const [espResult, setEspResult] = useState<IEspecialista[]>([]);
   
+  const {especialistasRes} = route.params;
+
   const getEspecialistas = async () =>{
     const esp = await getAllEspecialistas()
     setEspecialistas(esp);    
@@ -61,7 +62,7 @@ export const SearchScreen = ({navigation, route} :Props) => {
             }
         ]}>
           <HeaderContainer route={route} navigation={navigation}>
-             <Search data={especialistas} setDataResult={setEspResult} />
+            <Search data={especialistas} setDataResult={setEspResult} especialistasRes={especialistasRes}/>
           </HeaderContainer>  
          
         </Animated.View>
@@ -76,13 +77,13 @@ export const SearchScreen = ({navigation, route} :Props) => {
               {especialista:espec})
             }>
 
-            <Card 
-             
-              image = {require("../../assets/images/persona02.png")}
+            <Card              
+              fotoPerfil = {espec.fotoPerfil}
               nome = {espec.nome} 
               sobrenome={espec.sobrenome}
               descricaoCurta = {espec.descricaoCurta}
-              categoria="Cirurgia Plastica"   
+              categoria="Cirurgia Plastica" 
+              atendimentos={espec.atendimentos}  
             />  
           
           
