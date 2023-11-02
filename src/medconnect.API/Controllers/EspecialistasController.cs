@@ -48,11 +48,11 @@ namespace medconnect.API.Controllers
         public async Task<ActionResult<string>> Add()
         {
             List<Especialista> es = new List<Especialista>() {
-                new Especialista { Nome = "André", Sobrenome = "Silva", DescricaoCurta = "Médico especialista em cirurgia bariatrica...", FotoPerfil = "foto.png" },
-                new Especialista { Nome = "João", Sobrenome = "Gonsalves", DescricaoCurta = "Médico especialista em cirurgia bariatrica...", FotoPerfil = "foto.png" },
-                new Especialista { Nome = "Aline", Sobrenome = "Silva", DescricaoCurta = "Médico especialista em cirurgia bariatrica...", FotoPerfil = "foto.png" },
-                new Especialista { Nome = "Pedro", Sobrenome = "Silva", DescricaoCurta = "Médico especialista em cirurgia bariatrica...", FotoPerfil = "foto.png" },
-                new Especialista { Nome = "José", Sobrenome = "Silva", DescricaoCurta = "Médico especialista em cirurgia bariatrica...", FotoPerfil = "foto.png" },
+                new Especialista { Nome = "André", Sobrenome = "Silva", DescricaoCurta = "Médico especialista em cirurgia bariatrica.", FotoPerfil = "personImages/persona01.png" },
+                new Especialista { Nome = "João", Sobrenome = "Gonsalves", DescricaoCurta = "Médico Especialista em Cirurgia Vascular. Cuida dos problemas em vasos sanguíneos das pernas, braços, tronco e pescoço. Problemas das artérias como aneurisma de aorta, estenose das carótidas, doença arterial obstrutiva; e nas veias: teleangectasias, varizes e trombos.  O cirurgião plástico atua na reparação de órgãos e tecidos para", FotoPerfil = "personImages/persona02.png" },
+                new Especialista { Nome = "Aline", Sobrenome = "Santos", DescricaoCurta = "Especialista em Dermatologia...", FotoPerfil = "personImages/persona03.png" },
+                new Especialista { Nome = "Maria Helena", Sobrenome = "Albuquerque", DescricaoCurta = "Especialista em Clínica Médica...", FotoPerfil = "personImages/persona04.png" },
+                new Especialista { Nome = "José", Sobrenome = "Toledo Junior", DescricaoCurta = "Especialista em Endocrinologia e Metabologia...", FotoPerfil = "personImages/persona05.png" },
         };
              _appDbContext.Especialistas.AddRangeAsync(es);
              await _appDbContext.SaveChangesAsync();
@@ -65,24 +65,24 @@ namespace medconnect.API.Controllers
         {
             List<Atendimento> at = new List<Atendimento>()
             {
-                new Atendimento{ EspecialistaId = Guid.Parse("08dbcc34-2905-46dc-83ce-fae0d3ee454f"), 
+                new Atendimento{ EspecialistaId = Guid.Parse("08dbd362-7491-483b-8eca-10aeb459812c"), 
                     AtendimentoId = Guid.NewGuid(), DataAtendimento = DateTime.Now 
                 },
 
                
-                 new Atendimento{ EspecialistaId = Guid.Parse("08dbcc34-2910-4d3f-8dea-663799f3016c"),
+                 new Atendimento{ EspecialistaId = Guid.Parse("08dbd362-749d-4a81-89ee-220763a2e315"),
                     AtendimentoId = Guid.NewGuid(), DataAtendimento = DateTime.Now
                 },
 
-                 new Atendimento{ EspecialistaId = Guid.Parse("08dbcc34-2910-4d99-8303-1fe2affd29d1"),
+                 new Atendimento{ EspecialistaId = Guid.Parse("08dbd362-749d-4aee-845d-8aa0f396ef4c"),
                     AtendimentoId = Guid.NewGuid(), DataAtendimento = DateTime.Now
                 },
 
-                new Atendimento{ EspecialistaId = Guid.Parse("08dbcc34-2910-4da0-89a1-f255c6c68570"),
+                new Atendimento{ EspecialistaId = Guid.Parse("08dbd362-749d-4af5-8c12-992e14b5e768"),
                     AtendimentoId = Guid.NewGuid(), DataAtendimento = DateTime.Now
                 },
 
-                 new Atendimento{ EspecialistaId = Guid.Parse("08dbcc34-2910-4db6-81c4-9cb8c939f811"),
+                 new Atendimento{ EspecialistaId = Guid.Parse("08dbd362-749d-4b11-843f-994ad272c433"),
                     AtendimentoId = Guid.NewGuid(), DataAtendimento = DateTime.Now
                 },
 

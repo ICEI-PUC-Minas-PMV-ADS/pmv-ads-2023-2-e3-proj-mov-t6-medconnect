@@ -20,14 +20,18 @@ export const Calendario = ({setDataAgendamento}:any) => {
           onDayPress={date => {
             console.log(date);
             const {year, month, day} = date;
-            setDataAgendamento(`${day}/${month}/${year}`)
+            setDataAgendamento(`${year}-${month}-${day}`)
             setShowModel(false);
           }}
           //onMonthChange={() => {Alert.alert("movendo")}}
           initialDate={'2023-10-16'}
           minDate={'2022-12-31'}
-          maxDate={'2023-12-31'}
-          //hideExtraDays={true}
+          maxDate={'2024-06-31'}
+          hideExtraDays={true}
+          disabledByDefault
+          disableAllTouchEventsForDisabledDays
+          disableAllTouchEventsForInactiveDays
+         
           //hideDayNames={true}
 
              markedDates={{
@@ -36,7 +40,8 @@ export const Calendario = ({setDataAgendamento}:any) => {
               dotColor: 'green',
               selected: true,
               selectedColor: 'green',
-              selectedTextColor:'white'
+              selectedTextColor:'white',
+              disableTouchEvent: false,
             },
           }}
 

@@ -15,7 +15,8 @@ export const SideMenu = () => {
     <Drawer.Navigator 
       screenOptions={{headerShown:false }}  >
         <Drawer.Screen name="Dashboard" component={DashboardScreen} />                 
-        <Drawer.Screen name="Cadastro" component={CadastroScreen} />          
+        <Drawer.Screen name="Cadastro" component={CadastroScreen} />   
+        <Drawer.Screen name="Search" component={SearchScreen} />       
     </Drawer.Navigator>
   )
 }

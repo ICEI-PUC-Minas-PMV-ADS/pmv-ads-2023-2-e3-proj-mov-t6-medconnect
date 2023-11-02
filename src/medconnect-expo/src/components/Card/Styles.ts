@@ -1,38 +1,68 @@
-import {Dimensions, StyleSheet} from 'react-native';
-import {globalStyles} from '../../../theme/global.styles';
+import { Dimensions, StyleSheet } from "react-native";
+import { globalStyles } from "../../../theme/global.styles";
 
-const width = Dimensions.get('window').width;
+const width = Dimensions.get("window").width * 0.95;
+const height = Dimensions.get("window").height * 0.95;
 
 export const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
-    width: width,
-    height: 140,
-    gap: 10,
-    marginBottom: 2,
+    flexDirection: "row",
+    width: "100%",
+    height: height * 0.2,
+
+    shadowColor: "#d4d0cf",
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.0,
+    shadowRadius: 0,
+    borderWidth: 0.1,
+    alignItems: "center",
+    elevation: 2,
   },
   cardSpecImgContainer: {
-    alignItems: 'center',
-    justifyContent: 'center',
+    marginRight: 5,
+    padding: "1%",
   },
   cardSpecImgProfile: {
-    width: 100,
-    height: 120,
+    width: width * 0.22,
+    height: width * 0.24,
+    borderRadius: 5,
   },
   cardSpecInfo: {
-    width: width - 120,
-    height: 130,
+    width: "79%",
+    height: 100,
+    justifyContent: "center",
   },
   cardSpecBtnView: {
-    width: 100,
-    height: 32,
+    width: 70,
+    height: 20,
     backgroundColor: globalStyles.primaryColor,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 5,
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "flex-end",
+    bottom: 0,
+    left: "-15%",
     borderRadius: 3,
   },
   cardSpecBtnViewText: {
-    color: '#FFF',
+    color: "#FFF",
+    fontSize: 10,
+  },
+  titleInfo: {
+    fontSize: 14,
+    fontWeight: "bold",
+    color: "#181a19",
+  },
+  description: {
+    fontSize: 12,
+    color: "#323233",
+    width: "90%",
+  },
+  subtitleInfo: {
+    fontSize: 12,
+    fontWeight: "600",
+    color: "#323233",
   },
 });

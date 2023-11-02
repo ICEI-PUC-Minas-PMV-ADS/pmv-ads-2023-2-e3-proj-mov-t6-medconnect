@@ -66,7 +66,7 @@ export const styles = StyleSheet.create({
   btnHours: {
     flexDirection: "row",
     width: 400,
-    height: 100,
+    height: 60,
   },
   btnHour: {
     width: 80,

@@ -1,6 +1,5 @@
 import { useAuth } from "../hooks/useAuth";
-import { HomeScreen } from "../screens";
-import { SideMenu } from "./DrawerNavigation";
+import { AuthNavigation } from "./AuthNavigation";
 import { StackNavigation } from "./StackNavigation";
 
 async function teste(){
@@ -12,6 +11,5 @@ async function teste(){
 export const StartNavigation = () => {
   const { user, getAllEspecialistas } = useAuth();
  
-   
-  return user ? <StackNavigation /> : <StackNavigation />
+  return user ? <StackNavigation /> : <AuthNavigation />
 }

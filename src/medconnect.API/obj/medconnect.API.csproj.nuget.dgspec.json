@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Users\\Paulo\\Documents\\ProjetosProgramacao\\dotnet\\medconnect.API\\medconnect.API.csproj": {}
+    "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\pmv-ads-2023-2-e3-proj-mov-t6-medconnect-dev\\src\\medconnect.API\\medconnect.API.csproj": {}
   },
   "projects": {
-    "E:\\Users\\Paulo\\Documents\\ProjetosProgramacao\\dotnet\\medconnect.API\\medconnect.API.csproj": {
+    "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\pmv-ads-2023-2-e3-proj-mov-t6-medconnect-dev\\src\\medconnect.API\\medconnect.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Users\\Paulo\\Documents\\ProjetosProgramacao\\dotnet\\medconnect.API\\medconnect.API.csproj",
+        "projectUniqueName": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\pmv-ads-2023-2-e3-proj-mov-t6-medconnect-dev\\src\\medconnect.API\\medconnect.API.csproj",
         "projectName": "medconnect.API",
-        "projectPath": "E:\\Users\\Paulo\\Documents\\ProjetosProgramacao\\dotnet\\medconnect.API\\medconnect.API.csproj",
+        "projectPath": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\pmv-ads-2023-2-e3-proj-mov-t6-medconnect-dev\\src\\medconnect.API\\medconnect.API.csproj",
         "packagesPath": "C:\\Users\\paulo\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\Paulo\\Documents\\ProjetosProgramacao\\dotnet\\medconnect.API\\obj\\",
+        "outputPath": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\pmv-ads-2023-2-e3-proj-mov-t6-medconnect-dev\\src\\medconnect.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\paulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.23, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.23, )"
@@ -50,6 +54,10 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[7.0.0, )"
@@ -57,6 +65,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.33.0, )"
             }
           },
           "imports": [
@@ -78,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
