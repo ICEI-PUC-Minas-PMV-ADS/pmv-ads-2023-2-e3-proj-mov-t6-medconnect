@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace medconnect.API.Context
 {
-    public class AppDbContext : IdentityDbContext<UserIdentity>
+    public class AppDbContext : IdentityDbContext<Usuario>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
@@ -14,7 +14,7 @@ namespace medconnect.API.Context
         public DbSet<Consulta> Consultas { get; set; }
 
 
-        public DbSet<UserIdentity> UserIdentities { get; set; }
+        public DbSet<Usuario> UserIdentities { get; set; }
        
     }
 }

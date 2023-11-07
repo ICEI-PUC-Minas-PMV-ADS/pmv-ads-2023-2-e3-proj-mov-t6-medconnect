@@ -6,7 +6,7 @@ namespace medconnect.API.Repository.interfaces
     {
         IQueryable<T> GetAll();
         Task<T> GetById(Expression<Func<T, bool>> predicate);
- 
+        IQueryable<T> GetGetAllByUserId(Expression<Func<T, bool>> predicate);
         void Add(T entity); 
     }
 }

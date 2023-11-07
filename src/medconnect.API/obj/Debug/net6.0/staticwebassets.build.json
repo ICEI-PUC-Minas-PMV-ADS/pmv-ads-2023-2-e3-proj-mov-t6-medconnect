@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4PqJtQLLHbqj5LAxIUPfWdOmQ/Dmq0uYSmI5tWCJQaE=",
+  "Hash": "VbKEL44YhTD+HP5pPo47IW38W1bfeVW+b/EVvL8CmOE=",
   "Source": "medconnect.API",
   "BasePath": "_content/medconnect.API",
   "Mode": "Default",
@@ -10,17 +10,34 @@
     {
       "Name": "medconnect.API\\wwwroot",
       "Source": "medconnect.API",
-      "ContentRoot": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\pmv-ads-2023-2-e3-proj-mov-t6-medconnect-dev\\src\\medconnect.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\projeto\\medconnect\\src\\medconnect.API\\wwwroot\\",
       "BasePath": "_content/medconnect.API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\pmv-ads-2023-2-e3-proj-mov-t6-medconnect-dev\\src\\medconnect.API\\wwwroot\\personImages\\persona01.png",
+      "Identity": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\projeto\\medconnect\\src\\medconnect.API\\wwwroot\\apiImages\\default.png",
       "SourceId": "medconnect.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\pmv-ads-2023-2-e3-proj-mov-t6-medconnect-dev\\src\\medconnect.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\projeto\\medconnect\\src\\medconnect.API\\wwwroot\\",
+      "BasePath": "_content/medconnect.API",
+      "RelativePath": "apiImages/default.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\apiImages\\default.png"
+    },
+    {
+      "Identity": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\projeto\\medconnect\\src\\medconnect.API\\wwwroot\\personImages\\persona01.png",
+      "SourceId": "medconnect.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\projeto\\medconnect\\src\\medconnect.API\\wwwroot\\",
       "BasePath": "_content/medconnect.API",
       "RelativePath": "personImages/persona01.png",
       "AssetKind": "All",
@@ -34,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\personImages\\persona01.png"
     },
     {
-      "Identity": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\pmv-ads-2023-2-e3-proj-mov-t6-medconnect-dev\\src\\medconnect.API\\wwwroot\\personImages\\persona02.png",
+      "Identity": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\projeto\\medconnect\\src\\medconnect.API\\wwwroot\\personImages\\persona02.png",
       "SourceId": "medconnect.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\pmv-ads-2023-2-e3-proj-mov-t6-medconnect-dev\\src\\medconnect.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\projeto\\medconnect\\src\\medconnect.API\\wwwroot\\",
       "BasePath": "_content/medconnect.API",
       "RelativePath": "personImages/persona02.png",
       "AssetKind": "All",
@@ -51,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\personImages\\persona02.png"
     },
     {
-      "Identity": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\pmv-ads-2023-2-e3-proj-mov-t6-medconnect-dev\\src\\medconnect.API\\wwwroot\\personImages\\persona03.png",
+      "Identity": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\projeto\\medconnect\\src\\medconnect.API\\wwwroot\\personImages\\persona03.png",
       "SourceId": "medconnect.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\pmv-ads-2023-2-e3-proj-mov-t6-medconnect-dev\\src\\medconnect.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\projeto\\medconnect\\src\\medconnect.API\\wwwroot\\",
       "BasePath": "_content/medconnect.API",
       "RelativePath": "personImages/persona03.png",
       "AssetKind": "All",
@@ -68,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\personImages\\persona03.png"
     },
     {
-      "Identity": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\pmv-ads-2023-2-e3-proj-mov-t6-medconnect-dev\\src\\medconnect.API\\wwwroot\\personImages\\persona04.png",
+      "Identity": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\projeto\\medconnect\\src\\medconnect.API\\wwwroot\\personImages\\persona04.png",
       "SourceId": "medconnect.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\pmv-ads-2023-2-e3-proj-mov-t6-medconnect-dev\\src\\medconnect.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\projeto\\medconnect\\src\\medconnect.API\\wwwroot\\",
       "BasePath": "_content/medconnect.API",
       "RelativePath": "personImages/persona04.png",
       "AssetKind": "All",
@@ -85,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\personImages\\persona04.png"
     },
     {
-      "Identity": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\pmv-ads-2023-2-e3-proj-mov-t6-medconnect-dev\\src\\medconnect.API\\wwwroot\\personImages\\persona05.png",
+      "Identity": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\projeto\\medconnect\\src\\medconnect.API\\wwwroot\\personImages\\persona05.png",
       "SourceId": "medconnect.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\pmv-ads-2023-2-e3-proj-mov-t6-medconnect-dev\\src\\medconnect.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\projeto\\medconnect\\src\\medconnect.API\\wwwroot\\",
       "BasePath": "_content/medconnect.API",
       "RelativePath": "personImages/persona05.png",
       "AssetKind": "All",
@@ -102,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\personImages\\persona05.png"
     },
     {
-      "Identity": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\pmv-ads-2023-2-e3-proj-mov-t6-medconnect-dev\\src\\medconnect.API\\wwwroot\\personImages\\persona07.png",
+      "Identity": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\projeto\\medconnect\\src\\medconnect.API\\wwwroot\\personImages\\persona07.png",
       "SourceId": "medconnect.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\pmv-ads-2023-2-e3-proj-mov-t6-medconnect-dev\\src\\medconnect.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\projeto\\medconnect\\src\\medconnect.API\\wwwroot\\",
       "BasePath": "_content/medconnect.API",
       "RelativePath": "personImages/persona07.png",
       "AssetKind": "All",

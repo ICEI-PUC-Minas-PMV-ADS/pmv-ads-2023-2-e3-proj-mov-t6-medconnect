@@ -11,16 +11,17 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Consulta } from '../../api';
 import { Card } from '../../components/Card';
 import { publicFiles } from '../../../config/env';
+import { useAuth } from '../../hooks/useAuth';
 
 
 interface Props extends DrawerScreenProps<any, any>{}
 
 export const AppointmentScreen = ({navigation, route} :Props) => {
-  
+  const {token} = useAuth();
   const { especialista } = route.params;
 
   const consultaController = new Consulta();
-  
+  console.log("EspecialistaId : ==>>>>>>>>>",especialista.atendimentos[0].especialistaId)
   const [dataAgendamento, setDataAgendamento] = useState("");
   const [horaAgendamento, setHoraAgendamento] = useState("");
   const [datas, setDatas] = useState([])
@@ -34,8 +35,12 @@ export const AppointmentScreen = ({navigation, route} :Props) => {
   }
 
   const sendConsulta = async () =>{
+
     (dataAgendamento.trim().length > 0 && horaAgendamento.trim().length > 0) 
-      ? await consultaController.newConsulta(dataAgendamento+"T"+horaAgendamento)
+      ? await consultaController.newConsulta(
+            { "especialistaId": especialista.atendimentos[0].especialistaId,
+              "dataConsulta":`${dataAgendamento}T${horaAgendamento}`
+            }, token)
       : Alert.alert("Por favor, escolha um dia e horário...");
   }
 

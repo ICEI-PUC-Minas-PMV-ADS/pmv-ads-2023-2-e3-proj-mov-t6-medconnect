@@ -8,6 +8,8 @@ namespace medconnect.API.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid ConsultaId { get; set; }
+        public string? UsuarioId { get; set; }
+        public string EspecialistaId { get; set; }
         public DateTime DataConsulta { get; set; }  
 
     }

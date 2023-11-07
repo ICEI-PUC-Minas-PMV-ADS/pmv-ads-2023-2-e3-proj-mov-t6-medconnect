@@ -13,9 +13,9 @@ namespace medconnect.API.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly UserManager<UserIdentity> _userManager;
+        private readonly UserManager<Usuario> _userManager;
 
-        public UserController(UserManager<UserIdentity> userManager)
+        public UserController(UserManager<Usuario> userManager)
         {
             _userManager = userManager;
         }   
@@ -23,6 +23,7 @@ namespace medconnect.API.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
+           
             string token = Request.Headers["Authorization"];
             string userId = Token.getIdByToken(token);
 
@@ -36,7 +37,8 @@ namespace medconnect.API.Controllers
                 Sobrenome   = user.Sobrenome,
                 Email       = user.Email,
                 CPF         = user.CPF,
-                FotoPerfil  = user.FotoPerfil
+                FotoPerfil  = user.FotoPerfil,
+                 
             };
             return Ok(userResponse);
         }

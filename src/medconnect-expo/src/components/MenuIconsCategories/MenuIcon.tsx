@@ -6,11 +6,12 @@ interface IconData {
     icon: any,
     category: string,
     background: string,
+    onPress: any
 }
 
-export const MenuIcon = ({icon, category, background="D2D2D2"}: IconData) => {
+export const MenuIcon = ({onPress, icon, category, background="D2D2D2"}: IconData) => {
   return (
-   <TouchableOpacity style={[styles.container,  {backgroundColor: background}]}>
+   <TouchableOpacity onPress= {()=> onPress()} style={[styles.container,  {backgroundColor: background}]}>
     <Image 
         source={icon}
         style={[styles.icon]}

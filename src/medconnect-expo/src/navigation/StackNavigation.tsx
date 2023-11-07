@@ -2,29 +2,28 @@ import {createStackNavigator} from "@react-navigation/stack"
 import React from 'react'
 import { IndexScreen } from "../screens/IndexScreen"
 
-import { AppointmentScreen, DashboardScreen, HomeScreen, LoginScreen, RecoverPasswordScreen, SearchScreen, SpecialistScreen } from "../screens"
+import { AppointmentHistory, AppointmentScreen, RecoverPasswordScreen, SpecialistScreen } from "../screens"
  
 import { ValidarCampos } from "../screens/exemplo"
 import { BottomNavigation } from "./BottomNavigation"
-import CadastroScreen from "../screens/Register/components/CadastroScreen";
 
 const Stack = createStackNavigator()
 
 export const StackNavigation = () => {
   return (
-    <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="IndexScreen" component={IndexScreen} />  
+    <Stack.Navigator screenOptions={{}}>
+       {/* <Stack.Screen name="IndexScreen" component={IndexScreen} /> */ } 
 
-            <Stack.Screen name="Home" component={HomeScreen} />
-            <Stack.Screen name="Login" component={LoginScreen} />
-            <Stack.Screen name="Register" component={CadastroScreen} />
+           
 
 
-        <Stack.Screen name="Dashboard" options={{headerShown: false}} component={BottomNavigation} />
+        <Stack.Screen name="Dashboard" options={{}} component={BottomNavigation} />
         <Stack.Screen name="RecoverPassword" component={RecoverPasswordScreen} />     
         <Stack.Screen name="ValidarCampos" component={ValidarCampos} />
         <Stack.Screen name="Specialist" component={SpecialistScreen} />
         <Stack.Screen name="Appointment" component={AppointmentScreen} options={{presentation: "modal"}}/>
+        <Stack.Screen name="AppointmentHistory" component={AppointmentHistory} />
+
     </Stack.Navigator>
   )
 }

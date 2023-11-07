@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "o4NpMFhCsK5IIYHKvAQiTJBgbuMroLpo9zqwLPcpfE4/zW4DdaOouYGeJ0yPtbbwWodRo16Qh0qQut3zltQD8w==",
+  "dgSpecHash": "s7lnCEflnlhTNGxuEZGrBgPZfzVDA6LYp0HHHS++eTPT5scK/KO+IAC/wTl0RqSKqCecix7BT14pk10+Dv+r0A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\pmv-ads-2023-2-e3-proj-mov-t6-medconnect-dev\\src\\medconnect.API\\medconnect.API.csproj",
+  "projectFilePath": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\projeto\\medconnect\\src\\medconnect.API\\medconnect.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\paulo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\paulo\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.23\\microsoft.aspnetcore.authentication.jwtbearer.6.0.23.nupkg.sha512",

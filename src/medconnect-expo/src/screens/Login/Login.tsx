@@ -6,8 +6,11 @@ import {useForm, Controller } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 
 import {Schema} from "./ValidateSchema";
+import { useAuth } from '../../hooks/useAuth';
 
 export const LoginScreen = () => {
+
+   const {token, setToken, login} = useAuth()
 
   const navigation = useNavigation()
 
@@ -19,10 +22,20 @@ export const LoginScreen = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
+  const loginUser = async() => {
+    let tokenlogin = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhODc5ZDNkMi04NzJmLTQzZGItODkwMS0yMTY2NDc2ZjFmZTMiLCJqdGkiOiIyNjA1OTA3Yi1iNGUyLTRmYjUtYWRmNS0zM2E3NjhkNzY5YjUiLCJleHAiOjE2OTkzMjMxMzgsImlzcyI6IlRva2VuX0lzc3VlciIsImF1ZCI6IlRva2VuX0F1ZGllbmNlIn0.IBBdJaP99bOdbkyP0SUPRrKE1a3ksF4yxKoI5J44XGc";
+    setToken(tokenlogin);          
+    await login(token);      
+  }
+    
+
   const handleLogin = (data: any) => {
     const {username, password} = data
     if (username === 'usuario' && password === 'senha1') {
-       navigation.navigate("Dashboard");
+       (async()=>{
+        await loginUser();
+       } )();
+      
     } else {
       alert('Login falhou. Verifique seu usuário e senha.');
     }

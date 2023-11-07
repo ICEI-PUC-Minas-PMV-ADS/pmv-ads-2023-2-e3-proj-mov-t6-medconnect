@@ -6,9 +6,10 @@ import { styles } from './styles';
 import { Card } from '../../components/Card';
 import { useAuth } from '../../hooks/useAuth';
 import { IEspecialista } from '../../api/interfaces';
+import { Especialista } from '../../api';
 import { Search } from '../../components/Search';
 
-
+const especialistaController = new Especialista();
 interface Props extends DrawerScreenProps<any, any>{}
 
 export const SearchScreen = ({navigation, route} :Props) => {
@@ -18,18 +19,14 @@ export const SearchScreen = ({navigation, route} :Props) => {
   const [espResult, setEspResult] = useState<IEspecialista[]>([]);
   
   const {especialistasRes} = route.params;
-
-  const getEspecialistas = async () =>{
-    const esp = await getAllEspecialistas()
-    setEspecialistas(esp);    
-    setEspResult(esp);    
-  }
-
-  
+ 
   useEffect(() => {
-    getEspecialistas()
+    (async()=>{
+      const esp = await especialistaController.getAll();
+      setEspecialistas(esp);    
+      setEspResult(esp)
+    })()
   }, [])
-
 
   const [scrollY, setScrollY] = useState(new Animated.Value(0))
   return (

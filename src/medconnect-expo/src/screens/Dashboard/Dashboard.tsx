@@ -6,31 +6,27 @@ import { HeaderContainer } from '../../components/header/HeaderContainer';
 import { styles } from './styles';
 import { Card } from '../../components/Card';
 import { MenuIcon } from '../../components/MenuIconsCategories';
-import { useAuth } from '../../hooks/useAuth';
 import { FlatList } from 'react-native-gesture-handler';
+import { Especialista } from "../../api";
 import { IEspecialista } from '../../api/interfaces';
 import { Search } from '../../components/Search';
 
 
+const especialistaController = new Especialista();
 interface Props extends DrawerScreenProps<any, any>{}
 
 export const DashboardScreen = ({navigation, route} :Props) => {
-  const { getAllEspecialistas } = useAuth();
+  
   const [especialistas, setEspecialistas] = useState<IEspecialista[]>([]);
   const [especialistasRes, setEspecialistasRes] = useState<IEspecialista[]>([]);
   
 
-
-  const getEspecialistas = async () =>{
-    const esp = await getAllEspecialistas()
-    setEspecialistas(esp);    
-    setEspecialistasRes(esp)
-  }
-
-  
   useEffect(() => {
-    getEspecialistas()
-
+    (async()=>{
+      const esp = await especialistaController.getAll();
+      setEspecialistas(esp);    
+      setEspecialistasRes(esp)
+    })()
   }, [])
 
  
@@ -74,18 +70,21 @@ export const DashboardScreen = ({navigation, route} :Props) => {
         <Text style={styles.menuTitle}>Menu</Text>
         <View style={styles.menuIcons}>
             <MenuIcon 
+              onPress={() => navigation.navigate("AppointmentHistory")}
               icon={require('../../assets/images/medical-team.png')}
               category={"Profissionais"}
               background={"#e3ebeb"}  
             />          
 
             <MenuIcon 
+              onPress={() => navigation.navigate("AppointmentHistory")}
               icon={require('../../assets/images/medical-checkup.png')}
               category={"Agendamentos"}
               background={"#e3ebeb"}  
             />   
 
             <MenuIcon 
+              onPress={() => navigation.navigate("AppointmentHistory")}
               icon={require('../../assets/images/lungs.png')}
               category={"Exames"}
               background={"#e3ebeb"}  

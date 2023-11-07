@@ -3,6 +3,7 @@ using medconnect.API.Models;
 using medconnect.API.Repository.interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Web;
 
 namespace medconnect.API.Controllers
 {
@@ -35,13 +36,18 @@ namespace medconnect.API.Controllers
         }
 
 
-        [HttpGet("{id:Guid}", Name = "especialista")]
-        public async Task<ActionResult<Especialista>> Get(Guid id)
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Especialista>> Get(string id)
         {
-            var especialista = await _context.EspecialistaRepository.GetById(e => e.EspecialistaId == id);
-            if (especialista is null)
-                return NotFound();
-            return especialista;
+            string eId = System.Web.HttpUtility.UrlDecode(id);
+            //Guid guid = new Guid(eId);         
+            if (Guid.TryParse(eId, out Guid guid)) { 
+                var especialista = await _context.EspecialistaRepository.GetById(e => e.EspecialistaId == guid);
+                if (especialista is null)
+                    return NotFound();
+                return especialista;
+            }
+            return BadRequest("Especialista invalido...");          
         }
 
         [HttpGet("add")]
@@ -65,28 +71,29 @@ namespace medconnect.API.Controllers
         {
             List<Atendimento> at = new List<Atendimento>()
             {
-                new Atendimento{ EspecialistaId = Guid.Parse("08dbd362-7491-483b-8eca-10aeb459812c"), 
+                new Atendimento{ EspecialistaId = Guid.Parse("08dbdf1b-f660-48dc-808e-cf60183ceda9"), 
                     AtendimentoId = Guid.NewGuid(), DataAtendimento = DateTime.Now 
                 },
 
                
-                 new Atendimento{ EspecialistaId = Guid.Parse("08dbd362-749d-4a81-89ee-220763a2e315"),
+                 new Atendimento{ EspecialistaId = Guid.Parse("08dbdf1b-f66d-4a3b-82ce-d72950b08543"),
                     AtendimentoId = Guid.NewGuid(), DataAtendimento = DateTime.Now
                 },
 
-                 new Atendimento{ EspecialistaId = Guid.Parse("08dbd362-749d-4aee-845d-8aa0f396ef4c"),
+                 new Atendimento{ EspecialistaId = Guid.Parse("08dbdf1b-f66d-4ae5-862b-cc5c369c02c3"),
                     AtendimentoId = Guid.NewGuid(), DataAtendimento = DateTime.Now
                 },
 
-                new Atendimento{ EspecialistaId = Guid.Parse("08dbd362-749d-4af5-8c12-992e14b5e768"),
+                new Atendimento{ EspecialistaId = Guid.Parse("08dbdf1b-f66d-4af1-81e5-0d2f04fd84a9"),
                     AtendimentoId = Guid.NewGuid(), DataAtendimento = DateTime.Now
                 },
 
-                 new Atendimento{ EspecialistaId = Guid.Parse("08dbd362-749d-4b11-843f-994ad272c433"),
+                 new Atendimento{ EspecialistaId = Guid.Parse("08dbdf1b-f66d-4b15-8266-f005b4552e36"),
                     AtendimentoId = Guid.NewGuid(), DataAtendimento = DateTime.Now
                 },
 
             };
+                        
 
             _appDbContext.Atendimentos.AddRangeAsync(at);
             await _appDbContext.SaveChangesAsync();

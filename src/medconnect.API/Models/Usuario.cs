@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace medconnect.API.Models
 {
-    public class UserIdentity : IdentityUser
+    public class Usuario : IdentityUser
     {
         [Required]
         [StringLength(15)]
@@ -22,6 +22,8 @@ namespace medconnect.API.Models
         [Required]
         [StringLength(300)]
         public string Sobrenome { get; set; }
+
+        public IEnumerable<Consulta>? Consultas { get; set; }
 
     }
 }

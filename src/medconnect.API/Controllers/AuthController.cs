@@ -14,10 +14,10 @@ namespace medconnect.API.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly UserManager<UserIdentity> _userManager;
-        private readonly SignInManager<UserIdentity> _signInManager;
+        private readonly UserManager<Usuario> _userManager;
+        private readonly SignInManager<Usuario> _signInManager;
         private readonly IConfiguration _configuration;
-        public AuthController(UserManager<UserIdentity> userManager, SignInManager<UserIdentity> signInManager, IConfiguration configuration)
+        public AuthController(UserManager<Usuario> userManager, SignInManager<Usuario> signInManager, IConfiguration configuration)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -27,7 +27,7 @@ namespace medconnect.API.Controllers
         [HttpPost("register")]
         public async Task<ActionResult> RegisterUser([FromBody] UserModelDTO model)
         {
-            var user = new UserIdentity
+            var user = new Usuario
             {
                 UserName = model.Email,
                 Email = model.Email,

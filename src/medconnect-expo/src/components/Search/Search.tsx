@@ -16,13 +16,14 @@ export const Search = ({data, setDataResult, especialistasRes}: searchData) => {
  
   const navigation = useNavigation();
   const KEYS = ["nome", "sobrenome", "descricaoCurta"];
-
+  const [searchField, setSarchField] = useState("")
   useEffect(() => {
-    console.log("==================================>>", especialistasRes)
+    
     {especialistasRes.length < data.length ? setDataResult(especialistasRes) : setDataResult(data)}
   },[especialistasRes])
 
   const onSearch = (text:string) => {
+    setSarchField(text)
     const resultSearch = data.filter(createFilter(text, KEYS));
     setDataResult(resultSearch);
    }
@@ -37,6 +38,7 @@ export const Search = ({data, setDataResult, especialistasRes}: searchData) => {
     <TextInput 
         placeholder="Pesquisar..."
         style={styles.inputSearch}
+        value={searchField}
         onChangeText={(text) => onSearch(text)}
       />
       <TouchableOpacity onPress={() => sendSearch()} style={styles.searchIcon}>

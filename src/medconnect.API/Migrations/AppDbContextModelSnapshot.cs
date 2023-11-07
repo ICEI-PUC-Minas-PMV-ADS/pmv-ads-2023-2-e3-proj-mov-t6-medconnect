@@ -175,7 +175,16 @@ namespace medconnect.API.Migrations
                     b.Property<DateTime>("DataConsulta")
                         .HasColumnType("datetime(6)");
 
+                    b.Property<string>("EspecialistaId")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("UsuarioId")
+                        .HasColumnType("varchar(255)");
+
                     b.HasKey("ConsultaId");
+
+                    b.HasIndex("UsuarioId");
 
                     b.ToTable("Consultas");
                 });
@@ -211,7 +220,7 @@ namespace medconnect.API.Migrations
                     b.ToTable("Especialistas");
                 });
 
-            modelBuilder.Entity("medconnect.API.Models.UserIdentity", b =>
+            modelBuilder.Entity("medconnect.API.Models.Usuario", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("varchar(255)");
@@ -309,7 +318,7 @@ namespace medconnect.API.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("medconnect.API.Models.UserIdentity", null)
+                    b.HasOne("medconnect.API.Models.Usuario", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -318,7 +327,7 @@ namespace medconnect.API.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("medconnect.API.Models.UserIdentity", null)
+                    b.HasOne("medconnect.API.Models.Usuario", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -333,7 +342,7 @@ namespace medconnect.API.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("medconnect.API.Models.UserIdentity", null)
+                    b.HasOne("medconnect.API.Models.Usuario", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -342,7 +351,7 @@ namespace medconnect.API.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("medconnect.API.Models.UserIdentity", null)
+                    b.HasOne("medconnect.API.Models.Usuario", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -360,9 +369,21 @@ namespace medconnect.API.Migrations
                     b.Navigation("Especialista");
                 });
 
+            modelBuilder.Entity("medconnect.API.Models.Consulta", b =>
+                {
+                    b.HasOne("medconnect.API.Models.Usuario", null)
+                        .WithMany("Consultas")
+                        .HasForeignKey("UsuarioId");
+                });
+
             modelBuilder.Entity("medconnect.API.Models.Especialista", b =>
                 {
                     b.Navigation("Atendimentos");
+                });
+
+            modelBuilder.Entity("medconnect.API.Models.Usuario", b =>
+                {
+                    b.Navigation("Consultas");
                 });
 #pragma warning restore 612, 618
         }
