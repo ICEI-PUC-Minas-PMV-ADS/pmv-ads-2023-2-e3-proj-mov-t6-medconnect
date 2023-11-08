@@ -11,7 +11,7 @@ using medconnect.API.Context;
 namespace medconnect.API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231106225515_migracao01")]
+    [Migration("20231107161540_migracao01")]
     partial class migracao01
     {
         /// <inheritdoc />

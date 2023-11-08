@@ -23,7 +23,7 @@ export const LoginScreen = () => {
   const [password, setPassword] = useState('');
 
   const loginUser = async() => {
-    let tokenlogin = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhODc5ZDNkMi04NzJmLTQzZGItODkwMS0yMTY2NDc2ZjFmZTMiLCJqdGkiOiIyNjA1OTA3Yi1iNGUyLTRmYjUtYWRmNS0zM2E3NjhkNzY5YjUiLCJleHAiOjE2OTkzMjMxMzgsImlzcyI6IlRva2VuX0lzc3VlciIsImF1ZCI6IlRva2VuX0F1ZGllbmNlIn0.IBBdJaP99bOdbkyP0SUPRrKE1a3ksF4yxKoI5J44XGc";
+    let tokenlogin = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI3ZWFlMDRjYS1mODE5LTQ5YjEtOTY4MC04NjY0ZmVlYzlmYzEiLCJqdGkiOiJiZDIxNTA5Ny1jODU3LTQ5NGMtYmJjOS1kMWYxNGU5ZTBjNzYiLCJleHAiOjE2OTk0MTEyMjgsImlzcyI6IlRva2VuX0lzc3VlciIsImF1ZCI6IlRva2VuX0F1ZGllbmNlIn0.2FoeFAprgri2_MgRsC_TqCxI9GODtQUpPAWE0eDI5Gs";
     setToken(tokenlogin);          
     await login(token);      
   }

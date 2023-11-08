@@ -21,7 +21,7 @@ export const AppointmentScreen = ({navigation, route} :Props) => {
   const { especialista } = route.params;
 
   const consultaController = new Consulta();
-  console.log("EspecialistaId : ==>>>>>>>>>",especialista.atendimentos[0].especialistaId)
+
   const [dataAgendamento, setDataAgendamento] = useState("");
   const [horaAgendamento, setHoraAgendamento] = useState("");
   const [datas, setDatas] = useState([])
@@ -48,10 +48,7 @@ export const AppointmentScreen = ({navigation, route} :Props) => {
     return date.split("T")[0];
   }
 
-   
-  console.log("datas", datas);
-  console.log("especilista", especialista.atendimentos);
-
+  
   return (
     <SafeAreaView>
       <View style={styles.container}>
@@ -97,7 +94,9 @@ export const AppointmentScreen = ({navigation, route} :Props) => {
               <Text>Data da consulta:</Text>
               <View>
                 <Text style={styles.textHour}>ESCOLHER DIA</Text>
-                <Calendario  setDataAgendamento={setDataAgendamento}/> 
+                <Calendario 
+                  atendimentos={especialista.atendimentos}
+                  setDataAgendamento={setDataAgendamento}/> 
               </View>
           </View>
           <View style={styles.pedidoConsulta}>
