@@ -20,8 +20,8 @@ namespace medconnect.API.Controllers
             _userManager = userManager;
         }   
 
-        [HttpGet]
-        public async Task<IActionResult> Get()
+        [HttpPost]
+        public async Task<IActionResult> Post()
         {
            
             string token = Request.Headers["Authorization"];

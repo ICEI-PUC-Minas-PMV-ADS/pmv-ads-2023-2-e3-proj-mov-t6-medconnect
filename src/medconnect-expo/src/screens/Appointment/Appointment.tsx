@@ -34,13 +34,25 @@ export const AppointmentScreen = ({navigation, route} :Props) => {
     return (dateAt.getHours() + ":" + (dateAt.getMinutes()))
   }
 
+  const send = async() => {
+    try {
+      const result = await consultaController.newConsulta(
+        { "especialistaId": especialista.atendimentos[0].especialistaId,
+          "dataConsulta":`${dataAgendamento}T${horaAgendamento}`
+        }, token)
+      
+        navigation.navigate("Feedback")  
+
+    } catch (error) {
+       Alert.alert("Não foi possivel efetuar o agendamento, por favor tente mais tarde...");
+    }
+    
+  }
+
   const sendConsulta = async () =>{
 
     (dataAgendamento.trim().length > 0 && horaAgendamento.trim().length > 0) 
-      ? await consultaController.newConsulta(
-            { "especialistaId": especialista.atendimentos[0].especialistaId,
-              "dataConsulta":`${dataAgendamento}T${horaAgendamento}`
-            }, token)
+      ? send()
       : Alert.alert("Por favor, escolha um dia e horário...");
   }
 
