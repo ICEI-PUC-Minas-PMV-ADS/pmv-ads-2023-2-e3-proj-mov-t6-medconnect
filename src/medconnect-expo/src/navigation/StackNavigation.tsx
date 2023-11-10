@@ -13,7 +13,7 @@ const Stack = createStackNavigator()
 export const StackNavigation = () => {
   return (
     <Stack.Navigator screenOptions={{}}>
-      <Stack.Screen name="IndexScreen" component={IndexScreen} />  
+      {/*<Stack.Screen name="IndexScreen" component={IndexScreen} />  */}
 
            
 

@@ -1,4 +1,4 @@
-import {View, Text, Image} from "react-native"
+import {View, Text, Image, TouchableOpacity} from "react-native"
 import { publicFiles } from "../../../config/env"
 import { IConsulta, IEspecialista } from "../../api/interfaces"
 import { styles } from "./Styles"
@@ -30,6 +30,10 @@ export const CardHistory = ({consulta, especialista}: Prop) => {
               <Text>Data: {consulta.dataConsulta.split("T")[0]}</Text>
               <Text>Hora: {consulta.dataConsulta.split("T")[1]}</Text>
             </View>
+
+            <TouchableOpacity onPress={()=>{}} style={styles.cardSpecBtnView}>
+                <Text style={styles.cardSpecBtnViewText}>Visualizar</Text>
+            </TouchableOpacity>
           </View>
           )
           :
