@@ -71,25 +71,25 @@ namespace medconnect.API.Controllers
         {
             List<Atendimento> at = new List<Atendimento>()
             {
-                new Atendimento{ EspecialistaId = Guid.Parse("08dbdf1b-f660-48dc-808e-cf60183ceda9"), 
-                    AtendimentoId = Guid.NewGuid(), DataAtendimento = DateTime.Now 
+                new Atendimento{ EspecialistaId = Guid.Parse("08dbdfac-eee9-4708-8c79-382101985862"), 
+                    AtendimentoId = Guid.NewGuid(), DataAtendimento = new DateTime(2023, 11, 23, 15, 00, 0)
                 },
 
                
-                 new Atendimento{ EspecialistaId = Guid.Parse("08dbdf1b-f66d-4a3b-82ce-d72950b08543"),
-                    AtendimentoId = Guid.NewGuid(), DataAtendimento = DateTime.Now
+                 new Atendimento{ EspecialistaId = Guid.Parse("08dbdfac-eef8-4137-8082-50b24adb4128"),
+                    AtendimentoId = Guid.NewGuid(), DataAtendimento =  new DateTime(2023, 11, 24, 15, 30, 0)
                 },
 
-                 new Atendimento{ EspecialistaId = Guid.Parse("08dbdf1b-f66d-4ae5-862b-cc5c369c02c3"),
-                    AtendimentoId = Guid.NewGuid(), DataAtendimento = DateTime.Now
+                 new Atendimento{ EspecialistaId = Guid.Parse("08dbdfac-eef8-41bb-8118-c8150e7cd9b6"),
+                    AtendimentoId = Guid.NewGuid(), DataAtendimento =  new DateTime(2023, 11, 25, 18, 00, 0)
                 },
 
-                new Atendimento{ EspecialistaId = Guid.Parse("08dbdf1b-f66d-4af1-81e5-0d2f04fd84a9"),
-                    AtendimentoId = Guid.NewGuid(), DataAtendimento = DateTime.Now
+                new Atendimento{ EspecialistaId = Guid.Parse("08dbdfac-eef8-41c8-86d1-796294c2542f"),
+                    AtendimentoId = Guid.NewGuid(), DataAtendimento =  new DateTime(2023, 11, 25, 13, 30, 0)
                 },
 
-                 new Atendimento{ EspecialistaId = Guid.Parse("08dbdf1b-f66d-4b15-8266-f005b4552e36"),
-                    AtendimentoId = Guid.NewGuid(), DataAtendimento = DateTime.Now
+                 new Atendimento{ EspecialistaId = Guid.Parse("08dbdfac-eef8-41e8-8e05-63d76d491d69"),
+                    AtendimentoId = Guid.NewGuid(), DataAtendimento = new DateTime(2023, 11, 27, 16, 20, 0)
                 },
 
             };

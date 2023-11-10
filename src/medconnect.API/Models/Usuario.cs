@@ -25,5 +25,6 @@ namespace medconnect.API.Models
 
         public IEnumerable<Consulta>? Consultas { get; set; }
 
+
     }
 }

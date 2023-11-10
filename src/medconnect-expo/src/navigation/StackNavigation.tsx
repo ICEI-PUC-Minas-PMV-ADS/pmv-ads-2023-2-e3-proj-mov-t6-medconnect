@@ -6,13 +6,14 @@ import { AppointmentHistory, AppointmentScreen, RecoverPasswordScreen, Specialis
  
 import { ValidarCampos } from "../screens/exemplo"
 import { BottomNavigation } from "./BottomNavigation"
+import { ModalFeedback } from "../components/ModalFeedback"
 
 const Stack = createStackNavigator()
 
 export const StackNavigation = () => {
   return (
     <Stack.Navigator screenOptions={{}}>
-       {/* <Stack.Screen name="IndexScreen" component={IndexScreen} /> */ } 
+      {/*<Stack.Screen name="IndexScreen" component={IndexScreen} />  */}
 
            
 
@@ -23,6 +24,8 @@ export const StackNavigation = () => {
         <Stack.Screen name="Specialist" component={SpecialistScreen} />
         <Stack.Screen name="Appointment" component={AppointmentScreen} options={{presentation: "modal"}}/>
         <Stack.Screen name="AppointmentHistory" component={AppointmentHistory} />
+        <Stack.Screen name="Feedback" options={{presentation: "modal" , headerShown: false}}  component={ModalFeedback} />
+        <Stack.Screen name="ModalFeedback" options={{presentation: "modal" , headerShown: false}}  component={ModalFeedback} />
 
     </Stack.Navigator>
   )

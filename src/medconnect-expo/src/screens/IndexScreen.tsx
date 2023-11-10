@@ -16,6 +16,8 @@ export const IndexScreen = () => {
         <Button title="Dashboard" onPress={() => navigation.navigate("Dashboard")}/>
         <Button title="Exemplo Validar Campos" onPress={() => navigation.navigate("ValidarCampos")}/>        
         <Button title="Search" onPress={() => navigation.navigate("Search")}/>        
+        <Button title="Success" onPress={() => navigation.navigate("ModalFeedback")}/>        
+        <Button title="Feed" onPress={() => navigation.navigate("Feedback")}/>        
     </View>
   )
 }

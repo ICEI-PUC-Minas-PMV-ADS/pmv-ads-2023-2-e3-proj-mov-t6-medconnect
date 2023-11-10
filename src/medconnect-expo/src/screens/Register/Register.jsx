@@ -145,6 +145,8 @@ export const RegisterScreen = () => {
             />
           </View>
 
+         
+
           <Button title="Cadastrar" onPress={handleSubmit(handleCadastrar)} color="blue" />
         </View>
 

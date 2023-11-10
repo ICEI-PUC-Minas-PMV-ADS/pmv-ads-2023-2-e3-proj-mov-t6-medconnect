@@ -95,7 +95,7 @@ return (
       </Animated.View>
   
       <View style={styles.body}>
-
+        <Text>Agendamentos</Text>
         {
           especialistas.map((espec, index) => (
             <CardHistory key={espec.especialistaId} 

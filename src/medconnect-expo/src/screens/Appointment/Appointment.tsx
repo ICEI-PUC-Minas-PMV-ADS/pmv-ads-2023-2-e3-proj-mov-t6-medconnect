@@ -21,7 +21,7 @@ export const AppointmentScreen = ({navigation, route} :Props) => {
   const { especialista } = route.params;
 
   const consultaController = new Consulta();
-  console.log("EspecialistaId : ==>>>>>>>>>",especialista.atendimentos[0].especialistaId)
+
   const [dataAgendamento, setDataAgendamento] = useState("");
   const [horaAgendamento, setHoraAgendamento] = useState("");
   const [datas, setDatas] = useState([])
@@ -34,13 +34,25 @@ export const AppointmentScreen = ({navigation, route} :Props) => {
     return (dateAt.getHours() + ":" + (dateAt.getMinutes()))
   }
 
+  const send = async() => {
+    try {
+      const result = await consultaController.newConsulta(
+        { "especialistaId": especialista.atendimentos[0].especialistaId,
+          "dataConsulta":`${dataAgendamento}T${horaAgendamento}`
+        }, token)
+      
+        navigation.navigate("Feedback")  
+
+    } catch (error) {
+       Alert.alert("Não foi possivel efetuar o agendamento, por favor tente mais tarde...");
+    }
+    
+  }
+
   const sendConsulta = async () =>{
 
     (dataAgendamento.trim().length > 0 && horaAgendamento.trim().length > 0) 
-      ? await consultaController.newConsulta(
-            { "especialistaId": especialista.atendimentos[0].especialistaId,
-              "dataConsulta":`${dataAgendamento}T${horaAgendamento}`
-            }, token)
+      ? send()
       : Alert.alert("Por favor, escolha um dia e horário...");
   }
 
@@ -48,10 +60,7 @@ export const AppointmentScreen = ({navigation, route} :Props) => {
     return date.split("T")[0];
   }
 
-   
-  console.log("datas", datas);
-  console.log("especilista", especialista.atendimentos);
-
+  
   return (
     <SafeAreaView>
       <View style={styles.container}>
@@ -97,7 +106,9 @@ export const AppointmentScreen = ({navigation, route} :Props) => {
               <Text>Data da consulta:</Text>
               <View>
                 <Text style={styles.textHour}>ESCOLHER DIA</Text>
-                <Calendario  setDataAgendamento={setDataAgendamento}/> 
+                <Calendario 
+                  atendimentos={especialista.atendimentos}
+                  setDataAgendamento={setDataAgendamento}/> 
               </View>
           </View>
           <View style={styles.pedidoConsulta}>
