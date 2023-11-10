@@ -7,3 +7,4 @@ export * from "./Search";
 export * from "./Specialist";
 export * from "./Appointment";
 export * from "./AppointmentHistory";
+export * from "./Feedback";

@@ -6,7 +6,7 @@ type imgData = {
 }
 
 export const ImagePerson = ({image}:imgData) => {
-  console.log( `${publicFiles}/${image}`)
+ 
   return (
     <View>
       <Image source={{uri: `${publicFiles}/${image}`}} />

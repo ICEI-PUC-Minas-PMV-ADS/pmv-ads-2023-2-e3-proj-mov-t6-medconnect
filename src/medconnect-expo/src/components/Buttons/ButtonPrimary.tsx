@@ -11,12 +11,10 @@ export const ButtonPrimary = ({textButton, onPress}: Props) => {
   return (
     <TouchableOpacity
         style={[styles.button, styles.buttonLogin]}
-        onPress={() => {
-        // Adicione ação de login aqui
-        }}
+        onPress={ () => onPress()}
         activeOpacity={0.7}
     >
-        <Text style={styles.buttonTextLogin } onPress={ () => onPress()}>{textButton}</Text>
+        <Text style={styles.buttonTextLogin } >{textButton}</Text>
   </TouchableOpacity>
   )
 }
