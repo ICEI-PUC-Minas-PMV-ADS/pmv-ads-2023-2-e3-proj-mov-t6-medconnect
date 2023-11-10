@@ -114,6 +114,7 @@ const CadastroScreen = () => {
         </View>
 
         <View style={styles.formContainer}>
+       { errors.nome ? <Text style={{color: "#ff3777"}}>*{ errors.nome.message}</Text> : ""}
           <View style={[styles.inputContainer, 
               { borderWidth: errors.nome && 1,
                 borderColor: errors.nome && '#ff3777'  
@@ -133,8 +134,9 @@ const CadastroScreen = () => {
                 />
               )}
             />
+            
           </View>
-
+          { errors.sobrenome ? <Text style={{color: "#ff3777"}}>*{ errors.sobrenome.message}</Text> : ""}
           <View style={[styles.inputContainer, 
               { borderWidth: errors.sobrenome && 1,
                 borderColor: errors.sobrenome && '#ff3777'  
@@ -155,6 +157,8 @@ const CadastroScreen = () => {
               )}
             />
           </View>
+
+          { errors.cpf ? <Text style={{color: "#ff3777"}}>*{ errors.cpf.message}</Text> : ""}
           <View style={[styles.inputContainer, 
               { borderWidth: errors.cpf && 1,
                 borderColor: errors.cpf && '#ff3777'  
@@ -177,6 +181,8 @@ const CadastroScreen = () => {
                 )}
             />
           </View>
+
+          { errors.email ? <Text style={{color: "#ff3777"}}>*{ errors.email.message}</Text> : ""}
           <View style={[styles.inputContainer, 
               { borderWidth: errors.email && 1,
                 borderColor: errors.email && '#ff3777'  
@@ -198,7 +204,7 @@ const CadastroScreen = () => {
               )}
             />
           </View>
-
+          { errors.password ? <Text style={{color: "#ff3777"}}>*{ errors.password.message}</Text> : ""}
           <View style={[styles.inputContainer, 
               { borderWidth: errors.password && 1,
                 borderColor: errors.password && '#ff3777'  
