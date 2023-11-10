@@ -5,10 +5,12 @@ import { TextInputMask } from 'react-native-masked-text';
 import {useForm, Controller } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import {Schema} from "./ValidateSchema";
+import { useAuth } from '../../../hooks/useAuth';
 const apiUrl = 'https://localhost:7009/api/Usuarios';
 
 const CadastroScreen = () => {
 
+  const {register} = useAuth();
   
   const {control, handleSubmit, formState: {errors} }= useForm({
     resolver: yupResolver(Schema)
@@ -22,7 +24,10 @@ const CadastroScreen = () => {
 
 
   const handleRegister = async(data) => {
-    console.log(data)
+    const {nome, sobrenome, cpf, email, password} = data;
+    (async() => {
+      await register(nome, sobrenome, cpf, email, password)
+    })()
   }
 
   const handleCadastrar = async () => {

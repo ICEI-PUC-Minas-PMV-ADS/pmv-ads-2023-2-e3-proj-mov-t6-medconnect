@@ -44,11 +44,21 @@ const startLogin = async(email, password) => {
         Alert.alert("Não foi possivel efetuar o login, verifique seu email e senha...")
     }
 }
+    const register = async (nome, sobrenome, cpf, email, password) => {
+        try {
+            const result = await authController.register(nome, sobrenome, cpf, email, password);
+            const {token} = result 
+            console.log(result)
+            setToken(token)
+            
+        } catch (error) {
+             Alert.alert("Não foi possivel efetuar o cadastro, Tente novamente mais tarde...")
+        }
+    }
 
     const login = async(token) => {
        try {
            const response = await userController.getUser(token)
-           console.log("response ",response)
            await authController.setAccessToken(token)
            
            setUser(response) 
@@ -66,7 +76,8 @@ const startLogin = async(email, password) => {
         token,
         setToken,
         login,  
-        startLogin     
+        startLogin,   
+        register  
     }
 
     return <AuthContext.Provider value= {data}>{children}</AuthContext.Provider>
