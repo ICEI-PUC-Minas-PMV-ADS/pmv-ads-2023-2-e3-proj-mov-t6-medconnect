@@ -10,7 +10,7 @@ import { useAuth } from '../../hooks/useAuth';
 
 export const LoginScreen = () => {
 
-   const {token, setToken, login} = useAuth()
+   const {token, setToken, startLogin} = useAuth()
 
   const navigation = useNavigation()
 
@@ -21,25 +21,29 @@ export const LoginScreen = () => {
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-
+/*
   const loginUser = async() => {
     let tokenlogin = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhYjFkM2Q0OS0wZTc3LTRjNDAtYmExNi1jNWMzMTVlMTg4MGYiLCJqdGkiOiJjYmE1NzdmNi1iZjhhLTQxYzgtYjkyNC00NDc3YmQ4MGE4NjkiLCJleHAiOjE2OTk3NTM1NTksImlzcyI6IlRva2VuX0lzc3VlciIsImF1ZCI6IlRva2VuX0F1ZGllbmNlIn0.WUjq-fNzHDSjC5wgY2m1nbMl89jgkdmZELmc1iwTIXI";
     setToken(tokenlogin);          
     await login(token);      
   }
-    
+    */
 
   const handleLogin = (data: any) => {
     const {username, password} = data
-    if (username === 'usuario' && password === 'senha1') {
-       (async()=>{
+    startLogin(username,password)
+   
+    /* if (username === 'usuario' && password === 'senha1') {
+         
+     
+      /* (async()=>{
         
         await loginUser();
        } )();
       
     } else {
       alert('Login falhou. Verifique seu usuário e senha.');
-    }
+    }*/
   };
 
   const handleForgotPassword = () => {

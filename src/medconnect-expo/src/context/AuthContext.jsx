@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import {User} from "../api"
 import { Auth } from "../api";
+import { Alert } from "react-native";
 
 const userController = new User();
 const authController = new Auth() 
@@ -35,6 +36,14 @@ useEffect(() => {
    })()
 }, [token])
 
+const startLogin = async(email, password) => {
+    try {
+        const response = await authController.login(email, password);
+        await login(response.token)
+    } catch (error) {
+        Alert.alert("Não foi possivel efetuar o login, verifique seu email e senha...")
+    }
+}
 
     const login = async(token) => {
        try {
@@ -56,7 +65,8 @@ useEffect(() => {
         setUser,
         token,
         setToken,
-        login,       
+        login,  
+        startLogin     
     }
 
     return <AuthContext.Provider value= {data}>{children}</AuthContext.Provider>

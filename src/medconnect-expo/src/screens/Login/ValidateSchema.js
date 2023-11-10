@@ -1,7 +1,7 @@
 import * as yup from "yup";
 
 export const Schema = yup.object({
-  username: yup.string().required("Informe seu nome de usuário"),
+  username: yup.string().email('Email invalido').required('Informe seu email'),
   //email: yup.string().email('Email invalido').required('Informe seu email'),
   password: yup
     .string()
