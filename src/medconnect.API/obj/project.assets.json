@@ -2379,11 +2379,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\projeto\\medconnect\\src\\medconnect.API\\medconnect.API.csproj",
+      "projectUniqueName": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\medconnect.API.csproj",
       "projectName": "medconnect.API",
-      "projectPath": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\projeto\\medconnect\\src\\medconnect.API\\medconnect.API.csproj",
+      "projectPath": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\medconnect.API.csproj",
       "packagesPath": "C:\\Users\\paulo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\projeto\\medconnect\\src\\medconnect.API\\obj\\",
+      "outputPath": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\paulo\\AppData\\Roaming\\NuGet\\NuGet.Config",

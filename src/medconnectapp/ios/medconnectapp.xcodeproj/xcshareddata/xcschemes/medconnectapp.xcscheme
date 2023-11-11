@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "medconnectapp.app"
-               BlueprintName = "medconnectapp"
-               ReferencedContainer = "container:medconnectapp.xcodeproj">
+               BuildableName = "MedConnectApp.app"
+               BlueprintName = "MedConnectApp"
+               ReferencedContainer = "container:MedConnectApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "medconnectappTests.xctest"
-               BlueprintName = "medconnectappTests"
-               ReferencedContainer = "container:medconnectapp.xcodeproj">
+               BuildableName = "MedConnectAppTests.xctest"
+               BlueprintName = "MedConnectAppTests"
+               ReferencedContainer = "container:MedConnectApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "medconnectapp.app"
-            BlueprintName = "medconnectapp"
-            ReferencedContainer = "container:medconnectapp.xcodeproj">
+            BuildableName = "MedConnectApp.app"
+            BlueprintName = "MedConnectApp"
+            ReferencedContainer = "container:MedConnectApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "medconnectapp.app"
-            BlueprintName = "medconnectapp"
-            ReferencedContainer = "container:medconnectapp.xcodeproj">
+            BuildableName = "MedConnectApp.app"
+            BlueprintName = "MedConnectApp"
+            ReferencedContainer = "container:MedConnectApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
