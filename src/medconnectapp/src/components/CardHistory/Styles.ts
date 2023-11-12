@@ -17,23 +17,25 @@ export const styles = StyleSheet.create({
                 width: widthScreen * 0.2,
                 height: heightScreen * 0.1,
             }
-        }
+        },
+        cardSpecBtnView: {
+            width: 70,
+            height: 20,
+            backgroundColor: globalStyles.primaryColor,
+            alignItems: "center",
+            justifyContent: "center",
+            alignSelf: "flex-end",
+            bottom: 0,
+            left: "-75%",
+            borderRadius: 3,
+          },
+          cardSpecBtnViewText: {
+            color: "#FFF",
+            fontSize: 10,
+          },
     },
 
-    cardSpecBtnView: {
-        width: 70,
-        height: 20,
-        backgroundColor: globalStyles.primaryColor,
-        alignItems: "center",
-        justifyContent: "center",
-        alignSelf: "flex-end",
-        bottom: 0,
-        left: "-50%",
-        borderRadius: 3,
-      },
-      cardSpecBtnViewText: {
-        color: "#FFF",
-        fontSize: 10,
-      },
+    
+    
 
 })

@@ -3,12 +3,15 @@ import { publicFiles } from "../../../config/env"
 import { IConsulta, IEspecialista } from "../../api/interfaces"
 import { styles } from "./Styles"
 
+import { useNavigation } from "@react-navigation/native"
 
 type Prop = {
   consulta:IConsulta,
   especialista:IEspecialista
 }
 export const CardHistory = ({consulta, especialista}: Prop) => {
+
+  const navigation = useNavigation() 
 
   return (
     <View>
@@ -21,7 +24,7 @@ export const CardHistory = ({consulta, especialista}: Prop) => {
                 <Image 
                       source={{uri:`${publicFiles}/${especialista.fotoPerfil}`}}
                       style={styles.cardContainer.image.fotoPerfil}
-                      
+                      resizeMode="contain"
                 />
           </View>
             <View>
@@ -31,8 +34,8 @@ export const CardHistory = ({consulta, especialista}: Prop) => {
               <Text>Hora: {consulta.dataConsulta.split("T")[1]}</Text>
             </View>
 
-            <TouchableOpacity onPress={()=>{}} style={styles.cardSpecBtnView}>
-                <Text style={styles.cardSpecBtnViewText}>Visualizar</Text>
+            <TouchableOpacity onPress={()=> navigation.navigate("AppointmentCall",{especialista:especialista})} style={styles.cardContainer.cardSpecBtnView}>
+                <Text style={styles.cardContainer.cardSpecBtnViewText}>Visualizar</Text>
             </TouchableOpacity>
           </View>
           )
