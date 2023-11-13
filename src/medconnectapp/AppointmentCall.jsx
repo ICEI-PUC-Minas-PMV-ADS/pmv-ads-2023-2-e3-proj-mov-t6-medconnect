@@ -39,11 +39,11 @@ export default function AppointmentCall({navigation, route}) {
   const [type, setType] = useState('JOIN');
 
   const [callerId] = useState(
-    Math.floor(100000 + Math.random() * 900000).toString(),
+    456456
   );
   const otherUserId = useRef(null);
 
-  const socket = SocketIOClient(`http:${IP_SERVER}//:3500`, {
+  const socket = SocketIOClient(`http://192.168.1.6:3500`, {
     transports: ['websocket'],
     query: {
       callerId,
@@ -193,7 +193,7 @@ export default function AppointmentCall({navigation, route}) {
     const sessionDescription = await peerConnection.current.createOffer();
     await peerConnection.current.setLocalDescription(sessionDescription);
     sendCall({
-      calleeId: otherUserId.current,
+      calleeId: "123123",
       rtcMessage: sessionDescription,
     });
   }
@@ -220,7 +220,11 @@ export default function AppointmentCall({navigation, route}) {
 
   const JoinScreen = () => {
     return (
-      <View style={{flex:1}}>
+      <View style={{
+        flex:1,
+        justifyContent:'flex-end',
+        paddingBottom:"10%"        
+      }}>
          <ImageBackground
               style={{position:"absolute", zIndex: 1,width:"100%", height: "100%"}}
               source={{uri : `${publicFiles}/${especialista.fotoPerfil}`}}
@@ -231,9 +235,11 @@ export default function AppointmentCall({navigation, route}) {
         style={{           
           zIndex: 2,           
           justifyContent: 'center',
-          paddingHorizontal: 42,
+          paddingHorizontal: 42,      
+        
         }}>
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss} >
           <>
            
             <View
@@ -242,9 +248,10 @@ export default function AppointmentCall({navigation, route}) {
                 backgroundColor: '#1A1C22',
                 justifyContent: 'center',
                 alignItems: 'center',
+               
                 borderRadius: 14,
               }}>
-              <Text
+             {/* <Text
                 style={{
                   fontSize: 18,
                   color: '#D0D4DD',
@@ -276,19 +283,19 @@ export default function AppointmentCall({navigation, route}) {
                 justifyContent: 'center',
                 borderRadius: 14,
               }}>
-              <Text
+               <Text
                 style={{
                   fontSize: 18,
                   color: '#D0D4DD',
                 }}>
                 Enter call id of another user
-              </Text>
+              </Text> */}
               <TextInputContainer
                 placeholder={'Enter Caller ID'}
-                value={otherUserId.current}
+                value={"123123"}
                 setValue={text => {
-                  otherUserId.current = text;
-                  console.log('TEST', otherUserId.current);
+                  otherUserId.current = "123123";
+                  console.log(otherUserId.current) 
                 }}
                 keyboardType={'number-pad'}
               />
