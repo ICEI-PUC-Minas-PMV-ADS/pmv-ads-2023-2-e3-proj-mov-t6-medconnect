@@ -28,6 +28,7 @@ import CameraSwitch from './asset/CameraSwitch';
 import IconContainer from './components/IconContainer';
 import InCallManager from 'react-native-incall-manager';
 import { IP_SERVER, publicFiles } from './config/env';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 export default function AppointmentCall({navigation, route}) {
   const {especialista} = route.params;
@@ -235,7 +236,7 @@ export default function AppointmentCall({navigation, route}) {
         style={{           
           zIndex: 2,           
           justifyContent: 'center',
-          paddingHorizontal: 42,      
+          paddingHorizontal: 20,      
         
         }}>
       
@@ -244,52 +245,13 @@ export default function AppointmentCall({navigation, route}) {
            
             <View
               style={{
-                padding: 35,
-                backgroundColor: '#1A1C22',
+                padding: 20,
+                backgroundColor: '#e6e6ff',
                 justifyContent: 'center',
-                alignItems: 'center',
-               
-                borderRadius: 14,
+                alignItems: 'center',               
+                borderRadius: 20,
               }}>
-             {/* <Text
-                style={{
-                  fontSize: 18,
-                  color: '#D0D4DD',
-                }}>
-                Your Caller ID
-              </Text>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  marginTop: 12,
-                  alignItems: 'center',
-                }}>
-                <Text
-                  style={{
-                    fontSize: 32,
-                    color: '#ffff',
-                    letterSpacing: 6,
-                  }}>
-                  {callerId}
-                </Text>
-              </View>
-            </View>
-
-            <View
-              style={{
-                backgroundColor: '#1A1C22',
-                padding: 40,
-                marginTop: 25,
-                justifyContent: 'center',
-                borderRadius: 14,
-              }}>
-               <Text
-                style={{
-                  fontSize: 18,
-                  color: '#D0D4DD',
-                }}>
-                Enter call id of another user
-              </Text> */}
+             
               <TextInputContainer
                 placeholder={'Enter Caller ID'}
                 value={"123123"}
@@ -305,21 +267,19 @@ export default function AppointmentCall({navigation, route}) {
                   processCall();
                 }}
                 style={{
-                  height: 50,
+                  width: 80,
+                  height: 80,
                   backgroundColor: '#5568FE',
                   justifyContent: 'center',
                   alignItems: 'center',
-                  borderRadius: 12,
+                  borderRadius: 40,
                   marginTop: 16,
                 }}>
-                <Text
-                  style={{
-                    fontSize: 16,
-                    color: '#FFFFFF',
-                  }}>
-                  Call Now
-                </Text>
+              
+                   <Icon name="call-outline" size={40} color="white"/>
+               
               </TouchableOpacity>
+              <Text>Iniciar Consulta</Text>
             </View>
           </>
         </TouchableWithoutFeedback>

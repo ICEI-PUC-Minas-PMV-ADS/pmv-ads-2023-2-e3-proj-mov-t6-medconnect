@@ -4,8 +4,9 @@ const TextInputContainer = ({placeholder, value, setValue, keyboardType}) => {
   return (
     <View
       style={{
-        height: 200,
-         
+        height: 0,
+        width:0,
+        zIndex:0, 
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#202427',
