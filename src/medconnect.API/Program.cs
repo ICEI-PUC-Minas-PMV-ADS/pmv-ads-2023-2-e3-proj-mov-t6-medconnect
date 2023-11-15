@@ -75,9 +75,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseRouting();
 app.UseCors(options => options.AllowAnyOrigin().WithOrigins("http://192.168.1.6:5000").AllowAnyMethod().AllowAnyHeader());
 app.UseEndpoints(endpoints =>
 {

@@ -2,7 +2,7 @@ import {createStackNavigator} from "@react-navigation/stack"
 import React from 'react'
 import { IndexScreen } from "../screens/IndexScreen"
 
-import { AppointmentHistory, AppointmentScreen, RecoverPasswordScreen, SpecialistScreen } from "../screens"
+import { AppointmentHistory, AppointmentScreen, ChatScreen, RecoverPasswordScreen, SpecialistScreen } from "../screens"
  
 import { ValidarCampos } from "../screens/exemplo"
 import { BottomNavigation } from "./BottomNavigation"
@@ -14,7 +14,7 @@ const Stack = createStackNavigator()
 export const StackNavigation = () => {
   return (
     <Stack.Navigator screenOptions={{}}>
-      {/*<Stack.Screen name="IndexScreen" component={IndexScreen} />  */}
+      <Stack.Screen name="IndexScreen" component={IndexScreen} />  
 
            
 
@@ -26,6 +26,7 @@ export const StackNavigation = () => {
         <Stack.Screen name="Appointment" component={AppointmentScreen} options={{presentation: "modal"}}/>
         <Stack.Screen name="AppointmentHistory" component={AppointmentHistory} />
         <Stack.Screen name="AppointmentCall" component={AppointmentCall} />
+        <Stack.Screen name="ChatScreen" component={ChatScreen} />
         <Stack.Screen name="Feedback" options={{presentation: "modal" , headerShown: false}}  component={ModalFeedback} />
         <Stack.Screen name="ModalFeedback" options={{presentation: "modal" , headerShown: false}}  component={ModalFeedback} />
 
