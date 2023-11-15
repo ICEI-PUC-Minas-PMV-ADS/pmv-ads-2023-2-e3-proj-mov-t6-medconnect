@@ -4,6 +4,7 @@ import { View, Text, TextInput, Button, TouchableOpacity, StyleSheet, Image, Dim
 import { useNavigation } from '@react-navigation/native';
 import {useForm, Controller } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import {Schema} from "./ValidateSchema";
 import { useAuth } from '../../hooks/useAuth';
@@ -77,6 +78,7 @@ export const LoginScreen = () => {
           )}
           />
         {/*  <AntDesign name="user" size={24} color="gray" style={styles.icon} /> */}
+        <Icon name="person" size={20} color="gray" style={styles.icon} />
         </View>
         
         { errors.username && <Text> { errors.username.message} </Text>}
@@ -102,7 +104,8 @@ export const LoginScreen = () => {
               )}             
            />
           
-          {/* <AntDesign name="lock" size={24} color="gray" style={styles.icon} /> */}
+          {/* <AntDesign name="lock-closed-outline" size={24} color="gray" style={styles.icon} /> */}
+          <Icon name="lock-closed-outline" size={20} color="gray" style={styles.icon} />
         </View>
         { errors.password && <Text> { errors.password.message} </Text>}
 

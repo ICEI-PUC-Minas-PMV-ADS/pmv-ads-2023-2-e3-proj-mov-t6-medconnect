@@ -1,4 +1,5 @@
 using medconnect.API.Context;
+using medconnect.API.Hubs;
 using medconnect.API.Models;
 using medconnect.API.Repository;
 using medconnect.API.Repository.interfaces;
@@ -43,6 +44,7 @@ builder.Services.Configure<IdentityOptions>(options =>
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddCors();
 
+builder.Services.AddSignalR();
 builder.WebHost.UseUrls("http://0.0.0.0:5000");
 
 builder.Services.AddAuthentication(
@@ -75,7 +77,12 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+app.UseRouting();
+app.UseCors(options => options.AllowAnyOrigin().WithOrigins("http://192.168.1.6:5000").AllowAnyMethod().AllowAnyHeader());
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapHub<ChatHub>("/chat");
+});
 app.MapControllers();
 
 app.Run();
