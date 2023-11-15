@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Text, View,Button, SafeAreaView, ScrollView, TextInput, TouchableOpacity, Dimensions } from "react-native"
 import { HubConnection, HubConnectionBuilder } from '@microsoft/signalr';
 
@@ -9,6 +9,7 @@ export const ChatScreen = () => {
 
   const [connect, setConnect] = useState<HubConnection>(null)
   const [messages, setMessages] = useState([]);
+  const scrollRef = useRef();   
 
   useEffect(() => {
     const connection = new HubConnectionBuilder()
@@ -59,12 +60,15 @@ export const ChatScreen = () => {
   
   return (
     <SafeAreaView>
-      <ScrollView style={{
-        position:"absolute",
-        zIndex:99,
-        width: widthScreen,
-        height: heightScreen*0.75 ,
-        backgroundColor:"red"
+      <ScrollView 
+        ref={scrollRef}
+        onContentSizeChange={() => scrollRef.current.scrollToEnd({animated: true})}
+        style={{
+            position:"absolute",
+            zIndex:99,
+            width: widthScreen,
+            height: heightScreen*0.75 ,
+            backgroundColor:"red"
       }}>
 
         
