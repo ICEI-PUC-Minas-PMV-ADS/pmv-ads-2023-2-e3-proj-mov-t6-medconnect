@@ -1,14 +1,16 @@
 import { useEffect, useState, useRef } from "react";
 import { Text, View,Button, SafeAreaView, ScrollView, TextInput, TouchableOpacity, Dimensions } from "react-native"
 import { HubConnection, HubConnectionBuilder } from '@microsoft/signalr';
-
-const widthScreen = Dimensions.get("window").width;
-const heightScreen = Dimensions.get("window").height;
+import { useAuth } from "../../hooks/useAuth";
+import { styles } from "./Styles";
 
 export const ChatScreen = () => {
-
+  const {user} = useAuth()
   const [connect, setConnect] = useState<HubConnection>(null)
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState([{}]);
+  const [msg,setMsg] = useState("")
+
+
   const scrollRef = useRef();   
 
   useEffect(() => {
@@ -17,8 +19,9 @@ export const ChatScreen = () => {
     .build();
     
     
-    connection.on('ReceiveMessage', (user, message) => {    
-      setMessages(prevMessages => [...prevMessages, message])
+    connection.on('ReceiveMessage', (usermail, message) => {    
+      
+      setMessages(prevMessages => [...prevMessages, {u: usermail, m:message}])
     });
 
     if(!connect)
@@ -44,12 +47,14 @@ export const ChatScreen = () => {
   }, [connect])
 
 
-  const send = () => {
-   
-      connect.invoke('SendMessage', 'Usuário', 'Olá, mundo!')
+  const send = (msgValue:string) => {
+      if(msgValue.length > 0){
+      connect.invoke('SendMessage', user.email , msgValue)
         .catch((error) => {
           console.error(error);
       });
+      setMsg("");
+    }
       
     
   }
@@ -63,57 +68,29 @@ export const ChatScreen = () => {
       <ScrollView 
         ref={scrollRef}
         onContentSizeChange={() => scrollRef.current.scrollToEnd({animated: true})}
-        style={{
-            position:"absolute",
-            zIndex:99,
-            width: widthScreen,
-            height: heightScreen*0.75 ,
-            backgroundColor:"red"
-      }}>
+        style={styles.msgArea}>
 
         
     {
       messages.map((msg, index) => (
-        <Text key={index}>{msg}</Text>
+        <Text 
+          
+          key={index}>{msg.u}</Text>
       ))
      }
 
   </ScrollView>
-        <View style={{
-          width: "100%",
-          height: "100%",
-          flexDirection: "row",
-          justifyContent: "center",
-          alignSelf:"flex-end",  
-          alignItems: "flex-end",        
-          
-          position:"relative",
-          zIndex:10,
-          bottom:"10%",
-          
-        }}>
+        <View style={styles.actions}>
           <TextInput 
-            value=""
+            value={msg}
             placeholder="Enviar Mensagem"
-            onChangeText={() => {}}
-            style={{
-              width:"85%",
-              height: 50,
-              borderWidth: 0.2,
-              borderColor: "#666"
-            }}
+            onChangeText={(text) => setMsg(text)}            
+            style={styles.actions.input}
           />
        
           <TouchableOpacity 
-            style={{
-                width: 50, 
-                height: 50,
-                backgroundColor: "blue",
-                borderRadius: 25,
-                justifyContent:"center",
-                alignItems:"center"
-              }}
-            onPress={() => send()} >
+            style={styles.actions.sendMsg}
+            onPress={() => send(msg)} >
             <Text style={{color: "white"}}>enviar</Text>
           </TouchableOpacity>
         </View>
