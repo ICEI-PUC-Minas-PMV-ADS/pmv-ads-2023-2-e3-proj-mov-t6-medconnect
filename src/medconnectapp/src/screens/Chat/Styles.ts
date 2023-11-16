@@ -10,14 +10,13 @@ export const styles = StyleSheet.create({
         zIndex:99,
         width: widthScreen,
         height: heightScreen*0.75 ,
-        
+       
     },
     actions:{        
-        width: "100%",
+        width: "95%",
         height: "100%",
         flexDirection: "row",
-        justifyContent: "center",
-        alignSelf:"flex-end",  
+        alignSelf:"center" ,
         alignItems: "flex-end",        
         
         position:"relative",
@@ -26,18 +25,20 @@ export const styles = StyleSheet.create({
         
         input:{
             width:"85%",
-            height: 50,
+            height: 60,
             borderWidth: 0.2,
-            borderColor: "#666"
+            borderColor: "#333",
+            paddingRight: "10%",
+    
         },
 
         sendMsg:{
-                width: 50, 
-                height: 50,
-                backgroundColor: "blue",
-                borderRadius: 25,
+                
+                width: 60, 
+                height: 60,
                 justifyContent:"center",
-                alignItems:"center"
+                alignItems:"center",
+                backgroundColor: "#93c7cc", 
         }
     },
  

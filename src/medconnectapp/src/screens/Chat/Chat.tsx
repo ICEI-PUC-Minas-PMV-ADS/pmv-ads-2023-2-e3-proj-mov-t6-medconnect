@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { Text, View, Image, SafeAreaView, ScrollView, TextInput, TouchableOpacity, Dimensions } from "react-native"
 import { HubConnection, HubConnectionBuilder } from '@microsoft/signalr';
+import Icon  from "react-native-vector-icons/Ionicons";
 import { useAuth } from "../../hooks/useAuth";
 import { styles } from "./Styles";
 import { publicFiles } from "../../../config/env";
@@ -8,7 +9,7 @@ import { publicFiles } from "../../../config/env";
 export const ChatScreen = () => {
   const {user} = useAuth()
   const [connect, setConnect] = useState<HubConnection>(null)
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState([{u: "adm", m:"Olá, como posso te ajudar?"}]);
   const [msg,setMsg] = useState("")
 
 
@@ -71,7 +72,7 @@ export const ChatScreen = () => {
     {
       messages.map((msg, index) => (
         
-      <View   key={index} style={[styles.msgContainer, user.email === msg.u ? styles.msgContainerUser : styles.otherAccount]}>
+      <View key={index} style={[styles.msgContainer, user.email === msg.u ? styles.msgContainerUser : styles.otherAccount]}>
        {
           user.email === msg.u ? (
             <>
@@ -133,7 +134,7 @@ export const ChatScreen = () => {
           <TouchableOpacity 
             style={styles.actions.sendMsg}
             onPress={() => send(msg)} >
-            <Text style={{color: "white"}}>enviar</Text>
+            <Icon name="send" color="#405254" size={25}/>
           </TouchableOpacity>
         </View>
 
