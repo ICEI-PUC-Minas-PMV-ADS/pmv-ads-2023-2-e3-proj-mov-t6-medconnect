@@ -1,13 +1,14 @@
 import { useEffect, useState, useRef } from "react";
-import { Text, View,Button, SafeAreaView, ScrollView, TextInput, TouchableOpacity, Dimensions } from "react-native"
+import { Text, View, Image, SafeAreaView, ScrollView, TextInput, TouchableOpacity, Dimensions } from "react-native"
 import { HubConnection, HubConnectionBuilder } from '@microsoft/signalr';
 import { useAuth } from "../../hooks/useAuth";
 import { styles } from "./Styles";
+import { publicFiles } from "../../../config/env";
 
 export const ChatScreen = () => {
   const {user} = useAuth()
   const [connect, setConnect] = useState<HubConnection>(null)
-  const [messages, setMessages] = useState([{}]);
+  const [messages, setMessages] = useState([]);
   const [msg,setMsg] = useState("")
 
 
@@ -59,10 +60,6 @@ export const ChatScreen = () => {
     
   }
 
-  useEffect(() => {
-    console.log(messages)
-  }, [messages])
-  
   return (
     <SafeAreaView>
       <ScrollView 
@@ -73,9 +70,54 @@ export const ChatScreen = () => {
         
     {
       messages.map((msg, index) => (
-        <Text 
-          
-          key={index}>{msg.u}</Text>
+        
+      <View   key={index} style={[styles.msgContainer, user.email === msg.u ? styles.msgContainerUser : styles.otherAccount]}>
+       {
+          user.email === msg.u ? (
+            <>
+            <View 
+               
+                style={styles.msgTextArea}>
+        
+                <Text 
+                  style={styles.textMsg}
+                  >{msg.m}
+                </Text>
+                
+            </View>
+            <View style={styles.profileImgContainer}>
+              <Image 
+                  source={{uri: `${publicFiles}/${user.fotoPerfil}`}}
+                  style={styles.profileImg} 
+              />           
+            </View>
+            </>
+      ) : 
+      
+      (
+        <>
+         <View style={styles.profileImgContainer}>
+              <Image 
+                  source={{uri: `${publicFiles}/${user.fotoPerfil}`}}
+                  style={styles.profileImg} 
+              />           
+            </View>
+            <View 
+                key={index}
+                style={styles.msgTextArea}>
+        
+                <Text 
+                  style={styles.textMsg}
+                  key={index}>{msg.m}
+                </Text>
+                
+            </View>
+           
+            </>
+
+      )}
+      </View> 
+     
       ))
      }
 

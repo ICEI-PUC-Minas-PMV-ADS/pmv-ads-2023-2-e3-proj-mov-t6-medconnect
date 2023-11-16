@@ -6,10 +6,11 @@ const heightScreen = Dimensions.get("window").height;
 export const styles = StyleSheet.create({
     msgArea:{
         position:"absolute",
+        paddingVertical: "3%",
         zIndex:99,
         width: widthScreen,
         height: heightScreen*0.75 ,
-        backgroundColor:"red"
+        
     },
     actions:{        
         width: "100%",
@@ -38,5 +39,49 @@ export const styles = StyleSheet.create({
                 justifyContent:"center",
                 alignItems:"center"
         }
-    }
+    },
+ 
+    msgTextArea:{
+        height: heightScreen * 0.06,
+        borderRadius:5,
+        paddingHorizontal:"5%",
+        backgroundColor: "#333" ,
+        margin: "2%",  
+        justifyContent:"center",   
+       
+    },
+    textMsg:{
+       
+        color:"#FFF",
+ 
+    },
+    otherAccount:{
+        
+        alignSelf: "flex-start",
+    },
+    msgContainer:{
+        flexDirection:"row",
+        alignSelf:"flex-end",
+        alignItems:"center",
+        justifyContent:"center",
+        marginHorizontal: "5%",
+    },
+    msgContainerUser:{
+
+    },
+
+    profileImgContainer: {
+        width: 40,
+        height: 40,
+        backgroundColor: '#999',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 20,
+      },
+      profileImg: {
+        width: 35,
+        height: 35,
+        borderRadius: 20,
+      },
+     
 })
