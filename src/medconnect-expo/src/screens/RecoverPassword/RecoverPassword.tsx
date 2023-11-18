@@ -73,7 +73,7 @@ export const RecoverPasswordScreen = () => {
             }}
             activeOpacity={0.7}
           >
-            <Text style={styles.buttonTextRedefinir} onPress={handleSubmit(handleForgotPassword)}>Cadastre-se</Text>
+            <Text style={styles.buttonTextRedefinir} onPress={handleSubmit(handleForgotPassword)}>Redefinir Senha</Text>
           </TouchableOpacity>
     
       </View>
