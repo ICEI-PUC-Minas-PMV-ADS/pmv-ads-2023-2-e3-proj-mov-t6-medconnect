@@ -10,6 +10,9 @@ Para o projeto MedConnect serão aplicados dois modelos de teste de usabilidade:
 | Efetuar login - Campos obrigatórios: Preencher os dados do login cadastrado |  |  |  | 
 | Busca de consultas e especialistas: Permitir a busca por consultas através dos especialistas cadastrados e/ou dos sintomas. |  |  |  | 
 | Registro de sintomas: Permitir que o usuário gerencie os sintomas que vem sentindo. |  |  |  |
+| Busca de  remedios: Permitir que o usuário realize as buscas dos remedios. |  |  |  |
+| Marcação via chat: Permitir que o usuário realize a marcação das consultas atraves do chat. |  |  |  |
+
 
 ## Análise Heurística
 
