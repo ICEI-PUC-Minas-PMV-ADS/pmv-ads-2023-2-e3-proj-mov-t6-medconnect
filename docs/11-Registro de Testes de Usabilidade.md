@@ -13,5 +13,6 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Registro de
 | Realizar Busca de especialistas - Campos obrigatórios: tipo do especialista                            | Realizei as busca na aplicação sem eventuais problemas | Nenhum observado                                                  | Nenhum observado      |
 | Realizar Busca de remedios - Campos obrigatórios:                            | Realizei busca na aplicação sem eventuais problemas | Nenhum observado                                                  | Nenhum observado      |
 | Realizar registro de sintomas - Campos obrigatórios:     sintomas                      | Realizei registo de sintomas na aplicação sem eventuais problemas | Nenhum observado                                                  | Nenhum observado      |
-| Realizar Marcação via chat - Campos obrigatórios:     chat                      | Realizei registo de sintomas na aplicação sem eventuais problemas | Nenhum observado                                                  | Nenhum observado      |
-| Realizar chamada virtual - Campos obrigatórios:                          | Realizei registo de sintomas na aplicação sem eventuais problemas | Nenhum observado                                                  | Nenhum observado      |
+| Realizar Marcação via chat - Campos obrigatórios:     chat                      | Realizei registo de sintomas na aplicação sem eventuais problemas | Nenhum observado                                         | Nenhum observado      |
+| Realizar chamada virtual - Campos obrigatórios:                          | Realizei registo de sintomas na aplicação sem eventuais problemas | Nenhum observado                                               | Nenhum observado      |
+    
