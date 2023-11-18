@@ -18,7 +18,7 @@ export const SearchScreen = ({navigation, route} :Props) => {
   const [especialistas, setEspecialistas] = useState<IEspecialista[]>([]);
   const [espResult, setEspResult] = useState<IEspecialista[]>([]);
   
-  const {especialistasRes} = route.params;
+  const {especialistasRes} = route.params || [];
  
   useEffect(() => {
     (async()=>{

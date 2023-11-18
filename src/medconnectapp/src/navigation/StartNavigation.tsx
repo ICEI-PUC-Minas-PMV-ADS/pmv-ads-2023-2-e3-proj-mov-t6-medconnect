@@ -1,10 +1,10 @@
 import { useAuth } from "../hooks/useAuth";
 import { AuthNavigation } from "./AuthNavigation";
-import { StackNavigation } from "./StackNavigation";
+import { Start } from "./DrawerNavigation";
  
 export const StartNavigation = () => {
 
   const { user, token } = useAuth();
  
-  return user ? <StackNavigation /> : <AuthNavigation />
+  return user ? <Start /> : <AuthNavigation />
 }

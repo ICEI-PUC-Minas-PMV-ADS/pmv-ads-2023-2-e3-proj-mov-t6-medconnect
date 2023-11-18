@@ -31,7 +31,8 @@ export class Auth {
         throw error
        }
     }
-       async register(nome:string, sobrenome:string, cpf:string, email:string, password:string){
+    
+    async register(nome:string, sobrenome:string, cpf:string, email:string, password:string){
        try {
         const url = `http://${IP_SERVER}:5000/api/auth/register`
        

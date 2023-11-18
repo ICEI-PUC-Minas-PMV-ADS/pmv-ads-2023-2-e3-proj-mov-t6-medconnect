@@ -242,6 +242,7 @@ export default function AppointmentCall({navigation, route}) {
       
         <TouchableWithoutFeedback onPress={Keyboard.dismiss} >
           <>
+          
            
             <View
               style={{
@@ -261,25 +262,49 @@ export default function AppointmentCall({navigation, route}) {
                 }}
                 keyboardType={'number-pad'}
               />
-              <TouchableOpacity
-                onPress={() => {
-                  setType('OUTGOING_CALL');
-                  processCall();
-                }}
-                style={{
-                  width: 80,
-                  height: 80,
-                  backgroundColor: '#5568FE',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  borderRadius: 40,
-                  marginTop: 16,
-                }}>
-              
-                   <Icon name="call-outline" size={40} color="white"/>
-               
-              </TouchableOpacity>
-              <Text>Iniciar Consulta</Text>
+              <View style={{flexDirection: "row"}}>
+                <View>
+                  <TouchableOpacity
+                    onPress= {() => navigation.navigate("ChatScreen")}
+                    style={{
+                      width: 80,
+                      height: 80,
+                      backgroundColor: '#5568FE',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      borderRadius: 40,
+                      marginTop: 16,
+                    }}>
+                  
+                      <Icon name="chatbubble-ellipses-outline" size={40} color="white"/>
+                  
+                  </TouchableOpacity>
+                  
+                  <Text>Chat</Text>
+                </View>
+                <View>
+                  <TouchableOpacity
+                    onPress={() => {
+                      setType('OUTGOING_CALL');
+                      processCall();
+                    }}
+                    style={{
+                      width: 80,
+                      height: 80,
+                      backgroundColor: '#5568FE',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      borderRadius: 40,
+                      marginTop: 16,
+                    }}>
+                  
+                      <Icon name="call-outline" size={40} color="white"/>
+                  
+                  </TouchableOpacity>
+                  
+                  <Text>Iniciar Consulta</Text>
+                </View>
+              </View>
             </View>
           </>
         </TouchableWithoutFeedback>
