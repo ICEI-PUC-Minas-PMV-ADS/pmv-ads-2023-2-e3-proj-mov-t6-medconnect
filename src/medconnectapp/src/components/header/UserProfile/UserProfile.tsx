@@ -1,19 +1,27 @@
-import { View, Text, Image } from "react-native"
+import { View, Text, Image, TouchableOpacity } from "react-native"
 
 import {styles} from "./styles"
+import { useAuth } from "../../../hooks/useAuth"
+import { publicFiles } from "../../../../config/env";
 
 export const UserProfile = () => {
+  
+  const { user } = useAuth();
+
+
+  console.log(`${publicFiles}/${user.fotoPerfil}`)
   return (
    <View style={styles.content}>
-    <Text style={styles.userName}>Olá João</Text>
+    
     <View style={styles.profileImgContainer}>
         <Image 
-            source={require('../../../assets/images/persona01.jpg')}
+            source={{uri: `${publicFiles}/${user.fotoPerfil}`}}
             style={styles.profileImg} 
-        />
-           
+        />           
     </View>
-  
+    <Text style={styles.userName}>Olá {user.nome}</Text>
    </View>
   )
 }
+
+
