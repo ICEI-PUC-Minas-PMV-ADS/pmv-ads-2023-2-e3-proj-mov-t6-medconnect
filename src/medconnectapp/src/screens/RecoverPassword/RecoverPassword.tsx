@@ -21,6 +21,7 @@ export const RecoverPasswordScreen = () => {
 
   const handleForgotPassword = () => {
     alert('Um e-mail de recuperação de senha foi enviado.');
+    navigation.navigate("Login")
   };
 
   const screenHeight = Dimensions.get('window').height;
@@ -73,7 +74,7 @@ export const RecoverPasswordScreen = () => {
             }}
             activeOpacity={0.7}
           >
-            <Text style={styles.buttonTextRedefinir} onPress={handleSubmit(handleForgotPassword)}>Cadastre-se</Text>
+            <Text style={styles.buttonTextRedefinir} onPress={handleSubmit(handleForgotPassword)}>Redefinir Senha</Text>
           </TouchableOpacity>
 
       </View>

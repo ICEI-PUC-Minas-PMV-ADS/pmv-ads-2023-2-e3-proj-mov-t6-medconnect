@@ -44,7 +44,7 @@ const Menu = ( props: DrawerContentComponentProps) => {
        <View style={styles.content}>
        <ImageBackground 
         source={require('../assets/images/doctor.jpg')}
-        style={{width: "100%", height: "100%", position: "absolute", zIndex:1}}
+        style={{width: "100%", height: "100%", position: "absolute", zIndex:1, opacity: 0.4}}
         resizeMode="cover"
         />
         <View style={styles.profileImgContainer}>
@@ -77,7 +77,7 @@ const Menu = ( props: DrawerContentComponentProps) => {
           <View style={{}}>
               <TouchableOpacity style={styles.ItemMenu}  onPress={() => logout()}>
                 <Icon name="settings-outline" color="#A5C3E7" size={30} />
-                <Text>Sair</Text>
+                <Text>Configurações</Text>
               </TouchableOpacity>
 
               <TouchableOpacity style={styles.ItemMenu}  onPress={() => logout()}>
@@ -97,7 +97,6 @@ export const styles = StyleSheet.create({
   
   content: {
     margin: "10%", 
-    backgroundColor:"#999FE0",
     alignItems: 'center',
     gap: 10,
   },
