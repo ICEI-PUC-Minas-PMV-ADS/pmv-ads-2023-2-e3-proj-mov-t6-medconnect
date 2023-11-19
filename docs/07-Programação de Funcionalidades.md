@@ -221,6 +221,52 @@ _Figura 10 - Confirmação de Agendamento_
 
 </table>
 
+## Enviar/Listar Documentos/Exames Feitos 
+
+<table>
+    <tr>
+       <th>Tela enviar documentos/exames </th>
+       <th><a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t6-medconnect/blob/main/src/medconnectapp/src/components/ModalFeedback/ModalFeedback.tsx">Link do Código Fonte</a></th>       
+    </tr>
+    <tr>
+    <td width="300" >
+       <img width="300" height="100%"  src="./img/programacao/exames.png">
+
+_Figura 11 - Tela enviar documentos/exames_
+
+</td>
+<td width="300" >
+<a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t6-medconnect/blob/main/src/medconnectapp/src/screens/Chat/Chat.tsx">Link do Código Fonte</a></th>
+
+</td>
+</tr>
+
+</table>
+
+
+## Lista de Documentos/Exames Feitos 
+
+<table>
+    <tr>
+       <th>Lista de Documentos/Exames Feitos </th>
+       <th><a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t6-medconnect/blob/main/src/medconnectapp/src/components/ModalFeedback/ModalFeedback.tsx">Link do Código Fonte</a></th>       
+    </tr>
+    <tr>
+    <td width="300" >
+       <img width="300" height="100%"  src="./img/programacao/listaExames.png">
+
+_Figura 12 - Lista de Documentos/Exames Feitos_
+
+</td>
+<td width="300" >
+<a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t6-medconnect/blob/main/src/medconnectapp/src/screens/Chat/Chat.tsx">Link do Código Fonte</a></th>
+
+</td>
+</tr>
+
+</table>
+
+
 ## Chat Entre Paciente e Expecialista 
 
 <table>
@@ -232,7 +278,7 @@ _Figura 10 - Confirmação de Agendamento_
     <td width="300" >
        <img width="300" height="100%"  src="./img/programacao/Chat.png">
 
-_Figura 11 - Chat_
+_Figura 13 - Chat_
 
 </td>
 <td width="300" >
