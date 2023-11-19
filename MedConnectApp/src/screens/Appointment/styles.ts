@@ -79,6 +79,6 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
   },
   textHour: {
-    color: "#fff",
+    color: "#FFFFFF",
   },
 });
