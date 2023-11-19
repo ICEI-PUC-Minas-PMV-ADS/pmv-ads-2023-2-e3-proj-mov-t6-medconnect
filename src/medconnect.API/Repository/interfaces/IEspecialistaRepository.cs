@@ -2,7 +2,7 @@
 
 namespace medconnect.API.Repository.interfaces
 {
-    public interface IEspecialistaRepository : IRepository<Especialista>
+    public interface IEspecialistaRepository : IGeneric<Especialista>
     {
         Task<IEnumerable<Especialista>> GetEspecialistasAtendimentos();
     }

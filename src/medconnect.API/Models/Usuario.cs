@@ -8,12 +8,13 @@ namespace medconnect.API.Models
     {
         [Required]
         [StringLength(15)]
-        public string? CPF { get; set; }
-        public TypeUser? TipoUsuario { get; set; } = TypeUser.Paciente;
+        public string CPF { get; set; }
+
+        public TypeUser TipoUsuario { get; set; } = TypeUser.Paciente;
 
         [Required]
         [StringLength(350)]
-        public string? FotoPerfil { get; set; } = "apiImages/default.png";
+        public string FotoPerfil { get; set; } = "apiImages/default.png";
 
         [Required]
         [StringLength(100)]
@@ -23,8 +24,6 @@ namespace medconnect.API.Models
         [StringLength(300)]
         public string Sobrenome { get; set; }
 
-        public IEnumerable<Consulta>? Consultas { get; set; }
-
-
+        public ICollection<Consulta> Consultas { get; set; }
     }
 }

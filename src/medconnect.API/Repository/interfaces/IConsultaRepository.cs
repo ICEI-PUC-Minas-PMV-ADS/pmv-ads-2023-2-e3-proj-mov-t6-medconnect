@@ -2,7 +2,8 @@
 
 namespace medconnect.API.Repository.interfaces
 {
-    public interface IConsultaRepository : IRepository<Consulta>
+    public interface IConsultaRepository : IGeneric<Consulta>
     {
+        Task<IEnumerable<Consulta>> GetAllByUserId(string userId);
     }
 }

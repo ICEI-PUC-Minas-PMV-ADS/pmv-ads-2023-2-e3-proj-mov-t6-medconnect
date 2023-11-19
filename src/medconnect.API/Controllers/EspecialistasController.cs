@@ -1,9 +1,6 @@
-﻿using medconnect.API.Context;
-using medconnect.API.Models;
+﻿using medconnect.API.Models;
 using medconnect.API.Repository.interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System.Web;
 
 namespace medconnect.API.Controllers
 {
@@ -12,93 +9,86 @@ namespace medconnect.API.Controllers
     public class EspecialistasController : ControllerBase
     {
         private readonly IUnitOfWork _context;
-        private AppDbContext _appDbContext;
-        public EspecialistasController(IUnitOfWork context, AppDbContext appDbContext) 
+
+        public EspecialistasController(IUnitOfWork context)
         {
             _context = context;
-            _appDbContext = appDbContext;
         }
 
         [HttpGet]
-        [HttpGet("especialistas")]
         public async Task<IEnumerable<Especialista>> Get()
         {
-            var especialistas = await _context.EspecialistaRepository.GetEspecialistasAtendimentos();
+            var especialistas = await _context.EspecialistaRepository.List();
+              
             return especialistas;
         }
-
-        [HttpGet("especialistasOnly")]
-        public async Task<ActionResult<IEnumerable<Especialista>>> GetEsp()
-        {
-            var especialistas = await _context.EspecialistaRepository.GetAll().ToListAsync();
-
-            return especialistas;
-        }
-
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Especialista>> Get(string id)
+        public async Task<ActionResult<Especialista>> Get(int id)
         {
-            string eId = System.Web.HttpUtility.UrlDecode(id);
-            //Guid guid = new Guid(eId);         
-            if (Guid.TryParse(eId, out Guid guid)) { 
-                var especialista = await _context.EspecialistaRepository.GetById(e => e.EspecialistaId == guid);
-                if (especialista is null)
-                    return NotFound();
-                return especialista;
-            }
-            return BadRequest("Especialista invalido...");          
+            var especialista = await _context.EspecialistaRepository.GetEntityById(id);
+
+            if (especialista == null)
+                return NotFound();
+
+            return especialista;
         }
 
-        [HttpGet("add")]
-        public async Task<ActionResult<string>> Add()
+        [HttpPost]
+        public async Task<ActionResult<Especialista>> Post([FromBody] Especialista especialista)
         {
-            List<Especialista> es = new List<Especialista>() {
-                new Especialista { Nome = "André", Sobrenome = "Silva", DescricaoCurta = "Médico especialista em cirurgia bariatrica.", FotoPerfil = "personImages/persona01.png" },
-                new Especialista { Nome = "João", Sobrenome = "Gonsalves", DescricaoCurta = "Médico Especialista em Cirurgia Vascular. Cuida dos problemas em vasos sanguíneos das pernas, braços, tronco e pescoço. Problemas das artérias como aneurisma de aorta, estenose das carótidas, doença arterial obstrutiva; e nas veias: teleangectasias, varizes e trombos.  O cirurgião plástico atua na reparação de órgãos e tecidos para", FotoPerfil = "personImages/persona02.png" },
-                new Especialista { Nome = "Aline", Sobrenome = "Santos", DescricaoCurta = "Especialista em Dermatologia...", FotoPerfil = "personImages/persona03.png" },
-                new Especialista { Nome = "Maria Helena", Sobrenome = "Albuquerque", DescricaoCurta = "Especialista em Clínica Médica...", FotoPerfil = "personImages/persona04.png" },
-                new Especialista { Nome = "José", Sobrenome = "Toledo Junior", DescricaoCurta = "Especialista em Endocrinologia e Metabologia...", FotoPerfil = "personImages/persona05.png" },
-        };
-             _appDbContext.Especialistas.AddRangeAsync(es);
-             await _appDbContext.SaveChangesAsync();
+            if (especialista == null)
+                return BadRequest();
 
-            return "criado";
+           
+            if (especialista.ClienteId == 0)
+                return BadRequest("O ClienteId deve ser fornecido para associar o Especialista a um Cliente.");
+
+            _context.EspecialistaRepository.Add(especialista);
+            await _context.Commit();
+
+            return Ok(especialista);
         }
 
-        [HttpGet("addAtende")]
-        public async Task<ActionResult<string>> AddAtende()
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(int id, [FromBody] Especialista especialistaAtualizado)
         {
-            List<Atendimento> at = new List<Atendimento>()
+            if (especialistaAtualizado == null || id != especialistaAtualizado.Id)
             {
-                new Atendimento{ EspecialistaId = Guid.Parse("08dbdfac-eee9-4708-8c79-382101985862"), 
-                    AtendimentoId = Guid.NewGuid(), DataAtendimento = new DateTime(2023, 11, 23, 15, 00, 0)
-                },
+                return BadRequest();
+            }
 
-               
-                 new Atendimento{ EspecialistaId = Guid.Parse("08dbdfac-eef8-4137-8082-50b24adb4128"),
-                    AtendimentoId = Guid.NewGuid(), DataAtendimento =  new DateTime(2023, 11, 24, 15, 30, 0)
-                },
+            var especialistaExistente = await _context.EspecialistaRepository.GetEntityById(id);
 
-                 new Atendimento{ EspecialistaId = Guid.Parse("08dbdfac-eef8-41bb-8118-c8150e7cd9b6"),
-                    AtendimentoId = Guid.NewGuid(), DataAtendimento =  new DateTime(2023, 11, 25, 18, 00, 0)
-                },
+            if (especialistaExistente == null)
+            {
+                return NotFound();
+            }
 
-                new Atendimento{ EspecialistaId = Guid.Parse("08dbdfac-eef8-41c8-86d1-796294c2542f"),
-                    AtendimentoId = Guid.NewGuid(), DataAtendimento =  new DateTime(2023, 11, 25, 13, 30, 0)
-                },
+            especialistaExistente.Nome = especialistaAtualizado.Nome;
+            especialistaExistente.SobreNome = especialistaAtualizado.SobreNome;
+            especialistaExistente.DescricaoCurta = especialistaAtualizado.DescricaoCurta;
 
-                 new Atendimento{ EspecialistaId = Guid.Parse("08dbdfac-eef8-41e8-8e05-63d76d491d69"),
-                    AtendimentoId = Guid.NewGuid(), DataAtendimento = new DateTime(2023, 11, 27, 16, 20, 0)
-                },
+            _context.EspecialistaRepository.Update(especialistaExistente);
+            await _context.Commit();
 
-            };
-                        
+            return Ok(especialistaExistente);
+        }
 
-            _appDbContext.Atendimentos.AddRangeAsync(at);
-            await _appDbContext.SaveChangesAsync();
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var especialista = await _context.EspecialistaRepository.GetEntityById(id);
 
-            return "criado";
+            if (especialista == null)
+            {
+                return NotFound();
+            }
+
+            _context.EspecialistaRepository.Delete(especialista);
+            await _context.Commit();
+
+            return Ok(especialista);
         }
     }
 }

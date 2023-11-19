@@ -19,9 +19,9 @@ namespace medconnect.API.Repository
             return _context.Set<T>().AsNoTracking();
         }
 
-        public async Task<T> GetById(Expression<Func<T,bool>> predicate)
+        public async Task<T> GetById(Expression<Func<T, bool>> predicate)
         {
-            return await _context.Set<T>().AsNoTracking().SingleOrDefaultAsync( predicate );
+            return await _context.Set<T>().AsNoTracking().SingleOrDefaultAsync(predicate);
         }
 
         public IQueryable<T> GetGetAllByUserId(Expression<Func<T, bool>> predicate)
@@ -31,7 +31,7 @@ namespace medconnect.API.Repository
 
         public void Add(T entity)
         {
-            _context.Set<T>().Add(entity); 
+            _context.Set<T>().Add(entity);
         }
     }
 }

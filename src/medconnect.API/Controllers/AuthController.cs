@@ -1,6 +1,5 @@
 ﻿using medconnect.API.Models;
 using medconnect.API.Models.DTO;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -80,6 +79,67 @@ namespace medconnect.API.Controllers
             }
         }
 
+        [HttpPost("cadastrar")]
+        public async Task<ActionResult> Cadastrar([FromBody] CadastrarDTO model)
+        {
+            var user = new Usuario
+            {
+                UserName = model.email,
+                Email = model.email,
+                CPF = model.cpf,
+                Nome = model.nome,
+                Sobrenome = model.sobrenome,
+                EmailConfirmed = true
+            };
+
+            var result = await _userManager.CreateAsync(user, "SenhaPadrao");
+
+            if (!result.Succeeded)
+            {
+                return BadRequest(result.Errors);
+            }
+
+            return Ok("Usuário cadastrado com sucesso. Você pode fazer login agora.");
+        }
+
+        [HttpPost("forgot-password")]
+        public async Task<ActionResult> ForgotPassword([FromBody] ForgotPasswordDTO forgotPasswordDTO)
+        {
+            var user = await _userManager.FindByEmailAsync(forgotPasswordDTO.Email);
+
+            if (user == null)
+            {
+                return BadRequest("O email fornecido não está associado a uma conta.");
+            }
+
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+           
+
+            return Ok("Um link para redefinição de senha foi enviado para o seu email.");
+        }
+
+        [HttpPost("reset-password")]
+        public async Task<ActionResult> ResetPassword([FromBody] ResetPasswordDTO resetPasswordDTO)
+        {
+            var user = await _userManager.FindByEmailAsync(resetPasswordDTO.Email);
+
+            if (user == null)
+            {
+                return BadRequest("O email fornecido não está associado a uma conta.");
+            }
+
+            var result = await _userManager.ResetPasswordAsync(user, resetPasswordDTO.Token, resetPasswordDTO.NovaSenha);
+
+            if (result.Succeeded)
+            {
+                return Ok("Senha redefinida com sucesso.");
+            }
+            else
+            {
+                return BadRequest(result.Errors);
+            }
+        }
 
         private UserTokenDTO TokenGenerator(UserModelDTO userModelDTO, string userId)
         {
