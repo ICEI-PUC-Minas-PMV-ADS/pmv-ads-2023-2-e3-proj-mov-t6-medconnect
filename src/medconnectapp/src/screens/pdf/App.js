@@ -8,7 +8,7 @@ import {
   ScrollView,
 } from "react-native";
 
-export default function Document() {
+export default function PDF() {
 
   return (
     <View style={styles.container}>

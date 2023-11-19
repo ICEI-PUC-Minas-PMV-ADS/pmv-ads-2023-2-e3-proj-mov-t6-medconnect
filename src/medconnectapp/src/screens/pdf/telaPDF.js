@@ -8,7 +8,7 @@ import {
   ScrollView,
 } from "react-native";
 
-export default function App() {
+export default function Exames() {
   const handlePdfClick = () => {
     console.log("Estou aqui!");
     // Adicione mais lógica conforme necessário
@@ -62,19 +62,19 @@ export default function App() {
             <View style={styles.pdfContainer}>
               <TouchableOpacity onPress={handlePdfClick}>
                 <Image
-                  source={require("../AwesomeProject/assets/iconePdf.png")}
+                  source={require("../../assets/images/pdfIcone.jpg")}
                   style={styles.pdf}
                 />
               </TouchableOpacity>
               <TouchableOpacity>
                 <Image
-                  source={require("../AwesomeProject/assets/iconePdf.png")}
+                  source={require("../../assets/images/pdfIcone.jpg")}
                   style={styles.pdf}
                 />
               </TouchableOpacity>
               <TouchableOpacity>
                 <Image
-                  source={require("../AwesomeProject/assets/iconePdf.png")}
+                  source={require("../../assets/images/pdfIcone.jpg")}
                   style={styles.pdf}
                 />
               </TouchableOpacity>

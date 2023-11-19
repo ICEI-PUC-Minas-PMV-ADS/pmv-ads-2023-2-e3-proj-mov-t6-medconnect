@@ -4,6 +4,9 @@ import { AppointmentHistory, AppointmentScreen, ChatScreen, DashboardScreen, Rec
 import AppointmentCall from "../../../AppointmentCall";
 import { ModalFeedback } from "../../components/ModalFeedback";
 import { IndexScreen } from "../../screens/IndexScreen";
+import PDF from "../../screens/pdf/App";
+import Exames from "../../screens/pdf/telaPDF";
+ 
  
 export const HomeNavigation = () => {
     const Stack = createStackNavigator();
@@ -19,8 +22,12 @@ export const HomeNavigation = () => {
           <Stack.Screen name="AppointmentHistory" component={AppointmentHistory} />
           <Stack.Screen name="AppointmentCall" component={AppointmentCall} />
           <Stack.Screen name="ChatScreen" component={ChatScreen} />
+          <Stack.Screen name="Exames" component={Exames} />
+          <Stack.Screen name="PDF" component={PDF} />
           <Stack.Screen name="Feedback" options={{presentation: "modal" , headerShown: false}}  component={ModalFeedback} />
           <Stack.Screen name="ModalFeedback" options={{presentation: "modal" , headerShown: false}}  component={ModalFeedback} />
+           
+          
   
       </Stack.Navigator>
     )
