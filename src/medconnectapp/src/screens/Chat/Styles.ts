@@ -44,18 +44,37 @@ export const styles = StyleSheet.create({
  
     msgTextArea:{
         height: heightScreen * 0.06,
-        borderRadius:5,
+        borderWidth:1,
+        borderColor: "#999",
+        borderBottomLeftRadius: 20,
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
         paddingHorizontal:"5%",
-        backgroundColor: "#333" ,
+        backgroundColor: "#E3E0FF" ,
         margin: "2%",  
         justifyContent:"center",   
-       
+        top: -10,
     },
-    textMsg:{
-       
+    msgOtherArea:{
+        height: heightScreen * 0.06,
+        borderWidth:1,
+        borderColor: "#999",
+        borderBottomRightRadius: 30,
+        borderTopLeftRadius: 30,
+        borderTopRightRadius: 30,
+        borderRadius:5,
+        paddingHorizontal:"5%",
+        backgroundColor: "#275FDA" ,
+        margin: "2%",  
+        justifyContent:"center",   
+        top: -10,
+    },
+    textUserMsg:{       
+        color:"#2E2E2E",
+     },
+    textOtherMsg:{       
         color:"#FFF",
- 
-    },
+     },
     otherAccount:{
         
         alignSelf: "flex-start",

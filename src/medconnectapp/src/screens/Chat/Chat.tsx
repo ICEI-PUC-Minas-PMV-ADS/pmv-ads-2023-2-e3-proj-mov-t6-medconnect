@@ -81,7 +81,7 @@ export const ChatScreen = () => {
                 style={styles.msgTextArea}>
         
                 <Text 
-                  style={styles.textMsg}
+                  style={styles.textUserMsg}
                   >{msg.m}
                 </Text>
                 
@@ -105,10 +105,10 @@ export const ChatScreen = () => {
             </View>
             <View 
                 key={index}
-                style={styles.msgTextArea}>
+                style={styles.msgOtherArea}>
         
                 <Text 
-                  style={styles.textMsg}
+                  style={styles.textOtherMsg}
                   key={index}>{msg.m}
                 </Text>
                 
