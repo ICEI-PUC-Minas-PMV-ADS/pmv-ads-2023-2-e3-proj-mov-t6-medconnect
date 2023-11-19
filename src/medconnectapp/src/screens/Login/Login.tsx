@@ -1,22 +1,48 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, TouchableOpacity, StyleSheet, Image, Dimensions } from 'react-native';
-import { AntDesign } from '@expo/vector-icons';
+//import { AntDesign } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
+import {useForm, Controller } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
+import Icon from 'react-native-vector-icons/Ionicons';
+
+import {Schema} from "./ValidateSchema";
+import { useAuth } from '../../hooks/useAuth';
 
 export const LoginScreen = () => {
+
+   const {startLogin} = useAuth()
+
+  const navigation = useNavigation()
+
+  const {control, handleSubmit, formState: {errors} }= useForm({
+    resolver: yupResolver(Schema)
+  })
+
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
-    if (username === 'usuario' && password === 'senha') {
-      alert('Login bem-sucedido');
+  const handleLogin = (data: any) => {
+    const {username, password} = data
+    startLogin(username,password)
+   
+    /* if (username === 'usuario' && password === 'senha1') {
+         
+     
+      /* (async()=>{
+        
+        await loginUser();
+       } )();
+      
     } else {
       alert('Login falhou. Verifique seu usuário e senha.');
-    }
+    }*/
   };
 
   const handleForgotPassword = () => {
-    // Adicione aqui a lógica para enviar um e-mail de recuperação de senha
-    alert('Um e-mail de recuperação de senha foi enviado.');
+    navigation.navigate("RecoverPassword")
+   /*alert('Um e-mail de recuperação de senha foi enviado.');*/
   };
 
   const screenHeight = Dimensions.get('window').height;
@@ -32,31 +58,62 @@ export const LoginScreen = () => {
           style={styles.logo}
         />
         <Text style={styles.title}>Tela de Login</Text>
-        <View style={styles.inputContainer}>
-          <TextInput
-            style={styles.input}
-            placeholder="Usuário"
-            placeholderTextColor="gray"
-            onChangeText={(text) => setUsername(text)}
-            value={username}
+        <View style={[styles.inputContainer,
+          { borderWidth: errors.username && 1,
+            borderColor: errors.username && 'red'}
+          ]}>
+          
+        <Controller 
+              control={control}
+              name="username"
+              render={({field: {onChange, onBlur, value}}) => (  
+
+                <TextInput
+                  style={[styles.input ]}
+                  placeholder="Usuário"
+                  placeholderTextColor="gray"
+                  onChangeText={onChange}
+                  value={value}
+                />
+
+          )}
           />
-          <AntDesign name="user" size={24} color="gray" style={styles.icon} />
+        {/*  <AntDesign name="user" size={24} color="gray" style={styles.icon} /> */}
+        <Icon name="person" size={20} color="gray" style={styles.icon} />
         </View>
-        <View style={styles.inputContainer}>
-          <TextInput
-            style={styles.input}
-            placeholder="Senha"
-            placeholderTextColor="gray"
-            secureTextEntry={true}
-            onChangeText={(text) => setPassword(text)}
-            value={password}
-          />
-          <AntDesign name="lock" size={24} color="gray" style={styles.icon} />
+        
+        { errors.username && <Text> { errors.username.message} </Text>}
+
+        <View style={[styles.inputContainer,
+          { borderWidth: errors.password && 1,
+            borderColor: errors.password && 'red'}
+          ]}>
+        <Controller 
+              control={control}
+              name="password"
+              render={({field: {onChange, onBlur, value}}) => (  
+
+              <TextInput
+                style={styles.input}
+                placeholder="Senha"
+                placeholderTextColor="gray"
+                secureTextEntry={true}
+                onChangeText={onChange}
+                value={value}
+              />
+              
+              )}             
+           />
+          
+          {/* <AntDesign name="lock-closed-outline" size={24} color="gray" style={styles.icon} /> */}
+          <Icon name="lock-closed-outline" size={20} color="gray" style={styles.icon} />
         </View>
+        { errors.password && <Text> { errors.password.message} </Text>}
+
         <TouchableOpacity onPress={handleForgotPassword}>
           <Text style={styles.forgotPassword}>Esqueceu a senha?</Text>
         </TouchableOpacity>
-        <Button title="Login" onPress={handleLogin} color="#4C4DDC" />
+        <Button title="Login" onPress={handleSubmit(handleLogin)} color="#4C4DDC" />
         <Text style={styles.createAccount}>
           Não tem cadastro? <Text style={styles.link}>Clique aqui</Text>
         </Text>

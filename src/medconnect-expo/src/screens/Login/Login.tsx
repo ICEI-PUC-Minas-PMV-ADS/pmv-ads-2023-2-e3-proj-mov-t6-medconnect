@@ -47,7 +47,8 @@ export const LoginScreen = () => {
   };
 
   const handleForgotPassword = () => {
-    alert('Um e-mail de recuperação de senha foi enviado.');
+    navigation.navigate("RecoverPassword")
+    //alert('Um e-mail de recuperação de senha foi enviado.');
   };
 
   const screenHeight = Dimensions.get('window').height;

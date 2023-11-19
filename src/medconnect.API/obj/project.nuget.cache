@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "s7lnCEflnlhTNGxuEZGrBgPZfzVDA6LYp0HHHS++eTPT5scK/KO+IAC/wTl0RqSKqCecix7BT14pk10+Dv+r0A==",
+  "dgSpecHash": "4JJ2Xfn0jjh+i54cpJbcIihlnHqTLBSxYNjbsqp6zpxPulcmyuiCex0FnwQqrPPzX3nuoTQ2w+wTEQkwzkBN4w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\paulo\\OneDrive\\Documentos\\Projetos\\projeto\\medconnect\\src\\medconnect.API\\medconnect.API.csproj",
+  "projectFilePath": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\medconnect.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\paulo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\paulo\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.23\\microsoft.aspnetcore.authentication.jwtbearer.6.0.23.nupkg.sha512",

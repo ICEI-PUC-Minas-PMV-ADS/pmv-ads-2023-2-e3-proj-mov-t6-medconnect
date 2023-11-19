@@ -1,7 +1,8 @@
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs"
-import { SideMenu } from "./DrawerNavigation";
+import { Start } from "./DrawerNavigation";
 import Icon from "react-native-vector-icons/Ionicons" 
-import { HomeScreen, LoginScreen, RegisterScreen } from "../screens";
+import { HomeScreen, LoginScreen, RegisterScreen, SearchScreen } from "../screens";
+import { HomeNavigation } from "./BottomMenu/HomeNavigation";
 
 export const BottomNavigation = () => {
 
@@ -9,9 +10,9 @@ export const BottomNavigation = () => {
 
   return (
    <Tab.Navigator screenOptions={{headerShown: false}}>
-    <Tab.Screen name="DashBoard" options={{tabBarIcon: ()=> <Icon name="home-outline" size={16} color="#999" />}}  component={SideMenu} />
-    <Tab.Screen name="Login" options={{tabBarIcon: ()=> <Icon name="home-outline" size={16} color="#999" />}} component={LoginScreen} />
-    <Tab.Screen name="Register" options={{tabBarIcon: ()=> <Icon name="home-outline" size={16} color="#999" />}} component={RegisterScreen} />
+    <Tab.Screen name="DashBoard" options={{tabBarIcon: ()=> <Icon name="home-outline" size={16} color="#999" />}}  component={HomeNavigation} />
+    <Tab.Screen name="Buscar" options={{tabBarIcon: ()=> <Icon name="search" size={16} color="#999" />}} component={SearchScreen} />
+    <Tab.Screen name="Configurações" options={{tabBarIcon: ()=> <Icon name="settings-outline" size={16} color="#999" />}} component={RegisterScreen} />
    </Tab.Navigator>
   )
 }
