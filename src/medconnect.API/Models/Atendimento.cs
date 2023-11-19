@@ -8,12 +8,15 @@ namespace medconnect.API.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid AtendimentoId { get; set; }
+        public int Id { get; set; }
+
         public DateTime DataAtendimento { get; set; }
-        public Guid EspecialistaId { get; set; }
+
+        [ForeignKey("Especialista")]
+        public int EspecialistaId { get; set; }
 
         [JsonIgnore]
-        public virtual Especialista? Especialista { get; set;}
+        public virtual Especialista Especialista { get; set; }
     }
 
 }

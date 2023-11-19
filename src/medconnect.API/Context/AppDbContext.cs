@@ -12,6 +12,7 @@ namespace medconnect.API.Context
         public DbSet<Especialista> Especialistas { get; set; }
         public DbSet<Atendimento> Atendimentos { get; set;}
         public DbSet<Consulta> Consultas { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
 
 
         public DbSet<Usuario> UserIdentities { get; set; }

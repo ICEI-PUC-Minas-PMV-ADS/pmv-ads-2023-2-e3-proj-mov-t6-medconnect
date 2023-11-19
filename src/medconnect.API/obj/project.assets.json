@@ -2374,19 +2374,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\paulo\\.nuget\\packages\\": {}
+    "C:\\Users\\Samue\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\medconnect.API.csproj",
+      "projectUniqueName": "C:\\Users\\Samue\\Documents\\pmv-ads-2023-2-e3-proj-mov-t6-medconnect\\src\\medconnect.API\\medconnect.API.csproj",
       "projectName": "medconnect.API",
-      "projectPath": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\medconnect.API.csproj",
-      "packagesPath": "C:\\Users\\paulo\\.nuget\\packages\\",
-      "outputPath": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\obj\\",
+      "projectPath": "C:\\Users\\Samue\\Documents\\pmv-ads-2023-2-e3-proj-mov-t6-medconnect\\src\\medconnect.API\\medconnect.API.csproj",
+      "packagesPath": "C:\\Users\\Samue\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Samue\\Documents\\pmv-ads-2023-2-e3-proj-mov-t6-medconnect\\src\\medconnect.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\paulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Samue\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2462,7 +2462,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
