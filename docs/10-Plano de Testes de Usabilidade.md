@@ -6,14 +6,13 @@ Para o projeto MedConnect serão aplicados dois modelos de teste de usabilidade:
 
 | Atividade a ser realizada | Feedback do usuário | Considerações (quais os problemas, deficiências, limitações, etc) | Sugestão de melhorias |
 |--------------------|------------------------------------|------------------------------------|------------------------------------|
-| Criar conta - Campos obrigatórios: CPF, Nome, E-mail, Data de nascimento, Senha |  |  | | 
-| Efetuar login - Campos obrigatórios: Preencher os dados do login cadastrado |  |  |  | 
-| Busca de consultas e especialistas: Permitir a busca por consultas através dos especialistas cadastrados e/ou dos sintomas. |  |  |  | 
-| Registro de sintomas: Permitir que o usuário gerencie os sintomas que vem sentindo. |  |  |  |
+| Criar conta - Campos obrigatórios: CPF, Nome, E-mail, Data de nascimento, Senha | Conseguiu criar uma conta sem problemas | nenhuma | nenhum | 
+| Efetuar login - Campos obrigatórios: Preencher os dados do login cadastrado | Conseguiu efetuar login sem problemas | nenhum | nenhum | 
+| Busca de consultas e especialistas: Permitir a busca por consultas através dos especialistas cadastrados e/ou dos sintomas. | Conseguiu buscar por especialistas pelo nome. | Não conseguiu buscar por especialidade | Adicionar mais parametros a pesquisa |
 | Busca de  remedios: Permitir que o usuário realize as buscas dos remedios. |  |  |  |
 | Marcação via chat: Permitir que o usuário realize a marcação das consultas atraves do chat. |  |  |  |
 | Receitas via PDF: Permitir que o usuário baixe as receitas via PDF. |  |  |  |
-| Consultas por video chamada : Possibilita o usuário. realize as consultar de forma virtual. |  |  |  |
+| Consultas por video chamada : Possibilita o usuário. realize as consultar de forma virtual. | Conseguiu efetuar uma chamada de video(consulta) | nenhum | Melhorar o layout |
 
 
 ## Análise Heurística
