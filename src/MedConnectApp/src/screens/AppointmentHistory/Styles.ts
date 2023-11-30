@@ -29,4 +29,14 @@ export const styles = StyleSheet.create({
     
         borderRadius: 2,
       },
+
+      nothing:{
+        width: "100%",
+        height: "100%",
+        alignSelf: "center",
+        justifyContent: "center",
+        alignItems: "center",
+        top: "-10%",
+    }
+    
 })

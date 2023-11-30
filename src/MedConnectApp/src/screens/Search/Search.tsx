@@ -2,12 +2,12 @@ import {useEffect, useState} from 'react';
 import { DrawerScreenProps } from '@react-navigation/drawer';
 import {Animated, SafeAreaView, ScrollView, Text, View, TouchableOpacity }from 'react-native';
 import { HeaderContainer } from '../../components/header/HeaderContainer';
-import { styles } from './styles';
 import { Card } from '../../components/Card';
 import { useAuth } from '../../hooks/useAuth';
 import { IEspecialista } from '../../api/interfaces';
 import { Especialista } from '../../api';
 import { Search } from '../../components/Search';
+import { styles } from './styles';
 
 const especialistaController = new Especialista();
 interface Props extends DrawerScreenProps<any, any>{}
@@ -75,12 +75,7 @@ export const SearchScreen = ({navigation, route} :Props) => {
             }>
 
             <Card              
-              fotoPerfil = {espec.fotoPerfil}
-              nome = {espec.nome} 
-              sobrenome={espec.sobrenome}
-              descricaoCurta = {espec.descricaoCurta}
-              categoria="Cirurgia Plastica" 
-              atendimentos={espec.atendimentos}  
+              especialista={espec}
             />  
           
           

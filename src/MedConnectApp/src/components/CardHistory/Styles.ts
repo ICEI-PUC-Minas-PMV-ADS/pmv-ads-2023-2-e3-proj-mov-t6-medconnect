@@ -19,23 +19,45 @@ export const styles = StyleSheet.create({
             }
         },
         cardSpecBtnView: {
-            width: 70,
+            width: 60,
             height: 20,
             backgroundColor: globalStyles.primaryColor,
             alignItems: "center",
             justifyContent: "center",
             alignSelf: "flex-end",
-            bottom: 0,
-            left: "-75%",
+            bottom: -10,
+            left: "-40%",
             borderRadius: 3,
-          },
+            marginLeft: 2,
+        },
+        cardSpecBtnCancel:{},
           cardSpecBtnViewText: {
             color: "#FFF",
             fontSize: 10,
           },
+
+          cancelada: {
+            width: 80,
+            height: 20,
+            color: "#9c405a",
+            alignItems: "center",
+            justifyContent: "center",
+            alignSelf: "flex-end",
+            bottom: -10,
+            left: "-40%",
+            borderRadius: 3,
+            marginLeft: 2,
+        },
     },
 
-    
+    nothing:{
+        width: "100%",
+        height: "100%",
+        alignSelf: "center",
+        justifyContent: "center",
+        alignItems: "center",
+        top: "-10%",
+    }
     
 
 })

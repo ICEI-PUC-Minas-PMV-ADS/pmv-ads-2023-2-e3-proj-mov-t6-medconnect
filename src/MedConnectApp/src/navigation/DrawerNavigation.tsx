@@ -65,9 +65,13 @@ const Menu = ( props: DrawerContentComponentProps) => {
           <Icon name="document-attach-outline" size={30} color="#A5C3E7" />
           <Text>Agendamentos</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.ItemMenu}  onPress={() => logout()}>
+        <TouchableOpacity style={styles.ItemMenu}  onPress={() => navigation.navigate("PDF")}>
           <Icon name="documents-outline" size={30} color="#A5C3E7"/>
           <Text>Exames</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.ItemMenu}  onPress={() => navigation.navigate("Remedios")}>
+          <Icon name="calendar-outline" color="#A5C3E7" size={30} />
+          <Text>Medicação</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.ItemMenu}  onPress={() => logout()}>
           <Icon name="calendar-outline" color="#A5C3E7" size={30} />
@@ -75,7 +79,7 @@ const Menu = ( props: DrawerContentComponentProps) => {
         </TouchableOpacity>
 
           <View style={{}}>
-              <TouchableOpacity style={styles.ItemMenu}  onPress={() => logout()}>
+              <TouchableOpacity style={styles.ItemMenu}  onPress={() => navigation.navigate("Settings")}>
                 <Icon name="settings-outline" color="#A5C3E7" size={30} />
                 <Text>Configurações</Text>
               </TouchableOpacity>
@@ -117,7 +121,7 @@ export const styles = StyleSheet.create({
   },
   userName: {
     fontSize: widthScreen * 0.07,
-    color: '#000',
+    color: '#474747',
     fontWeight: "bold",
     zIndex:10
   },

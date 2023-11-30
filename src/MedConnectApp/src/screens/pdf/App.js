@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import {
   TouchableOpacity,
@@ -9,7 +10,7 @@ import {
 } from "react-native";
 
 export default function PDF() {
-
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <Image
@@ -40,9 +41,7 @@ export default function PDF() {
             </TouchableOpacity>
             <TouchableOpacity
               style={[styles.button, styles.buttonCadastro]}
-              onPress={() => {
-                // Adicione ação de Acessar Exames aqui
-              }}
+              onPress={() => navigation.navigate("Exames")}
               activeOpacity={0.7}
             >
               <Text

@@ -44,7 +44,7 @@ export default function AppointmentCall({navigation, route}) {
   );
   const otherUserId = useRef(null);
 
-  const socket = SocketIOClient(`http://192.168.1.6:3500`, {
+  const socket = SocketIOClient(`http://${IP_SERVER}:3500`, {
     transports: ['websocket'],
     query: {
       callerId,
@@ -251,6 +251,7 @@ export default function AppointmentCall({navigation, route}) {
                 justifyContent: 'center',
                 alignItems: 'center',               
                 borderRadius: 20,
+                 
               }}>
              
               <TextInputContainer
@@ -263,7 +264,7 @@ export default function AppointmentCall({navigation, route}) {
                 keyboardType={'number-pad'}
               />
               <View style={{flexDirection: "row"}}>
-                <View>
+                <View style={{alignItems: "center"}}>
                   <TouchableOpacity
                     onPress= {() => navigation.navigate("ChatScreen")}
                     style={{
@@ -274,6 +275,7 @@ export default function AppointmentCall({navigation, route}) {
                       alignItems: 'center',
                       borderRadius: 40,
                       marginTop: 16,
+                      marginHorizontal: 20
                     }}>
                   
                       <Icon name="chatbubble-ellipses-outline" size={40} color="white"/>
@@ -319,7 +321,7 @@ export default function AppointmentCall({navigation, route}) {
         style={{
           flex: 1,
           justifyContent: 'space-around',
-          backgroundColor: 'red',
+          backgroundColor: '#686e7d',
         }}>
         <View
           style={{
@@ -333,7 +335,7 @@ export default function AppointmentCall({navigation, route}) {
               fontSize: 16,
               color: '#D0D4DD',
             }}>
-            Calling to...
+            Chamando...
           </Text>
 
           <Text
@@ -392,7 +394,7 @@ export default function AppointmentCall({navigation, route}) {
               marginTop: 12,
               color: '#ffff',
             }}>
-            {otherUserId.current} is calling..
+            Chamando...
           </Text>
         </View>
         <View

@@ -1,28 +1,38 @@
-import { View, Image, Text, TouchableOpacity } from "react-native"
+import { View, Image, Text, TouchableOpacity, ScrollView, FlatList } from "react-native"
 import { publicFiles } from "../../../config/env"
 import { styles } from "./Styles"
+import { IEspecialista } from "../../api/interfaces"
  
 
-type CardData = {
-    fotoPerfil: string,
-    nome: string,
-    sobrenome:string,
-    descricaoCurta:string,
-    categoria:string,
-    atendimentos:object,
-}
-
-export const SpecialistInfo = (Prop : CardData) => {
- console.log("FOTO",Prop)
+export const SpecialistInfo = ({especialista} : IEspecialista) => {
+  
   return (
     <View style={styles.container}>
-        <View style={styles.cardSpecImgContainer}>
-             <Image style={styles.cardSpecImgProfile} source={{uri:`${publicFiles}/${Prop.image}`}} />
-        </View>
-        <View style={styles.cardSpecInfo}>
-            <Text>{Prop.nome} {Prop.sobrenome} </Text>
-            <Text>{ Prop.descricaoCurta }</Text>
-            <Text>{Prop.categoria}</Text>
+        <View style={styles.profInfo}>
+              <View style={styles.cardSpecImgContainer}>
+                  <Image style={styles.cardSpecImgProfile} source={{uri:`${publicFiles}/${especialista.fotoPerfil}`}} />
+              </View>
+              <View style={styles.cardSpecInfo}>
+                  <Text style={styles.cardTextInfo}>{especialista.nome} {especialista.sobrenome} </Text>
+                  <Text style={styles.cardTextInfo}>{ especialista.descricaoCurta.substring(0, 100)+"..."  }</Text>
+                  <Text style={styles.cardTextInfo}>{especialista.especialidade}</Text>
+              </View>
+            </View>
+          <View>
+           <Text style={{width: 340}}>{especialista.descricaoDetalhada.substring(0, 400)+"..." }</Text>
+           
+           <ScrollView horizontal>
+            {
+              especialista.imagemsPublicidade.map((img) => (
+                <Image 
+                    key={img.id}
+                    source={{uri: `${publicFiles}/${img.urlImage}`}} 
+                    style={{width: 220, height: 180, margin:5}}
+                   />
+              ))
+            }
+            </ScrollView>
+          
         </View>
     </View>
   )

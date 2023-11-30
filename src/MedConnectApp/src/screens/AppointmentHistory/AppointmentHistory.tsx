@@ -4,7 +4,7 @@ import { DrawerScreenProps } from "@react-navigation/drawer";
 import {Consulta} from "../../api"
 import { Especialista } from "../../api";
 import { useAuth } from "../../hooks/useAuth";
-import { View, Text, SafeAreaView, ScrollView, Animated } from "react-native";
+import { View, Text, SafeAreaView, ScrollView, Animated, Image } from "react-native";
 import { HeaderContainer } from "../../components/header/HeaderContainer";
 import {styles} from "./Styles";
 
@@ -27,12 +27,13 @@ export const AppointmentHistory = ({navigation, route} :Props) => {
       console.log(error)
     }
   }
+  console.log("====TAM====>", consultas.length)
 
   const getEspecialista = async(eId:string)=> {
     let response = await especialistaController.getOne(eId) 
     setEspecialistas([...especialistas, response])
   }
- 
+
  useEffect(() => {
   
     (async() => {
@@ -97,12 +98,32 @@ return (
       <View style={styles.body}>
         <Text>Agendamentos</Text>
         {
+          consultas.length > 0 ?
+           ( 
+            
           especialistas.map((espec, index) => (
-            <CardHistory key={espec.especialistaId} 
+            <CardHistory key={index} 
+              consultas={consultas}
+              setConsultas={setConsultas}
               consulta={consultas[index]}
               especialista={espec}/>
           ))
+           ):
+           ( 
+            <View
+            style={styles.nothing}
+          >
+            <Text style={{fontSize:20}}>
+              Nenhuma consulta agendada...
+            </Text>
+            <Image 
+               source={require("./../../assets/images/medical-checkup.png")}
+               style={{width: 100, height: 100, opacity:0.5}}
 
+              />
+          </View>      
+           )
+        
         }
 
       </View>

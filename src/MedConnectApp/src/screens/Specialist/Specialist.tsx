@@ -62,20 +62,15 @@ export const SpecialistScreen = ({navigation, route} :Props) => {
        <View style={styles.body}>
 
         <SpecialistInfo 
-            nome={especialista.nome}
-            sobrenome={especialista.sobrenome}
-            image={especialista.fotoPerfil}
-            descricaoCurta={especialista.descricaoCurta}
-            categoria="Cirurgia Plastica"  
+           especialista = {especialista}
         />
          
-       
-            <ButtonPrimary 
+    
+        <ButtonPrimary                
                onPress={goAgendamento}
                textButton='Agendar Consulta'/>
         </View>
           
-       
       </ScrollView>
       </View>
     </SafeAreaView>

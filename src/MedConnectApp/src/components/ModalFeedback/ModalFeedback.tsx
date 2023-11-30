@@ -26,13 +26,7 @@ export const ModalFeedback = ({onPress}: any) => {
                 <Icon name="checkmark" size={100} color="#FFF" />
             </View>
 
-            <View>
-                <Text style={styles.info.infoTitle}>Nome do Especialista</Text>
-                <Text>Especialidade</Text>
-                <Text>Data: 08/09/2023 </Text>
-                <Text>Horário: 10:30AM</Text>
-            </View>
-
+          
             <View>
                 <ButtonPrimary textButton="Visualizar Agenda" onPress={() => confirm()}/>  
             </View>  

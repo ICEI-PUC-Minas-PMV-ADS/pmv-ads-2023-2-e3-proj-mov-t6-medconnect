@@ -6,6 +6,7 @@ var heightBody = Dimensions.get("window").height * 0.82;
 export const styles = StyleSheet.create({
   container: {
     backgroundColor: "#FFF",
+     
   },
   header: {},
   content: {

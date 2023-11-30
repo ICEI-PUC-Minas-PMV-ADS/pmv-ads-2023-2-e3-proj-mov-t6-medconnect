@@ -1,15 +1,18 @@
 import {Dimensions, StyleSheet} from 'react-native';
 import {globalStyles} from '../../../theme/global.styles';
 
-const width = Dimensions.get('window').width;
+const widthScreen = Dimensions.get('window').width;
 
 export const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
-    width: width,
-    height: 140,
+    flexDirection: 'column',
+    width: widthScreen,
+    height: "85%",
     gap: 10,
     marginBottom: 2,
+  },
+  profInfo:{
+    flexDirection: 'row',
   },
   cardSpecImgContainer: {
     alignItems: 'center',
@@ -20,8 +23,12 @@ export const styles = StyleSheet.create({
     height: 120,
   },
   cardSpecInfo: {
-    width: width - 120,
+    width: "60%",
     height: 130,
+  },
+  cardTextInfo:{
+    width: "100%",
+    
   },
   cardSpecBtnView: {
     width: 100,

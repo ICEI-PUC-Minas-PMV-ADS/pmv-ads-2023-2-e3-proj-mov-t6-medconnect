@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 import {
   TouchableOpacity,
   StyleSheet,
@@ -9,9 +10,9 @@ import {
 } from "react-native";
 
 export default function Exames() {
+  const navigate = useNavigation()
   const handlePdfClick = () => {
-    console.log("Estou aqui!");
-    // Adicione mais lógica conforme necessário
+    navigate.navigate("PDFFile")
   };
 
   return (
@@ -32,19 +33,19 @@ export default function Exames() {
             <Text style={styles.dataDocumentos}>25/09/2023, 10:55AM</Text>
 
             <View style={styles.pdfContainer}>
-              <TouchableOpacity onPress={handlePdfClick}>
+              <TouchableOpacity onPress={() => handlePdfClick()}>
                 <Image
                   source={require("../../assets/images/pdfIcone.jpg")}
                   style={styles.pdf}
                 />
               </TouchableOpacity>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => handlePdfClick()}>
                 <Image
                   source={require("../../assets/images/pdfIcone.jpg")}
                   style={styles.pdf}
                 />
               </TouchableOpacity>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => handlePdfClick()}>
                 <Image
                   source={require("../../assets/images/pdfIcone.jpg")}
                   style={styles.pdf}

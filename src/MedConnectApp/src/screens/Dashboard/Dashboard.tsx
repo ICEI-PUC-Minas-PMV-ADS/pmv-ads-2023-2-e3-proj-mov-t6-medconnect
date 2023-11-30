@@ -29,6 +29,7 @@ export const DashboardScreen = ({navigation, route} :Props) => {
     })()
   }, [])
 
+  console.log("especialistas", especialistas)
  
   const [scrollY, setScrollY] = useState(new Animated.Value(0))
   return (
@@ -84,7 +85,7 @@ export const DashboardScreen = ({navigation, route} :Props) => {
             />   
 
             <MenuIcon 
-              onPress={() => navigation.navigate("AppointmentHistory")}
+              onPress={() => navigation.navigate("PDF")}
               icon={require('../../assets/images/lungs.png')}
               category={"Exames"}
               background={"#e3ebeb"}  
@@ -118,13 +119,8 @@ export const DashboardScreen = ({navigation, route} :Props) => {
         {especialistas.map((especialista) =>  (
            
                <Card 
-                key={especialista.especialistaId}
-                fotoPerfil = {especialista.fotoPerfil}
-                nome = {especialista.nome} 
-                sobrenome={especialista.sobrenome}
-                descricaoCurta = {especialista.descricaoCurta}
-                categoria="Cirurgia Plastica"  
-                atendimentos= {especialista.atendimentos} 
+                  key={especialista.especialistaId}
+                  especialista={especialista}
               />  
               
               ))     

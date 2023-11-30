@@ -4,7 +4,7 @@ import { HubConnection, HubConnectionBuilder } from '@microsoft/signalr';
 import Icon  from "react-native-vector-icons/Ionicons";
 import { useAuth } from "../../hooks/useAuth";
 import { styles } from "./Styles";
-import { publicFiles } from "../../../config/env";
+import { IP_SERVER, publicFiles } from "../../../config/env";
 
 export const ChatScreen = () => {
   const {user} = useAuth()
@@ -17,13 +17,13 @@ export const ChatScreen = () => {
 
   useEffect(() => {
     const connection = new HubConnectionBuilder()
-    .withUrl('http://192.168.1.6:5000/chat')
+    .withUrl(`http://${IP_SERVER}:5000/chat`)
     .build();
     
     
-    connection.on('ReceiveMessage', (usermail, message) => {    
-      
-      setMessages(prevMessages => [...prevMessages, {u: usermail, m:message}])
+    connection.on('ReceiveMessage', (sender, message) => {    
+      console.log(sender)
+      setMessages(prevMessages => [...prevMessages, {u: sender.email, i: sender.fotoPerfil, m:message}])
     });
 
     if(!connect)
@@ -51,7 +51,8 @@ export const ChatScreen = () => {
 
   const send = (msgValue:string) => {
       if(msgValue.length > 0){
-      connect.invoke('SendMessage', user.email , msgValue)
+      const sender = {email: user.email, fotoPerfil: user.fotoPerfil}  
+      connect.invoke('SendMessage', sender , msgValue)
         .catch((error) => {
           console.error(error);
       });
@@ -99,7 +100,7 @@ export const ChatScreen = () => {
         <>
          <View style={styles.profileImgContainer}>
               <Image 
-                  source={{uri: `${publicFiles}/${user.fotoPerfil}`}}
+                  source={{uri: `${publicFiles}/${msg.i}`}}
                   style={styles.profileImg} 
               />           
             </View>

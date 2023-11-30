@@ -18,7 +18,7 @@ export const Search = ({data, setDataResult, especialistasRes}: searchData) => {
   const KEYS = ["nome", "sobrenome", "descricaoCurta"];
   const [searchField, setSarchField] = useState("")
   useEffect(() => {
-    
+    if(especialistasRes)
     {especialistasRes.length < data.length ? setDataResult(especialistasRes) : setDataResult(data)}
   },[especialistasRes])
 

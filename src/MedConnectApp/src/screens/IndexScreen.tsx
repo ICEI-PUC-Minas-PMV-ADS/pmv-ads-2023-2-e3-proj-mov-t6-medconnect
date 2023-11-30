@@ -22,6 +22,7 @@ export const IndexScreen = () => {
         <Button title="Exames" onPress={() => navigation.navigate("Exames")}/>        
         <Button title="PDF" onPress={() => navigation.navigate("PDF")}/>        
          
+         
     </View>
   )
 }
